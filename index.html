@@ -1,84 +1,111 @@
-<?php
-  $bg = array('images/LakeAlps.jpg', 'images/plant.jpg', 'images/GreyAlps4.jpg', 'images/jpn.jpg', 'images/sky.jpg'); // array of filenames
-  $i = rand(0, count($bg)-1); // generate random number size of the array
-  $selectedBg = "$bg[$i]"; // set variable equal to which random filename was chosen
-  if ($selectedBg == 'images/LakeAlps.jpg') {
-    $color0 = '#52c6cc';
-    $color1 = '#01e684';
-    $color3 = '#3c888c';
-    $grad = 'radial-gradient(circle at 50% 50%,rgba(0, 0, 0, 0.17),rgba(0, 0, 0, 0.22))';
-  }
-  elseif ($selectedBg == 'images/plant.jpg') {
-    $color0 = '#d84e4e';
-    $color1 = '#ff3f3f';
-    $color3 = '#ad3a3a';
-    $grad = 'radial-gradient(circle at 50% 50%,rgba(0, 0, 0, 0.17),rgba(0, 0, 0, 0.22))';
-  }
-  elseif ($selectedBg == 'images/GreyAlps4.jpg') {
-    $color0 = '#49d8bd';
-    $color1 = '#49d8bd';
-    $color3 = '#0f9e84';
-    $grad = 'radial-gradient(circle at 50% 50%,rgba(76, 76, 76, 0.17),rgba(0, 0, 0, 0.22))';
-  }
-  elseif ($selectedBg == 'images/sky.jpg') { 
-      $color0 = '#e47e7e';
-      $color1 = '#e47e7e';
-      $color3 = '#bd6c6c';
-      $grad = 'radial-gradient(circle at 50% 50%,rgba(103, 103, 103, 0.28),rgba(0, 0, 0, 0.22))';
-    }
-
-  else {
-    $color0 = '#4eabd8';
-    $color1 = '#4eabd8';
-    $color3 = '#0075ad';
-    $grad = 'radial-gradient(circle at 50% 50%,rgba(0, 0, 0, 0),rgba(255, 255, 255, 0.22))';
-  }
-?>
-
 <!DOCTYPE html>
 <html lang="en">
     <head>
-    <!-- Global site tag (gtag.js) - Google Analytics -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-158326635-1"></script>
-    <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
-    
-      gtag('config', 'UA-158326635-1');
-    </script>
+      <style>
+        html {
+          background-size: cover;
+          height: 100vh;
+          margin: 0;
+        }
 
-    <style>
-    html{
-    background-image: <?php echo $grad ?>,url(<?php echo $selectedBg; ?>);
-    background-size: cover;
-    height: 100vh;
-    }
-    
-    .scoop{
-      color: <?php echo $color0 ?> !important;
-      text-shadow: 0px 0px 2px  <?php echo $color1 ?> !important;
-      font-family: "Nunito", sans-serif;
-    }
-    
-    .w3-button:hover{color:#000!important;background-color: <?php echo $color0 ?> !important;}
-    
-    .w3-display-bottomleft.w3-large.w3-container.w3-padding-16.w3-black:hover{color:#fff!important; font-weight: 700;background-color:  <?php echo $color3 ?> !important; text-shadow: 0px 0px 2px white;}
-    
-    </style>
-        
-        <title>Michael Anderson</title>
-        <meta name="viewport" content="width=device-width, initial-scale=.75, maximum-scale=1.0,minimum-scale=.75, user-scalable=yes">
-        <link rel="icon" type="image/png" href="images/logo2.png">
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-        <script src="https://surveyjs.azureedge.net/1.0.81/survey.jquery.js"></script>
-        <link href="https://surveyjs.azureedge.net/1.0.81/survey.css" type="text/css" rel="stylesheet"/>
-        <link rel="stylesheet" href="./index.css">
-        <link rel="stylesheet" href="css/styles.css?<?php echo filemtime('css/styles.css') ?>"/>
-        <link href="https://fonts.googleapis.com/css?family=Nunito:700|Open+Sans&display=swap" rel="stylesheet">
-        <script src="https://kit.fontawesome.com/6611d6a31f.js"></script>
-        <script src="scroll.js"></script>
-        <script src="navscroll.js"></script>
+        .scoop {
+          font-family: "Nunito", sans-serif;
+        }
+
+        .w3-button:hover {
+          color: #000 !important;
+        }
+
+        .w3-display-bottomleft.w3-large.w3-container.w3-padding-16.w3-black:hover {
+          color: #fff !important;
+          font-weight: 700;
+          text-shadow: 0px 0px 2px white;
+        }
+      </style>
+      <script>
+        const backgrounds = [
+          {
+            image: 'images/LakeAlps.jpg',
+            color0: '#52c6cc',
+            color1: '#01e684',
+            color3: '#3c888c',
+            grad: 'radial-gradient(circle at 50% 50%,rgba(0, 0, 0, 0.17),rgba(0, 0, 0, 0.22))'
+          },
+          {
+            image: 'images/plant.jpg',
+            color0: '#d84e4e',
+            color1: '#ff3f3f',
+            color3: '#ad3a3a',
+            grad: 'radial-gradient(circle at 50% 50%,rgba(0, 0, 0, 0.17),rgba(0, 0, 0, 0.22))'
+          },
+          {
+            image: 'images/GreyAlps4.jpg',
+            color0: '#49d8bd',
+            color1: '#49d8bd',
+            color3: '#0f9e84',
+            grad: 'radial-gradient(circle at 50% 50%,rgba(76, 76, 76, 0.17),rgba(0, 0, 0, 0.22))'
+          },
+          {
+            image: 'images/sky.jpg',
+            color0: '#e47e7e',
+            color1: '#e47e7e',
+            color3: '#bd6c6c',
+            grad: 'radial-gradient(circle at 50% 50%,rgba(103, 103, 103, 0.28),rgba(0, 0, 0, 0.22))'
+          },
+          {
+            image: 'images/jpn.jpg',
+            color0: '#4eabd8',
+            color1: '#4eabd8',
+            color3: '#0075ad',
+            grad: 'radial-gradient(circle at 50% 50%,rgba(0, 0, 0, 0),rgba(255, 255, 255, 0.22))'
+          }
+        ];
+
+        const bg = backgrounds[Math.floor(Math.random() * backgrounds.length)];
+
+        // Set background
+        document.documentElement.style.backgroundImage = `${bg.grad}, url(${bg.image})`;
+
+        // Style .scoop
+        const scoops = document.querySelectorAll('.scoop');
+        scoops.forEach(el => {
+          el.style.color = bg.color0;
+          el.style.textShadow = `0px 0px 2px ${bg.color1}`;
+        });
+
+        // Style .w3-button:hover (injected CSS)
+        const styleTag = document.createElement('style');
+        styleTag.innerHTML = `
+          .w3-button:hover {
+            background-color: ${bg.color0} !important;
+          }
+          .w3-display-bottomleft.w3-large.w3-container.w3-padding-16.w3-black:hover {
+            background-color: ${bg.color3} !important;
+          }
+        `;
+        document.head.appendChild(styleTag);
+      </script>
+      <!-- Global site tag (gtag.js) - Google Analytics -->
+      <script async src="https://www.googletagmanager.com/gtag/js?id=UA-158326635-1"></script>
+      <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+      
+        gtag('config', 'UA-158326635-1');
+      </script>
+      <title>Michael Anderson</title>
+      <meta name="viewport" content="width=device-width, initial-scale=.75, maximum-scale=1.0,minimum-scale=.75, user-scalable=yes">
+      <link rel="icon" type="image/png" href="images/logo2.png">
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+      <script src="https://surveyjs.azureedge.net/1.0.81/survey.jquery.js"></script>
+      <link href="https://surveyjs.azureedge.net/1.0.81/survey.css" type="text/css" rel="stylesheet"/>
+      <link rel="stylesheet" href="./index.css">
+      <link rel="stylesheet" href="css/styles.css?<?php echo filemtime('css/styles.css') ?>"/>
+      <link href="https://fonts.googleapis.com/css?family=Nunito:700|Open+Sans&display=swap" rel="stylesheet">
+      <script src="https://kit.fontawesome.com/6611d6a31f.js"></script>
+      <script src="scroll.js"></script>
+      <script src="navscroll.js"></script>
     </head>
     <body>
     
