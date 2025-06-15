@@ -1,0 +1,212 @@
+<?php
+  $bg = array('images/LakeAlps.jpg', 'images/plant.jpg', 'images/GreyAlps4.jpg', 'images/jpn.jpg', 'images/sky.jpg'); // array of filenames
+  $i = rand(0, count($bg)-1); // generate random number size of the array
+  $selectedBg = "$bg[$i]"; // set variable equal to which random filename was chosen
+  if ($selectedBg == 'images/LakeAlps.jpg') {
+    $color0 = '#52c6cc';
+    $color1 = '#01e684';
+    $color3 = '#3c888c';
+    $grad = 'radial-gradient(circle at 50% 50%,rgba(0, 0, 0, 0.17),rgba(0, 0, 0, 0.22))';
+  }
+  elseif ($selectedBg == 'images/plant.jpg') {
+    $color0 = '#d84e4e';
+    $color1 = '#ff3f3f';
+    $color3 = '#ad3a3a';
+    $grad = 'radial-gradient(circle at 50% 50%,rgba(0, 0, 0, 0.17),rgba(0, 0, 0, 0.22))';
+  }
+  elseif ($selectedBg == 'images/GreyAlps4.jpg') {
+    $color0 = '#49d8bd';
+    $color1 = '#49d8bd';
+    $color3 = '#0f9e84';
+    $grad = 'radial-gradient(circle at 50% 50%,rgba(76, 76, 76, 0.17),rgba(0, 0, 0, 0.22))';
+  }
+  elseif ($selectedBg == 'images/sky.jpg') { 
+      $color0 = '#e47e7e';
+      $color1 = '#e47e7e';
+      $color3 = '#bd6c6c';
+      $grad = 'radial-gradient(circle at 50% 50%,rgba(103, 103, 103, 0.28),rgba(0, 0, 0, 0.22))';
+    }
+
+  else {
+    $color0 = '#4eabd8';
+    $color1 = '#4eabd8';
+    $color3 = '#0075ad';
+    $grad = 'radial-gradient(circle at 50% 50%,rgba(0, 0, 0, 0),rgba(255, 255, 255, 0.22))';
+  }
+?>
+
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-158326635-1"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+    
+      gtag('config', 'UA-158326635-1');
+    </script>
+
+    <style>
+    html{
+    background-image: <?php echo $grad ?>,url(<?php echo $selectedBg; ?>);
+    background-size: cover;
+    height: 100vh;
+    }
+    
+    .scoop{
+      color: <?php echo $color0 ?> !important;
+      text-shadow: 0px 0px 2px  <?php echo $color1 ?> !important;
+      font-family: "Nunito", sans-serif;
+    }
+    
+    .w3-button:hover{color:#000!important;background-color: <?php echo $color0 ?> !important;}
+    
+    .w3-display-bottomleft.w3-large.w3-container.w3-padding-16.w3-black:hover{color:#fff!important; font-weight: 700;background-color:  <?php echo $color3 ?> !important; text-shadow: 0px 0px 2px white;}
+    
+    </style>
+        
+        <title>Michael Anderson</title>
+        <meta name="viewport" content="width=device-width, initial-scale=.75, maximum-scale=1.0,minimum-scale=.75, user-scalable=yes">
+        <link rel="icon" type="image/png" href="images/logo2.png">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+        <script src="https://surveyjs.azureedge.net/1.0.81/survey.jquery.js"></script>
+        <link href="https://surveyjs.azureedge.net/1.0.81/survey.css" type="text/css" rel="stylesheet"/>
+        <link rel="stylesheet" href="./index.css">
+        <link rel="stylesheet" href="css/styles.css?<?php echo filemtime('css/styles.css') ?>"/>
+        <link href="https://fonts.googleapis.com/css?family=Nunito:700|Open+Sans&display=swap" rel="stylesheet">
+        <script src="https://kit.fontawesome.com/6611d6a31f.js"></script>
+        <script src="scroll.js"></script>
+        <script src="navscroll.js"></script>
+    </head>
+    <body>
+    
+<div class="flexer">
+
+          <section class="about">
+            
+               <img class="prof" src="images/mander.png" width="150" height="150" alt="Profile Pic">
+               <div class="contact"> <span class="scoop">MICHAEL ANDERSON</span> <br> <span class="under">michael@manderson.site</span>  <br> <span class="under">(607)-226-4485</span> </div>
+               <div class="links"> 
+                <a href='https://www.linkedin.com/in/michael-anderson-86a653178/' target="_blank"><div class="link">  <i class="fab fa-linkedin"> </i> LinkedIn </div></a>
+                <a href='https://my.indeed.com/p/michaela-xzivo79' target="_blank"><div class="link">  <i class="fas fa-info-circle"></i> Indeed </div></a>
+              </div>
+              <div class="links2"> 
+                <a href='https://manderson.site/move/ManderResume.pdf' target="_blank"><div class="link">  <i class="far fa-file-alt"></i> Resume </div></a>
+                <a href=""><div class="link">  <i class="far fa-file-alt"></i> Transcript </div></a>
+              </div>
+              <!-- <hr class="hr" align="center"/> -->
+              <div class="flexer2">
+              <img class="uni" src="images/uniroc.png" width="82px" height="79" alt="Profile Pic">
+              <div>
+              <h2 class="head2 scoop"> BS ENVIRONMENTAL SCIENCE</h2>
+              <h3 class="head3">Minor in Computer Science</h3>
+            </div>
+              </div>
+              <!-- <hr class="hr" align="center"/> -->
+              <div class="center2"> <h2 class="skills scoop">SKILLS</h2>
+              <span class="headd"> <i class="fab fa-html5 fa-lg"></i> HTML5 </span>
+               <span class="headd"> <i class="fab fa-css3-alt fa-lg"></i> CSS3 </span>
+                <span class="headd"> <i class="fab fa-js-square fa-lg"></i> JavaScript </span>
+                <span class="headd"> <i class="fab fa-php fa-lg"></i> PHP </span>
+                <span class="headd"> <i class="fas fa-database fa-lg"></i></i> mySQL </span>
+              <span class="headd"> <i class="fab fa-python fa-lg"></i> Python </span>
+              <span class="headd"> <i class="fab fa-java fa-lg"></i> Java </span>
+              <span class="headd"> <i class="fas fa-globe-americas fa-lg"></i> GIS </span>
+               <span class="headd"> <i class="fas fa-globe fa-lg"></i> ArcGIS Pro </span>
+               
+              
+              </div>
+
+            </section>
+
+
+
+
+              <section class="projects"> 
+                <h2 class="headz scoop"> PROJECTS</h2>
+<div class="w3-content w3-display-container">
+
+<div class="w3-display-container mySlides">
+  <img src="images/nbadecades.jpg" style="width:100%" alt="NBA Decades">
+  <a href="https://manderson.site/yote/index.php" target="_blank">
+    <div class="w3-display-bottomleft w3-large w3-container w3-padding-16 w3-black">
+      <i class="fas fa-external-link-square-alt fa-sm" aria-hidden="true">&nbsp;&nbsp;</i>NBA Decades:<br> <span class="smol">HTML / CSS / JavaScript / Python Web Scraping</span>
+    </div>
+  </a>
+</div>
+
+<div class="w3-display-container mySlides">
+  <img src="images/saleaverage.png" style="width:100%" alt="Ebay Analysis">
+  <a href="https://www.saleaverage.com/" target="_blank">
+    <div class="w3-display-bottomleft w3-large w3-container w3-padding-16 w3-black">
+      <i class="fas fa-external-link-square-alt fa-sm" aria-hidden="true">&nbsp;&nbsp;</i>Ebay Price Analysis:<br> <span class="smol">HTML / CSS / JavaScript / jQuery / Flask / Python Web Scraping</span>
+    </div>
+  </a>
+</div>
+
+<div class="w3-display-container mySlides">
+  <img src="images/randomppl.jpg" style="width:100%" alt="Random People">
+  <a href="https://manderson.site/people/" target="_blank">
+  <div class="w3-display-bottomleft w3-large w3-container w3-padding-16 w3-black">
+    <i class="fas fa-external-link-square-alt fa-sm" aria-hidden="true">&nbsp;&nbsp;</i>Random People Generator:<br> <span class="smol">HTML / CSS / JavaScript / Python Web Scraping</span>
+  </div>
+</a>
+</div>
+
+<div class="w3-display-container mySlides">
+  <img src="images/aurora.jpg" style="width:100%" alt="Aurora">
+  <a href="https://manderson.site/move/manderson/index.php" target="_blank">
+    <div class="w3-display-bottomleft w3-large w3-container w3-padding-16 w3-black">
+       <i class="fas fa-external-link-square-alt fa-sm" aria-hidden="true">&nbsp;&nbsp;</i>Aurora Newsletter (Assignment):<br> <span class="smol">HTML / CSS / JavaScript / PHP</span>
+    </div>
+  </a>
+</div>
+
+<div class="w3-display-container mySlides">
+  <img src="images/pikas.jpg" style="width:100%" alt="Pikas">
+  <a href="https://manderson.site/move/study/storymap/index.html" target="_blank">
+  <div class="w3-display-bottomleft w3-large w3-container w3-padding-16 w3-black">
+    <i class="fas fa-external-link-square-alt fa-sm" aria-hidden="true">&nbsp;&nbsp;</i>Pikas and Climate Change (Assignment):<br> <span class="smol">Esri Story Map / ArcGIS Pro / CSS</span>
+  </div>
+</a>
+</div>
+
+<div class="w3-display-container mySlides">
+  <img src="images/goat.jpg" style="width:100%" alt="NBA Greats">
+  <a href='https://manderson.site/csc174finalPHP/index.php' target="_blank">
+  <div class="w3-display-bottomleft w3-large w3-container w3-padding-16 w3-black">
+    <i class="fas fa-external-link-square-alt fa-sm" aria-hidden="true">&nbsp;&nbsp;</i>NBA Greats (Assignment):<br> <span class="smol">HTML / CSS / JavaScript / PHP</span>
+  </div>
+</a>
+</div>
+
+<button class="w3-button w3-display-left w3-black" onclick="plusDivs(-1)">&#10094;</button>
+<button class="w3-button w3-display-right w3-black" onclick="plusDivs(1)">&#10095;</button>
+
+</div>
+</section>
+</div>
+<script>
+var slideIndex = 1;
+showDivs(slideIndex);
+
+function plusDivs(n) {
+  showDivs(slideIndex += n);
+}
+
+function showDivs(n) {
+  var i;
+  var x = document.getElementsByClassName("mySlides");
+  if (n > x.length) {slideIndex = 1}
+  if (n < 1) {slideIndex = x.length}
+  for (i = 0; i < x.length; i++) {
+    x[i].style.display = "none";  
+  }
+  x[slideIndex-1].style.display = "block";  
+}
+</script>
+
+</body>
+</html>
