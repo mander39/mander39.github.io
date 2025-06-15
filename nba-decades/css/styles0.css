@@ -123,6 +123,10 @@
 	margin-right: 10px;
 }
 
+.player_overlay.champs.rochester{
+	background-color: #3d3b7d;
+}
+
 .player_container.team.raptors {
 	background-color: #611827;
 	padding: 0px 0px 0px 0px;

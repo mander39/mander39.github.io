@@ -1,0 +1,130 @@
+
+/*
+.player_container .hint {
+  position: absolute;
+  bottom: -12px;
+  left: -12px;
+  width: 32px;
+  height: 32px;
+  background: #000;
+  border-radius: 16px;
+  transition: all 0.2s ease;
+}*/
+
+.hint, .hint2, .hint3, .hint4, .hint5, .hint6, .hint7, .hint8, .hint9, .hint10{
+  display: none;
+}
+
+@media (max-width: 960px){
+.hint, .hint2, .hint3, .hint4, .hint5, .hint6, .hint7, .hint8, .hint9, .hint10{
+  display: block;
+  z-index: 1000;
+}
+.player_container .hint, .hint2, .hint3, .hint4, .hint5, .hint6, .hint7, .hint8, .hint9, .hint10{
+    position: absolute;
+    background: #4a4a4a;
+    border: 3px solid #a7a6a6;
+    transition: all 0.2s ease;
+    bottom: -1px;
+    left: -55px;
+    width: 32px;
+    height: 32px;
+    border-radius: 20px;
+}
+.player_container .hint .icon-info, .hint2 .icon-info, .hint3 .icon-info, .hint4 .icon-info, .hint5 .icon-info, .hint6 .icon-info, .hint7 .icon-info, .hint8 .icon-info, .hint9 .icon-info, .hint10 .icon-info {
+  position: absolute;
+  z-index: 1;
+  bottom: 0;
+  left: 0;
+  display: block;
+  width: 32px;
+  height: 32px;
+  border-radius: 16px;
+  cursor: pointer;
+  pointer-events: auto;
+}
+.player_container .hint .icon-info:before, .hint2 .icon-info:before,
+.player_container .hint .icon-info:after, .hint2 .icon-info:after, .hint3 .icon-info:before, .hint3 .icon-info:after
+, .hint4 .icon-info:before, .hint4 .icon-info:after, .hint5 .icon-info:before, .hint5 .icon-info:after, .hint6 .icon-info:before, .hint6 .icon-info:after
+, .hint7 .icon-info:before, .hint7 .icon-info:after, .hint8 .icon-info:before, .hint8 .icon-info:after, .hint9 .icon-info:before, .hint9 .icon-info:after
+, .hint10 .icon-info:before, .hint10 .icon-info:after {
+  content: '';
+  position: absolute;
+  width: 2px;
+  height: 12px;
+  background: white;
+  border-radius: 2px;
+  transform-origin: center center;
+  transition: all 0.25s ease;
+}
+.player_container .hint .icon-info:before, .hint2 .icon-info:before, .hint3 .icon-info:before, .hint4 .icon-info:before, .hint5 .icon-info:before, .hint6 .icon-info:before
+, .hint7 .icon-info:before, .hint8 .icon-info:before, .hint9 .icon-info:before, .hint10 .icon-info:before {
+  transform: translate(15px, 6px) rotate(0) scale(1, 0.2);
+}
+.player_container .hint .icon-info:after, .hint2 .icon-info:after, .hint3 .icon-info:after, .hint4 .icon-info:after, .hint5 .icon-info:after, .hint6 .icon-info:after
+, .hint7 .icon-info:after, .hint8 .icon-info:after, .hint9 .icon-info:after, .hint10 .icon-info:after {
+  transform: translate(15px, 12px) rotate(0) scale(1, 0.5);
+}
+/*
+.player_container .hint.show {
+  width: calc(100% + 24px);
+  height: calc(100% + 24px);
+}*/
+.player_container .hint.show, .hint2.show, .hint3.show, .hint4.show, .hint5.show, .hint6.show, .hint7.show, .hint8.show, .hint9.show, .hint10.show {
+    width: calc(100% + 50px);
+    height: calc(100% - 90px);
+    border: 3px solid #a7a6a6;
+}
+.player_container .hint.show .icon-info:before, .hint2.show .icon-info:before, .hint3.show .icon-info:before, .hint4.show .icon-info:before, .hint5.show .icon-info:before
+, .hint6.show .icon-info:before, .hint7.show .icon-info:before, .hint8.show .icon-info:before, .hint9.show .icon-info:before, .hint10.show .icon-info:before {
+  transform: translate(15px, 10px) rotate(-45deg);
+}
+.player_container .hint.show .icon-info:after, .hint2.show .icon-info:after, .hint3.show .icon-info:after, .hint4.show .icon-info:after, .hint5.show .icon-info:after, .hint6.show .icon-info:after
+, .hint7.show .icon-info:after, .hint8.show .icon-info:after, .hint9.show .icon-info:after, .hint10.show .icon-info:after {
+  transform: translate(15px, 10px) rotate(45deg);
+}
+
+.fade-in {
+  opacity: 1;
+  animation-name: fadeInOpacity;
+  animation-iteration-count: 1;
+  animation-timing-function: ease-in;
+  animation-duration: .4s;
+}
+
+@keyframes fadeInOpacity {
+  0% {
+    opacity: 0;
+  }
+  20% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.hidden {
+  display: none;
+  transition: all 0.3s;
+}
+
+#hint-content, #hint-content2, #hint-content3, #hint-content4, #hint-content5, #hint-content6, #hint-content7, #hint-content8, #hint-content9, #hint-content10 {
+    padding-left: 40px;
+    padding-top: 7px;
+    font-size: 14px;
+    text-align: center;
+    font-family: 'Source Sans Pro';
+    font-weight: 700;
+}
+
+.hint3, .hint9, .hint10{
+  bottom: -14px !important;
+}
+
+#hint-content3, #hint-content4, #hint-content5,#hint-content6, #hint-content7, #hint-content8, #hint-content9, #hint-content10{
+  padding-top: 15px !important;
+  padding-right: 5px !important;
+}
+
+}
