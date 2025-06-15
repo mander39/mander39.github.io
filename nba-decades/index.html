@@ -1,12 +1,4488 @@
-<!-- nba-decades/index.html -->
 <!DOCTYPE html>
 <html>
+<!--
+⣶⣶⣶⣶⣶⣶⣶⣶⣶⣶⣶⣶⣶⣶⣶⣶⣤⣤⣄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄
+⣿⣿⣽⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣦⣄⡀⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄
+⣿⣿⣿⡿⢿⣿⠟⠛⠿⢻⠿⠿⠿⡿⠿⢿⣿⣿⣿⣿⣿⣿⣿⣦⡀⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄
+⠋⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠈⠙⠛⠿⢿⣿⣿⣦⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄
+⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⢀⠄⠄⠄⠉⢿⣿⣷⡀⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄
+⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⢀⠦⠄⠄⠄⠘⠿⣿⣄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄
+⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠈⠁⠄⠄⠄⠄⠄⠻⣿⣆⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄
+⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠤⠄⡀⠄⠄⠸⣿⣇⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄
+⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠐⠂⠄⠄⠘⣿⡀⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄
+⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠡⠄⠄⠄⠸⣿⡀⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄
+⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⡆⠴⠄⠄⠄⢿⣧⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄
+⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠠⠄⣿⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄
+⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠿⡇⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄
+⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⢀⣤⣤⣦⣤⠄⢻⡄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄
+⠄⣀⣀⣀⡀⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⣀⣴⣿⣿⣿⡿⠿⠛⠻⠿⣾⣧⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄
+⣿⣿⣿⣿⣿⣿⣥⣤⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⢠⣿⣿⡿⠛⠄⠄⠄⠄⠄⠄⠘⢿⡆⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄
+⠄⠄⠄⠄⠄⠄⠈⠙⠧⠠⠆⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⢴⣾⠏⠄⠄⣀⡀⣀⡀⢄⣀⠸⣷⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄
+⠄⠄⠄⠄⠄⠓⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⣀⣤⣿⡇⠄⠄⠄⠈⢠⣌⣉⠻⣇⡀⢸⣆⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄
+⠐⠒⠿⢻⣷⣦⣀⣀⣀⡀⠄⠄⠄⠄⠄⠄⠄⠄⠄⢀⢐⣿⠿⢋⣀⠴⣶⠚⢻⣿⣿⠿⢿⣿⣧⣀⣿⡄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄
+⣤⣴⣶⡿⠻⢿⣿⣿⡿⢷⡆⠄⠄⠄⠄⠄⠄⠄⠄⢠⣿⣯⠐⠉⠁⠄⠻⣶⣾⣿⣿⢀⠘⡟⢛⡛⣡⣿⡀⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄
+⣦⣴⣿⡟⠄⠄⣉⣉⡁⠄⡁⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠿⣿⠉⠉⠉⠄⠄⢀⠄⠘⠏⠄⣀⣼⡗⢤⠙⣇⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄
+⠛⠛⠛⠃⣖⣺⡿⠛⠂⠰⠁⠄⠄⠐⠒⠄⠄⠄⠄⠄⠄⠄⠉⢷⣤⠄⠐⠒⠻⠗⠲⠶⠛⠋⠁⢠⣛⠛⢹⣇⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄
+⠄⠄⠄⠄⣈⡭⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠈⢹⣆⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠐⠈⣿⣇⠄⠄⠄⠄⠄⠄⠄⠄⠄
+⠄⠐⠄⠉⠁⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠉⠳⣤⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⢻⡄⠄⠄⠄⠄⠄⠄⠄⠄
+⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠸⠆⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠈⣿⠄⠄⠄⠄⠄⠄⠄⠄
+⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⢅⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⣿⡄⠄⠄⠄⠄⠄⠄⠄
+⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⢀⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⢀⣀⣀⠄⢀⣀⡀⠄⠄⠄⠄⠄⠄⢀⣿⡇⠄⠄⠄⠄⠄⠄⠄
+⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⢶⣄⠄⠄⢀⣤⣤⣤⣤⡀⠄⠄⠄⠄⠄⣴⣉⣿⣿⡗⠄⠛⣗⠄⠄⠄⡀⠄⠄⢠⣿⡇⠄⠄⠄⠄⠄⠄⠄
+⠄⠄⠄⠄⠄⠄⣠⠰⠄⠄⠄⠄⠛⠳⠿⠿⣏⠄⠄⠙⠿⣿⣦⠾⠿⡿⣿⠿⠋⠁⠄⠄⠄⠙⢿⣇⡀⠄⠄⠄⠄⣿⠇⠄⠄⠄⠄⠄⠄⠄
+⠄⠄⠄⠄⠄⣼⡍⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⢀⡀⠒⣤⣤⣤⣤⣤⣤⣄⠄⠙⣷⠄⠄⠄⢈⣿⠄⠄⠄⠄⠄⠄⠄⠄
+⠄⠄⠄⢀⣿⠟⠄⠄⠄⠄⠄⠄⣀⣠⣀⣠⣄⣤⣄⣤⣾⣿⣿⣤⡬⠿⠿⠟⠛⠛⠛⠛⠛⠛⣿⠏⣿⡄⠄⢀⣿⣿⠄⠄⠄⠄⠄⠄⠄⠄
+⠄⠄⢀⡾⠁⠄⢀⣠⣰⡶⠶⠚⠛⠛⠉⠉⠉⠉⠉⠉⠁⠄⠄⠄⠄⠄⠄⠄⠄⣀⣀⣤⣶⣶⠏⠄⣿⠄⠄⢰⣿⡏⠄⠄⠄⠄⠄⠄⠄⠄
+⠄⠄⢼⡇⠄⠄⠛⠄⠄⠄⠄⣀⢀⣀⡀⠄⠄⠄⠄⠄⡀⠄⠄⣀⣄⣠⣾⣷⡿⠿⢿⣿⡟⠃⠄⢠⠃⠄⢀⣿⣿⠄⠄⠄⠄⠄⠄⠄⠄⠄
+⠄⠄⠸⠇⠄⠰⣶⣶⣤⣾⣿⣿⣿⢿⡿⢿⣶⣿⣾⣷⠿⠶⣶⢟⣿⡿⠋⠉⣁⣀⣾⡟⠄⠄⠄⠸⠄⠄⢸⣿⡏⠄⠄⠄⠄⠄⠄⠄⠄⠄
+⠄⠄⠄⠄⠄⠄⠙⠉⠛⠻⠧⢤⣤⠄⢀⡀⡀⠄⠄⠄⠄⠄⠼⠋⠄⠄⠄⠄⠘⠛⢻⣀⠄⠄⠐⠃⠄⠄⣿⣿⠇⠄⠄⠄⠄⠄⠄⠄⠄⠄
+⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠉⠄⠁⠄⠉⠛⠓⠢⠄⠄⠄⣀⡀⠄⠄⠄⠄⠄⢸⣿⠃⠄⠄⢁⠄⣼⣿⡏⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄
+⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠈⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠰⣿⡏⠄⠄⠄⢼⣤⣼⡿⠃⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄
+⠁⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⣀⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⢰⣿⡇⠄⠄⠄⣸⣷⣿⠇⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄
+⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠠⣧⣤⡀⠄⠄⠄⠄⠄⠄⠄⠄⣠⣾⣟⠃⠄⠄⠘⣿⣿⣿⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄
+⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠈⠙⢿⣿⣶⣶⣶⣦⣶⣶⣿⣿⡿⠍⠄⠄⠄⢸⣿⣿⠃⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄
+⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠈⠛⠻⣿⡏⠹⠛⠛⠋⠄⠄⠄⠄⠄⢸⣿⡿⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄
+⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⣿⣿⠁⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄
+⠄⠄⠄⠄⢠⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⢸⣿⡟⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄
+⠄⠄⠄⠄⠁⡀⠒⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⣾⣿⠃⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄
+⠘⣠⡄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⣿⡇⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄
+⠄⡀⠟⠃⢤⣤⠂⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⡀⣾⣿⠃⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄
+⠄⠄⠄⠄⠄⠄⡆⠂⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⣠⡿⣿⣿⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⢠
+⡀⠄⠄⠂⠄⢀⠠⠎⠋⡀⡀⠄⠄⠄⠄⠄⠄⠄⠄⠄⣄⠄⠄⠄⠄⠄⠄⠄⠄⢰⣿⡿⣿⣿⡀⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄
+⣠⢀⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⡀⠄⠄⠂⠄⠄⢀⣌⠄⠄⠄⠒⠄⠄⠄⣠⣾⣿⠁⠈⣿⡇⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄
+⠁⠛⣶⣾⣴⣦⣿⠙⣀⡀⠄⠂⠉⢱⡆⡄⠄⠄⠁⠄⠐⠛⠻⠄⠄⠐⢶⣴⣿⣿⣿⠄⠄⠘⣿⣆⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄
+⠄⠄⠄⠉⠹⣿⠟⠲⣾⣿⣿⣷⣿⣾⣷⣴⣶⣿⣦⣤⣤⣤⣤⣶⣶⣾⣿⣿⠋⢹⣿⠄⠄⠄⠘⢿⣦⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄
+⠄⠄⠄⠰⠄⠄⠄⠄⠾⠋⠉⠈⠉⠿⣿⣿⣿⣿⣿⣿⢿⣿⣿⣿⠿⠿⣟⣟⣮⣿⡇⠄⠄⠄⠄⠈⣿⣿⣆⡀⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄
+⢤⡐⠄⠄⠄⠄⠤⠖⠄⠄⠄⠄⠄⠄⠈⠉⠉⠉⠉⠈⠛⠋⠙⠋⢀⣡⣿⠛⣿⡏⠄⠄⠄⠄⠄⠄⣿⣿⣿⣷⣦⠄⠄⠄⠄⠄⠄⠄⠄⠄
+⠄⠛⢶⣄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⢠⡄⠨⠃⠄⠃⡸⠏⠩⣴⣶⡟⠄⠄⠄⠄⠄⠄⠄⣿⣿⣿⢿⠿⣿⣶⣄⣀⠄⠄⠄⠄⠄
+⠄⠄⠄⠙⢷⣤⡀⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠁⠄⠄⠄⠄⠄⣴⣷⣿⠟⠄⠄⠄⠄⠄⠄⠄⠄⣿⣿⣿⡆⢰⠹⠛⠛⠿⢷⣦⣤⡀⠄
+⠄⠄⠄⠄⠄⠈⠻⢦⣀⠄⠄⠄⠄⠄⠄⠄⠄⠘⠄⠄⠄⠄⠄⢸⣼⡿⠋⠄⠄⠄⠄⠄⠄⠄⠄⠄⣿⡿⢿⣯⠸⠆⠄⠄⢠⡀⠉⠉⠛⢛
+-->
     <head>
-        <title>NBA Decades</title>
+        <title>Decades</title>
+        <meta name="viewport" content="width=device-width, initial-scale=.65, maximum-scale=1.0, user-scalable=yes" />
+        <link rel="stylesheet" href="styles/styles.css">
+        <link href="https://fonts.googleapis.com/css?family=Exo+2:700&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Titillium+Web:900&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro&amp;display=swap" rel="stylesheet">
     </head>
     <body>
-        <h1>NBA Through the Decades</h1>
-        <p>This is a subpage about NBA history.</p>
-        <a href="/">Back to Home</a>
+    <div class="balls">
+    <div id="header">
+	    <div id="headerContent">
+	       NBA DECADES
+	    </div>
+	</div>
+
+    <div class="decade">
+		<h2> THE 10's  -  THE LEBRON JAMES / WARRIORS DECADE</h2>
+	</div>
+	<div class="center2">
+	<div class="center">
+
+		<div class="player_triplet">
+
+			<div class="player_container">
+				<div class="year">2019</div>
+				<div class="fmvp">FMVP</div>
+		  		<img src="img/kawhi2.jpg" alt="Avatar" class="player_image">
+		  		<div class="player_overlay raptors">
+		    		<div class="player_text raptors">
+		    			<div class="name">KAWHI LEONARD</div>
+		    			<div class="stats">PPG: 26.6</div>
+						<div class="stats">RPG: 7.3</div>
+						<div class="stats">APG: 3.3</div>
+						<div class="stats">BPG: 0.4</div>
+						<div class="stats">SPG: 1.8</div>
+		    		</div>
+		  		</div>
+			</div>
+
+			<div class="player_container">
+		  		<img src="img/siakam.jpg" alt="Avatar" class="player_image">
+		  		<div class="player_overlay raptors">
+		    		<div class="player_text raptors">
+		    			<div class="name">PASCAL SIAKAM</div>
+						<div class="stats">PPG: 16.9</div>
+						<div class="stats">RPG: 6.9</div>
+						<div class="stats">APG: 3.1</div>
+						<div class="stats">BPG: 0.7</div>
+						<div class="stats">SPG: 0.9</div>
+		    		</div>
+		  		</div>
+			</div>
+
+			<div class="player_container">
+		  		<img src="img/ibaka.jpg" alt="Avatar" class="player_image">
+		  		<div class="player_overlay raptors">
+		    		<div class="player_text raptors">
+		    			<div class="name">SERGE IBAKA</div>
+						<div class="stats">PPG: 15.0</div>
+						<div class="stats">RPG: 8.1</div>
+						<div class="stats">APG: 1.3</div>
+						<div class="stats">BPG: 1.4</div>
+						<div class="stats">SPG: 0.4</div>
+		    		</div>
+		  		</div>
+			</div>
+
+			<div class="player_container team raptors">
+		  		<img src="img/raptors.png" alt="Avatar" class="player_image team raptors">
+		  		<div class="player_overlay champs raptors">
+		  			<div class="team3">TORONTO RAPTORS</div> 
+					<div class="score raptors">4  -  2</div>
+					<div class="team2">GOLDEN STATE WARRIORS</div>
+		  		</div>
+			</div>
+
+			<div class="champs raptors">
+				<div class="champs_text">
+					<div class="team2">TORONTO RAPTORS</div> 
+					<div class="score raptors">4  -  2</div>
+					<div class="team2">GOLDEN STATE WARRIORS</div>
+				</div>
+			</div>
+
+		</div>	
+
+		<div class="player_triplet">
+			<div class="player_container">
+				<div class="year">2018</div>
+				<div class="fmvp">FMVP</div>
+		  		<img src="img/durant.jpg" alt="Avatar" class="player_image">
+		  		<div class="player_overlay warriors">
+		    		<div class="player_text warriors">
+		    			<div class="name">KEVIN DURANT</div>
+<div class="stats">PPG: 26.4</div>
+<div class="stats">RPG: 6.8</div>
+<div class="stats">APG: 5.4</div>
+<div class="stats">BPG: 1.8</div>
+<div class="stats">SPG: 0.7</div>
+		    		</div>
+		  		</div>
+			</div>
+
+			<div class="player_container">
+		  		<img src="img/curry.jpg" alt="Avatar" class="player_image">
+		  		<div class="player_overlay warriors">
+		    		<div class="player_text warriors">
+		    			<div class="name">STEPHEN CURRY</div>
+<div class="stats">PPG: 26.4</div>
+<div class="stats">RPG: 5.1</div>
+<div class="stats">APG: 6.1</div>
+<div class="stats">BPG: 0.2</div>
+<div class="stats">SPG: 1.6</div>
+		    		</div>
+		  		</div>
+			</div>
+
+			<div class="player_container">
+		  		<img src="img/klay.jpg" alt="Avatar" class="player_image">
+		  		<div class="player_overlay warriors">
+		    		<div class="player_text warriors">
+		    			<div class="name">KLAY THOMPSON</div>
+<div class="stats">PPG: 20.0</div>
+<div class="stats">RPG: 3.8</div>
+<div class="stats">APG: 2.5</div>
+<div class="stats">BPG: 0.5</div>
+<div class="stats">SPG: 0.8</div>
+		    		</div>
+		  		</div>
+			</div>
+
+			<div class="player_container team warriors">
+		  		<img src="img/warriors.png" alt="Avatar" class="player_image team warriors">
+		  		<div class="player_overlay champs warriors">
+		  			<div class="team3">GOLDEN STATE WARRIORS</div> 
+					<div class="score warriors">4  -  0</div>
+					<div class="team2">CLEVELAND CAVALIERS</div>
+		  		</div>
+			</div>
+
+			<div class="champs warriors">
+				<div class="champs_text">
+					<div class="team2">GOLDEN STATE WARRIORS</div> 
+					<div class="score warriors">4  -  0</div>
+					<div class="team2">CLEVELAND CAVALIERS</div>
+				</div>
+			</div>
+
+		</div>	
+
+		<div class="player_triplet">
+
+			<div class="player_container">
+				<div class="year">2017</div>
+		  		<img src="img/curry.jpg" alt="Avatar" class="player_image">
+		  		<div class="player_overlay warriors">
+		    		<div class="player_text warriors">
+		    			<div class="name">STEPHEN CURRY</div>
+<div class="stats">PPG: 25.3</div>
+<div class="stats">RPG: 4.5</div>
+<div class="stats">APG: 6.6</div>
+<div class="stats">BPG: 0.2</div>
+<div class="stats">SPG: 1.8</div>
+		    		</div>
+		  		</div>
+			</div>
+
+			<div class="player_container">
+				<div class="fmvp">FMVP</div>
+		  		<img src="img/durant.jpg" alt="Avatar" class="player_image">
+		  		<div class="player_overlay warriors">
+		    		<div class="player_text warriors">
+		    			<div class="name">KEVIN DURANT</div>
+<div class="stats">PPG: 25.1</div>
+<div class="stats">RPG: 8.3</div>
+<div class="stats">APG: 4.8</div>
+<div class="stats">BPG: 1.6</div>
+<div class="stats">SPG: 1.1</div>
+		    		</div>
+		  		</div>
+			</div>
+
+			<div class="player_container">
+		  		<img src="img/klay.jpg" alt="Avatar" class="player_image">
+		  		<div class="player_overlay warriors">
+		    		<div class="player_text warriors">
+		    			<div class="name">KLAY THOMPSON</div>
+<div class="stats">PPG: 22.3</div>
+<div class="stats">RPG: 3.7</div>
+<div class="stats">APG: 2.1</div>
+<div class="stats">BPG: 0.5</div>
+<div class="stats">SPG: 0.8</div>
+		    		</div>
+		  		</div>
+			</div>
+
+			<div class="player_container team warriors">
+		  		<img src="img/warriors.png" alt="Avatar" class="player_image team warriors">
+		  		<div class="player_overlay champs warriors">
+		  			<div class="team3">GOLDEN STATE WARRIORS</div> 
+					<div class="score warriors">4  -  1</div>
+					<div class="team2">CLEVELAND CAVALIERS</div>
+		  		</div>
+			</div>
+
+			<div class="champs warriors">
+				<div class="champs_text">
+					<div class="team2">GOLDEN STATE WARRIORS</div> 
+					<div class="score warriors">4  -  1</div>
+					<div class="team2">CLEVELAND CAVALIERS</div>
+				</div>
+			</div>
+
+		</div>	
+
+		<div class="player_triplet">
+
+			<div class="player_container">
+				<div class="fmvp">FMVP</div>
+				<div class="year">2016</div>
+		  		<img src="img/lebron2.jpg" alt="Avatar" class="player_image">
+		  		<div class="player_overlay cavs">
+		    		<div class="player_text cavs">
+		    			<div class="name">LEBRON JAMES</div>
+<div class="stats">PPG: 25.3</div>
+<div class="stats">RPG: 7.4</div>
+<div class="stats">APG: 6.8</div>
+<div class="stats">BPG: 0.6</div>
+<div class="stats">SPG: 1.4</div>
+		    		</div>
+		  		</div>
+			</div>
+
+			<div class="player_container">
+		  		<img src="img/kyrie.jpg" alt="Avatar" class="player_image">
+		  		<div class="player_overlay cavs">
+		    		<div class="player_text cavs">
+		    		    	<div class="name">KYRIE IRVING</div>
+<div class="stats">PPG: 19.6</div>
+<div class="stats">RPG: 3.0</div>
+<div class="stats">APG: 4.7</div>
+<div class="stats">BPG: 0.3</div>
+<div class="stats">SPG: 1.1</div>
+		    		</div>
+		  		</div>
+			</div>
+
+			<div class="player_container">
+		  		<img src="img/love.jpg" alt="Avatar" class="player_image">
+		  		<div class="player_overlay cavs">
+		    		<div class="player_text cavs">
+		    			<div class="name">KEVIN LOVE</div>
+<div class="stats">PPG: 16.0</div>
+<div class="stats">RPG: 9.9</div>
+<div class="stats">APG: 2.4</div>
+<div class="stats">BPG: 0.5</div>
+<div class="stats">SPG: 0.8</div>
+		    		</div>
+		  		</div>
+			</div>
+
+			<div class="player_container team cavs">
+		  		<img src="img/cavs2.png" alt="Avatar" class="player_image team cavs">
+		  		<div class="player_overlay champs cavs">
+		  			<div class="team3">CLEVELAND CAVALIERS</div> 
+					<div class="score cavs">4 - 3</div>
+					<div class="team2">GOLDEN STATE WARRIORS</div>
+		  		</div>
+			</div>
+
+			<div class="champs cavs">
+				<div class="champs_text">
+					<div class="team2">CLEVELAND CAVALIERS</div> 
+					<div class="score cavs">4 - 3</div>
+					<div class="team2">GOLDEN STATE WARRIORS</div>
+				</div>
+			</div>
+
+		</div>	
+
+
+		<div class="player_triplet">
+
+			<div class="player_container">
+				<div class="year">2015</div>
+				<div class="mvp">MVP</div>
+		  		<img src="img/curry.jpg" alt="Avatar" class="player_image">
+		  		<div class="player_overlay warriors">
+		    		<div class="player_text warriors">
+		    			<div class="name">STEPHEN CURRY</div>
+<div class="stats">PPG: 23.8</div>
+<div class="stats">RPG: 4.3</div>
+<div class="stats">APG: 7.7</div>
+<div class="stats">BPG: 0.2</div>
+<div class="stats">SPG: 2.0</div>
+		    		</div>
+		  		</div>
+			</div>
+
+			<div class="player_container">
+		  		<img src="img/klay.jpg" alt="Avatar" class="player_image">
+		  		<div class="player_overlay warriors">
+		    		<div class="player_text warriors">
+		    			<div class="name">KLAY THOMPSON</div>
+<div class="stats">PPG: 21.7</div>
+<div class="stats">RPG: 3.2</div>
+<div class="stats">APG: 2.9</div>
+<div class="stats">BPG: 0.8</div>
+<div class="stats">SPG: 1.1</div>
+		    		</div>
+		  		</div>
+			</div>
+
+			<div class="player_container">
+		  		<img src="img/green.jpg" alt="Avatar" class="player_image">
+		  		<div class="player_overlay warriors">
+		    		<div class="player_text warriors">
+		    			<div class="name">DRAYMOND GREEN</div>
+<div class="stats">PPG: 11.7</div>
+<div class="stats">RPG: 8.2</div>
+<div class="stats">APG: 3.7</div>
+<div class="stats">BPG: 1.3</div>
+<div class="stats">SPG: 1.6</div>
+		    		</div>
+		  		</div>
+			</div>
+
+			<div class="player_container team warriors">
+		  		<img src="img/warriors.png" alt="Avatar" class="player_image team warriors">
+		  		<div class="player_overlay champs warriors">
+		  			<div class="team3">GOLDEN STATE WARRIORS</div> 
+					<div class="score warriors">4  -  2</div>
+					<div class="team2">CLEVELAND CAVALIERS</div>
+		  		</div>
+			</div>
+
+			<div class="champs warriors">
+				<div class="champs_text">
+					<div class="team2">GOLDEN STATE WARRIORS</div> 
+					<div class="score warriors">4  -  2</div>
+					<div class="team2">CLEVELAND CAVALIERS</div>
+				</div>
+			</div>
+
+		</div>	
+
+		<div class="player_triplet">
+
+			<div class="player_container">
+				<div class="year">2014</div>
+		  		<img src="img/parker.jpg" alt="Avatar" class="player_image">
+		  		<div class="player_overlay spurs">
+		    		<div class="player_text spurs">
+		    			<div class="name">TONY PARKER</div>
+<div class="stats">PPG: 16.7</div>
+<div class="stats">RPG: 2.3</div>
+<div class="stats">APG: 5.7</div>
+<div class="stats">BPG: 0.1</div>
+<div class="stats">SPG: 0.5</div>
+		    		</div>
+		  		</div>
+			</div>
+
+			<div class="player_container">
+		  		<img src="img/duncan.jpg" alt="Avatar" class="player_image">
+		  		<div class="player_overlay spurs">
+		    		<div class="player_text spurs">
+		    			<div class="name">TIM DUNCAN</div>
+<div class="stats">PPG: 15.1</div>
+<div class="stats">RPG: 9.7</div>
+<div class="stats">APG: 3.0</div>
+<div class="stats">BPG: 1.9</div>
+<div class="stats">SPG: 0.6</div>
+		    		</div>
+		  		</div>
+			</div>
+
+			<div class="player_container">
+				<div class="fmvp">FMVP</div>
+		  		<img src="img/kawhi.jpg" alt="Avatar" class="player_image">
+		  		<div class="player_overlay spurs">
+		    		<div class="player_text spurs">
+		    			<div class="name">KAWHI LEONARD</div>
+<div class="stats">PPG: 12.8</div>
+<div class="stats">RPG: 6.2</div>
+<div class="stats">APG: 2.0</div>
+<div class="stats">BPG: 0.8</div>
+<div class="stats">SPG: 1.7</div>
+		    		</div>
+		  		</div>
+			</div>
+
+			<div class="player_container team spurs">
+		  		<img src="img/spurs.png" alt="Avatar" class="player_image team spurs">
+		  		<div class="player_overlay champs spurs">
+		  			<div class="team3">SAN ANTONIO SPURS</div> 
+					<div class="score spurs">4  -  1</div>
+					<div class="team2">MIAMI HEAT</div>
+		  		</div>
+			</div>
+
+			<div class="champs spurs">
+				<div class="champs_text">
+					<div class="team2">SAN ANTONIO SPURS</div> 
+					<div class="score spurs">4  -  1</div>
+					<div class="team2">MIAMI HEAT</div>
+				</div>
+			</div>
+
+		</div>	
+
+		<div class="player_triplet">
+	    	<div class="player_container">
+	    		<div class="year">2013</div>
+	    		<div class="mvp">MVP</div>
+	    		<div class="fmvp">FMVP</div>
+		  		<img src="img/lebron.jpg" alt="Avatar" class="player_image">
+		  		<div class="player_overlay heat">
+		    		<div class="player_text heat">
+		    			<div class="name">LEBRON JAMES</div>
+<div class="stats">PPG: 26.8</div>
+<div class="stats">RPG: 8.0</div>
+<div class="stats">APG: 7.3</div>
+<div class="stats">BPG: 0.9</div>
+<div class="stats">SPG: 1.7</div>
+		    		</div>
+		  		</div>
+			</div>
+
+			<div class="player_container">
+		  		<img src="img/wade.jpg" alt="Avatar" class="player_image">
+		  		<div class="player_overlay heat">
+		    		<div class="player_text heat">
+		    			<div class="name">DWYANE WADE</div>
+<div class="stats">PPG: 21.2</div>
+<div class="stats">RPG: 5.0</div>
+<div class="stats">APG: 5.1</div>
+<div class="stats">BPG: 0.8</div>
+<div class="stats">SPG: 1.9</div>
+		    		</div>
+		  		</div>
+			</div>
+
+			<div class="player_container">
+		  		<img src="img/bosh.jpg" alt="Avatar" class="player_image">
+		  		<div class="player_overlay heat">
+		    		<div class="player_text heat">
+		    			<div class="name">CHRIS BOSH</div>
+<div class="stats">PPG: 16.6</div>
+<div class="stats">RPG: 6.8</div>
+<div class="stats">APG: 1.7</div>
+<div class="stats">BPG: 1.4</div>
+<div class="stats">SPG: 0.9</div>
+		    		</div>
+		  		</div>
+			</div>
+
+			<div class="player_container team heat">
+		  		<img src="img/heat.png" alt="Avatar" class="player_image team heat">
+		  		<div class="player_overlay champs heat">
+		  			<div class="team3">MIAMI HEAT</div> 
+					<div class="score heat">4  -  3</div>
+					<div class="team2">SAN ANTONIO SPURS</div>
+		  		</div>
+			</div>
+
+			<div class="champs heat">
+				<div class="champs_text">
+					<div class="team2">MIAMI HEAT</div> 
+					<div class="score heat">4  -  3</div>
+					<div class="team2">SAN ANTONIO SPURS</div>
+				</div>
+			</div>
+
+		</div>	
+
+		<div class="player_triplet">
+
+	    	<div class="player_container">
+	    		<div class="year">2012</div>
+	    		<div class="mvp">MVP</div>
+	    		<div class="fmvp">FMVP</div>
+		  		<img src="img/lebron.jpg" alt="Avatar" class="player_image">
+		  		<div class="player_overlay heat">
+		    		<div class="player_text heat">
+		    			<div class="name">LEBRON JAMES</div>
+<div class="stats">PPG: 27.1</div>
+<div class="stats">RPG: 7.9</div>
+<div class="stats">APG: 6.2</div>
+<div class="stats">BPG: 0.8</div>
+<div class="stats">SPG: 1.9</div>
+		    		</div>
+		  		</div>
+			</div>
+
+			<div class="player_container">
+		  		<img src="img/wade.jpg" alt="Avatar" class="player_image">
+		  		<div class="player_overlay heat">
+		    		<div class="player_text heat">
+		    			<div class="name">DWYANE WADE</div>
+<div class="stats">PPG: 22.1</div>
+<div class="stats">RPG: 4.8</div>
+<div class="stats">APG: 4.6</div>
+<div class="stats">BPG: 1.3</div>
+<div class="stats">SPG: 1.7</div>
+		    		</div>
+		  		</div>
+			</div>
+
+			<div class="player_container">
+		  		<img src="img/bosh.jpg" alt="Avatar" class="player_image">
+		  		<div class="player_overlay heat">
+		    		<div class="player_text heat">
+		    			<div class="name">CHRIS BOSH</div>
+<div class="stats">PPG: 18.0</div>
+<div class="stats">RPG: 7.9</div>
+<div class="stats">APG: 1.8</div>
+<div class="stats">BPG: 0.8</div>
+<div class="stats">SPG: 0.9</div>
+		    		</div>
+		  		</div>
+			</div>
+
+			<div class="player_container team heat">
+		  		<img src="img/heat.png" alt="Avatar" class="player_image team heat">
+		  		<div class="player_overlay champs heat">
+		  			<div class="team3">MIAMI HEAT</div> 
+					<div class="score heat">4  -  1</div>
+					<div class="team2">OKLAHOMA CITY THUNDER</div>
+		  		</div>
+			</div>
+
+			<div class="champs heat">
+				<div class="champs_text">
+					<div class="team2">MIAMI HEAT</div> 
+					<div class="score heat">4  -  1</div>
+					<div class="team2">OKLAHOMA CITY THUNDER</div>
+				</div>
+			</div>
+
+		</div>	
+
+		<div class="player_triplet">
+
+	    	<div class="player_container">
+	    		<div class="fmvp">FMVP</div>
+	    		<div class="year">2011</div>
+		  		<img src="img/dirk.jpg" alt="Avatar" class="player_image">
+		  		<div class="player_overlay mavs">
+		    		<div class="player_text mavs">
+		    			<div class="name">DIRK NOWITZKI</div>
+<div class="stats">PPG: 23.0</div>
+<div class="stats">RPG: 7.0</div>
+<div class="stats">APG: 2.6</div>
+<div class="stats">BPG: 0.6</div>
+<div class="stats">SPG: 0.5</div>
+		    		</div>
+		  		</div>
+			</div>
+
+			<div class="player_container">
+		  		<img src="img/terry.jpg" alt="Avatar" class="player_image">
+		  		<div class="player_overlay mavs">
+		    		<div class="player_text mavs">
+		    			<div class="name">JASON TERRY</div>
+<div class="stats">PPG: 15.8</div>
+<div class="stats">RPG: 1.9</div>
+<div class="stats">APG: 4.1</div>
+<div class="stats">BPG: 0.2</div>
+<div class="stats">SPG: 1.1</div>
+		    		</div>
+		  		</div>
+			</div>
+
+			<div class="player_container">
+		  		<img src="img/butler.jpg" alt="Avatar" class="player_image">
+		  		<div class="player_overlay mavs">
+		    		<div class="player_text mavs">
+		    			<div class="name">CARON BUTLER</div>
+<div class="stats">PPG: 15.0</div>
+<div class="stats">RPG: 4.1</div>
+<div class="stats">APG: 1.6</div>
+<div class="stats">BPG: 0.3</div>
+<div class="stats">SPG: 1.0</div>
+		    		</div>
+		  		</div>
+			</div>
+
+			<div class="player_container team mavs">
+		  		<img src="img/mavs.png" alt="Avatar" class="player_image team mavs">
+		  		<div class="player_overlay champs mavs">
+		  			<div class="team3">DALLAS MAVERICKS</div> 
+					<div class="score heat">4  -  2</div>
+					<div class="team2">MIAMI HEAT</div>
+		  		</div>
+			</div>
+
+			<div class="champs mavs">
+				<div class="champs_text">
+					<div class="team2">DALLAS MAVERICKS</div> 
+					<div class="score mavs">4  -  2</div>
+					<div class="team2">MIAMI HEAT</div>
+				</div>
+			</div>
+
+		</div>	
+
+
+		<div class="player_triplet">
+	    	<div class="player_container">
+	    		<div class="fmvp">FMVP</div>
+	    		<div class="year">2010</div>
+		  		<img src="img/kobe.jpg" alt="Avatar" class="player_image">
+		  		<div class="player_overlay lakers">
+		    		<div class="player_text lakers">
+		    			<div class="name">KOBE BRYANT</div>
+<div class="stats">PPG: 27.0</div>
+<div class="stats">RPG: 5.4</div>
+<div class="stats">APG: 5.0</div>
+<div class="stats">BPG: 0.3</div>
+<div class="stats">SPG: 1.5</div>
+		    		</div>
+		  		</div>
+			</div>
+
+			<div class="player_container">
+		  		<img src="img/gasol.jpg" alt="Avatar" class="player_image">
+		  		<div class="player_overlay lakers">
+		    		<div class="player_text lakers">
+		    			<div class="name">PAU GASOL</div>
+<div class="stats">PPG: 18.3</div>
+<div class="stats">RPG: 11.3</div>
+<div class="stats">APG: 3.4</div>
+<div class="stats">BPG: 1.7</div>
+<div class="stats">SPG: 0.6</div>
+		    		</div>
+		  		</div>
+			</div>
+
+			<div class="player_container">
+		  		<img src="img/bynum.jpg" alt="Avatar" class="player_image">
+		  		<div class="player_overlay lakers">
+		    		<div class="player_text lakers">
+		    			<div class="name">ANDREW BYNUM</div>
+<div class="stats">PPG: 15.0</div>
+<div class="stats">RPG: 8.3</div>
+<div class="stats">APG: 1.0</div>
+<div class="stats">BPG: 1.4</div>
+<div class="stats">SPG: 0.5</div>
+		    		</div>
+		  		</div>
+			</div>
+
+			<div class="player_container team lakers">
+		  		<img src="img/lakers.png" alt="Avatar" class="player_image team lakers">
+		  		<div class="player_overlay champs lakers">
+		  			<div class="team3">LOS ANGELES LAKERS</div> 
+					<div class="score heat">4  -  3</div>
+					<div class="team2">BOSTON CELTICS</div>
+		  		</div>
+			</div>
+
+			<div class="champs lakers">
+				<div class="champs_text">
+					<div class="team2">LOS ANGELES LAKERS</div> 
+					<div class="score lakers">4  -  3</div>
+					<div class="team2">BOSTON CELTICS</div>
+				</div>
+			</div>
+
+		</div>	
+	</div>
+
+	</div>
+
+	<div class="decade">
+		<h2> THE 00's  -  THE LAKERS / SPURS DYNASTY DECADE</h2>
+	</div>
+	<div class="center2">
+	<div class="center">
+
+		<div class="player_triplet">
+	    	<div class="player_container">
+	    		<div class="fmvp">FMVP</div>
+	    		<div class="year">2009</div>
+		  		<img src="img/kobe.jpg" alt="Avatar" class="player_image">
+		  		<div class="player_overlay lakers">
+		    		<div class="player_text lakers">
+		    			<div class="name">KOBE BRYANT</div>
+<div class="stats">PPG: 26.8</div>
+<div class="stats">RPG: 5.2</div>
+<div class="stats">APG: 4.9</div>
+<div class="stats">BPG: 0.5</div>
+<div class="stats">SPG: 1.5</div>
+		    		</div>
+		  		</div>
+			</div>
+
+			<div class="player_container">
+		  		<img src="img/gasol.jpg" alt="Avatar" class="player_image">
+		  		<div class="player_overlay lakers">
+		    		<div class="player_text lakers">
+		    			<div class="name">PAU GASOL</div>
+<div class="stats">PPG: 18.9</div>
+<div class="stats">RPG: 9.6</div>
+<div class="stats">APG: 3.5</div>
+<div class="stats">BPG: 1.0</div>
+<div class="stats">SPG: 0.6</div>
+		    		</div>
+		  		</div>
+			</div>
+
+			<div class="player_container">
+		  		<img src="img/bynum.jpg" alt="Avatar" class="player_image">
+		  		<div class="player_overlay lakers">
+		    		<div class="player_text lakers">
+		    			<div class="name">ANDREW BYNUM</div>
+<div class="stats">PPG: 14.3</div>
+<div class="stats">RPG: 8.0</div>
+<div class="stats">APG: 1.4</div>
+<div class="stats">BPG: 1.8</div>
+<div class="stats">SPG: 0.4</div>
+		    		</div>
+		  		</div>
+			</div>
+
+			<div class="player_container team lakers">
+		  		<img src="img/lakers.png" alt="Avatar" class="player_image team lakers">
+		  		<div class="player_overlay champs lakers">
+		  			<div class="team3">LOS ANGELES LAKERS</div> 
+					<div class="score heat">4  -  1</div>
+					<div class="team2">ORLANDO MAGIC</div>
+		  		</div>
+			</div>
+
+			<div class="champs lakers">
+				<div class="champs_text">
+					<div class="team2">LOS ANGELES LAKERS</div> 
+					<div class="score lakers">4 - 1</div>
+					<div class="team2">ORLANDO MAGIC</div>
+				</div>
+			</div>
+
+		</div>	
+
+		<div class="player_triplet">
+	    	<div class="player_container">
+	    		<div class="fmvp">FMVP</div>
+	    		<div class="year">2008</div>
+		  		<img src="img/pierce.jpg" alt="Avatar" class="player_image">
+		  		<div class="player_overlay celtics">
+		    		<div class="player_text celtics">
+		    			<div class="name">PAUL PIERCE</div>
+<div class="stats">PPG: 19.6</div>
+<div class="stats">RPG: 5.1</div>
+<div class="stats">APG: 4.5</div>
+<div class="stats">BPG: 0.5</div>
+<div class="stats">SPG: 1.3</div>
+		    		</div>
+		  		</div>
+			</div>
+
+			<div class="player_container">
+		  		<img src="img/garnett.jpg" alt="Avatar" class="player_image">
+		  		<div class="player_overlay celtics">
+		    		<div class="player_text celtics">
+		    			<div class="name">KEVIN GARNETT</div>
+<div class="stats">PPG: 18.8</div>
+<div class="stats">RPG: 9.2</div>
+<div class="stats">APG: 3.4</div>
+<div class="stats">BPG: 1.3</div>
+<div class="stats">SPG: 1.4</div>
+		    		</div>
+		  		</div>
+			</div>
+
+			<div class="player_container">
+		  		<img src="img/allen.jpg" alt="Avatar" class="player_image">
+		  		<div class="player_overlay celtics">
+		    		<div class="player_text celtics">
+		    			<div class="name">RAY ALLEN</div>
+<div class="stats">PPG: 17.4</div>
+<div class="stats">RPG: 3.7</div>
+<div class="stats">APG: 3.1</div>
+<div class="stats">BPG: 0.2</div>
+<div class="stats">SPG: 0.9</div>
+		    		</div>
+		  		</div>
+			</div>
+
+			<div class="player_container team celtics">
+		  		<img src="img/celtics.png" alt="Avatar" class="player_image team celtics">
+		  		<div class="player_overlay champs celtics">
+		  			<div class="team3">BOSTON CELTICS</div> 
+					<div class="score heat">4  -  2</div>
+					<div class="team2">LOS ANGELES LAKERS</div>
+		  		</div>
+			</div>
+
+			<div class="champs celtics">
+				<div class="champs_text">
+					<div class="team2">BOSTON CELTICS</div> 
+					<div class="score celtics">4 - 2</div>
+					<div class="team2">LOS ANGELES LAKERS</div>
+				</div>
+			</div>
+
+		</div>	
+
+
+		
+
+		<div class="player_triplet">
+	    	<div class="player_container">
+	    		<div class="year">2007</div>
+		  		<img src="img/duncan.jpg" alt="Avatar" class="player_image">
+		  		<div class="player_overlay spurs">
+		    		<div class="player_text spurs">
+		    			<div class="name">TIM DUNCAN</div>
+<div class="stats">PPG: 20.0</div>
+<div class="stats">RPG: 10.6</div>
+<div class="stats">APG: 3.4</div>
+<div class="stats">BPG: 2.4</div>
+<div class="stats">SPG: 0.8</div>
+		    		</div>
+		  		</div>
+			</div>
+
+			<div class="player_container">
+			    <div class="fmvp">FMVP</div>
+		  		<img src="img/parker.jpg" alt="Avatar" class="player_image">
+		  		<div class="player_overlay spurs">
+		    		<div class="player_text spurs">
+		    			<div class="name">TONY PARKER</div>
+<div class="stats">PPG: 18.6</div>
+<div class="stats">RPG: 3.2</div>
+<div class="stats">APG: 5.5</div>
+<div class="stats">BPG: 0.1</div>
+<div class="stats">SPG: 1.1</div>
+		    		</div>
+		  		</div>
+			</div>
+
+			<div class="player_container">
+		  		<img src="img/manu.jpg" alt="Avatar" class="player_image">
+		  		<div class="player_overlay spurs">
+		    		<div class="player_text spurs">
+		    			<div class="name">MANU GINOBILI</div>
+<div class="stats">PPG: 16.5</div>
+<div class="stats">RPG: 4.4</div>
+<div class="stats">APG: 3.5</div>
+<div class="stats">BPG: 0.4</div>
+<div class="stats">SPG: 1.5</div>
+		    		</div>
+		  		</div>
+			</div>
+
+			<div class="player_container team spurs">
+		  		<img src="img/spurs.png" alt="Avatar" class="player_image team spurs">
+		  		<div class="player_overlay champs spurs">
+		  			<div class="team3">SAN ANTONIO SPURS</div> 
+					<div class="score spurs">4 - 0</div>
+					<div class="team2">CLEVELAND CAVALIERS</div>
+		  		</div>
+		  		
+			</div>
+
+			<div class="champs spurs">
+				<div class="champs_text">
+					<div class="team2">SAN ANTONIO SPURS</div> 
+					<div class="score spurs">4 - 0</div>
+					<div class="team2">CLEVELAND CAVALIERS</div>
+				</div>
+			</div>
+
+		</div>	
+
+		<div class="player_triplet">
+	    	<div class="player_container">
+	    	    <div class="fmvp">FMVP</div>
+	    		<div class="year">2006</div>
+		  		<img src="img/wade.jpg" alt="Avatar" class="player_image">
+		  		<div class="player_overlay heat">
+		    		<div class="player_text heat">
+		    			<div class="name">DWYANE WADE</div>
+<div class="stats">PPG: 27.2</div>
+<div class="stats">RPG: 5.7</div>
+<div class="stats">APG: 6.7</div>
+<div class="stats">BPG: 0.8</div>
+<div class="stats">SPG: 1.9</div>
+		    		</div>
+		  		</div>
+			</div>
+
+			<div class="player_container">
+				<div class="rule2">HAND CHECKING BANNED</div>
+		  		<img src="img/shaq2.jpg" alt="Avatar" class="player_image">
+		  		<div class="player_overlay heat">
+		    		<div class="player_text heat">
+		    			<div class="name">SHAQUILLE O'NEAL</div>
+<div class="stats">PPG: 20.0</div>
+<div class="stats">RPG: 9.2</div>
+<div class="stats">APG: 1.9</div>
+<div class="stats">BPG: 1.8</div>
+<div class="stats">SPG: 0.4</div>
+		    		</div>
+		  		</div>
+			</div>
+
+			<div class="player_container">
+		  		<img src="img/williams.jpg" alt="Avatar" class="player_image">
+		  		<div class="player_overlay heat">
+		    		<div class="player_text heat">
+		    			<div class="name">JASON WILLIAMS</div>
+		    			<div class="stats">PPG: 12.3</div>
+		    			<div class="stats">RPG: 2.4</div>
+		    			<div class="stats">APG: 4.9</div>
+		    			<div class="stats">BPG: .1</div>
+		    			<div class="stats">SPG: .9</div>
+		    		</div>
+		  		</div>
+			</div>
+
+			<div class="player_container team heat">
+		  		<img src="img/heat.png" alt="Avatar" class="player_image team heat">
+		  		<div class="player_overlay champs heat">
+		  			<div class="team3">MIAMI HEAT</div> 
+					<div class="score heat">4 - 2</div>
+					<div class="team2">DALLAS MAVERICKS</div>
+		  		</div>
+			</div>
+
+			<div class="champs heat">
+				<div class="champs_text">
+					<div class="team2">MIAMI HEAT</div> 
+					<div class="score heat">4 - 2</div>
+					<div class="team2">DALLAS MAVERICKS</div>
+				</div>
+			</div>
+
+		</div>	
+
+		<div class="player_triplet">
+	    	<div class="player_container">
+	    	    <div class="fmvp">FMVP</div>
+	    		<div class="year">2005</div>
+		  		<img src="img/duncan.jpg" alt="Avatar" class="player_image">
+		  		<div class="player_overlay spurs">
+		    		<div class="player_text spurs">
+		    			<div class="name">TIM DUNCAN</div>
+<div class="stats">PPG: 20.3</div>
+<div class="stats">RPG: 11.1</div>
+<div class="stats">APG: 2.7</div>
+<div class="stats">BPG: 2.6</div>
+<div class="stats">SPG: 0.7</div>
+		    		</div>
+		  		</div>
+			</div>
+
+			<div class="player_container">
+		  		<img src="img/parker.jpg" alt="Avatar" class="player_image">
+		  		<div class="player_overlay spurs">
+		    		<div class="player_text spurs">
+		    			<div class="name">TONY PARKER</div>
+<div class="stats">PPG: 16.6</div>
+<div class="stats">RPG: 3.7</div>
+<div class="stats">APG: 6.1</div>
+<div class="stats">BPG: 0.1</div>
+<div class="stats">SPG: 1.2</div>
+		    		</div>
+		  		</div>
+			</div>
+
+			<div class="player_container">
+		  		<img src="img/manu.jpg" alt="Avatar" class="player_image">
+		  		<div class="player_overlay spurs">
+		    		<div class="player_text spurs">
+		    			<div class="name">MANU GINOBILI</div>
+<div class="stats">PPG: 16.0</div>
+<div class="stats">RPG: 4.4</div>
+<div class="stats">APG: 3.9</div>
+<div class="stats">BPG: 0.4</div>
+<div class="stats">SPG: 1.6</div>
+		    		</div>
+		  		</div>
+			</div>
+
+			<div class="player_container team spurs">
+		  		<img src="img/spurs.png" alt="Avatar" class="player_image team spurs">
+		  		<div class="player_overlay champs spurs">
+		  		    <div class="team3">SAN ANTONIO SPURS</div> 
+					<div class="score spurs">4 - 3</div>
+					<div class="team2">DETROIT PISTONS</div>
+		  		</div>
+			</div>
+
+			<div class="champs spurs">
+				<div class="rule">HAND CHECKING BANNED</div>
+				<div class="champs_text">
+					<div class="team2">SAN ANTONIO SPURS</div> 
+					<div class="score spurs">4 - 3</div>
+					<div class="team2">DETROIT PISTONS</div>
+				</div>
+			</div>
+
+		</div>	
+
+		<div class="player_triplet">
+	    	<div class="player_container">
+	    		<div class="year">2004</div>
+		  		<img src="img/hamilton.jpg" alt="Avatar" class="player_image">
+		  		<div class="player_overlay pistons">
+		    		<div class="player_text pistons">
+		    			<div class="name">RICHARD HAMILTON</div>
+<div class="stats">PPG: 17.6</div>
+<div class="stats">RPG: 3.6</div>
+<div class="stats">APG: 4.0</div>
+<div class="stats">BPG: 0.2</div>
+<div class="stats">SPG: 1.3</div>
+		    		</div>
+		  		</div>
+			</div>
+
+			<div class="player_container">
+			    <div class="fmvp">FMVP</div>
+		  		<img src="img/billups.jpg" alt="Avatar" class="player_image">
+		  		<div class="player_overlay pistons">
+		    		<div class="player_text pistons">
+		    			<div class="name">CHAUNCEY BILLUPS</div>
+<div class="stats">PPG: 16.9</div>
+<div class="stats">RPG: 3.5</div>
+<div class="stats">APG: 5.7</div>
+<div class="stats">BPG: 0.1</div>
+<div class="stats">SPG: 1.1</div>
+		    		</div>
+		  		</div>
+			</div>
+
+			<div class="player_container">
+		  		<img src="img/wallace.jpg" alt="Avatar" class="player_image">
+		  		<div class="player_overlay pistons">
+		    		<div class="player_text pistons">
+		    			<div class="name">BEN WALLACE</div>
+<div class="stats">PPG: 9.5</div>
+<div class="stats">RPG: 12.4</div>
+<div class="stats">APG: 1.7</div>
+<div class="stats">BPG: 3.0</div>
+<div class="stats">SPG: 1.8</div>
+		    		</div>
+		  		</div>
+			</div>
+
+			<div class="player_container team pistons">
+		  		<img src="img/pistons.png" alt="Avatar" class="player_image team pistons">
+		  		<div class="player_overlay champs pistons">
+		  		    <div class="team3">DETROIT PISTONS</div> 
+					<div class="score pistons">4 - 1</div>
+					<div class="team2">LOS ANGELES LAKERS</div>
+		  		</div>
+			</div>
+
+			<div class="champs pistons">
+				<div class="champs_text">
+					<div class="team2">DETROIT PISTONS</div> 
+					<div class="score pistons">4 - 1</div>
+					<div class="team2">LOS ANGELES LAKERS</div>
+				</div>
+			</div>
+
+		</div>
+
+		<div class="player_triplet">
+	    	<div class="player_container">
+	    	    <div class="fmvp">FMVP</div>
+	    		<div class="year">2003</div>
+	    		<div class="mvp">MVP</div>
+		  		<img src="img/duncan.jpg" alt="Avatar" class="player_image">
+		  		<div class="player_overlay spurs">
+		    		<div class="player_text spurs">
+		    			<div class="name">TIM DUNCAN</div>
+<div class="stats">PPG: 23.3</div>
+<div class="stats">RPG: 12.9</div>
+<div class="stats">APG: 3.9</div>
+<div class="stats">BPG: 2.9</div>
+<div class="stats">SPG: 0.7</div>
+		    		</div>
+		  		</div>
+			</div>
+
+			<div class="player_container">
+		  		<img src="img/parker.jpg" alt="Avatar" class="player_image">
+		  		<div class="player_overlay spurs">
+		    		<div class="player_text spurs">
+		    			<div class="name">TONY PARKER</div>
+		    			<div class="stats">PPG: 15.5</div>
+		    			<div class="stats">RPG: 2.6</div>
+		    			<div class="stats">APG: 5.3</div>
+		    			<div class="stats">BPG: .0</div>
+		    			<div class="stats">SPG: .9</div>
+		    		</div>
+		  		</div>
+			</div>
+
+			<div class="player_container">
+		  		<img src="img/jackson.jpg" alt="Avatar" class="player_image">
+		  		<div class="player_overlay spurs">
+		    		<div class="player_text spurs">
+		    			<div class="name">STEPHEN JACKSON</div>
+		    			<div class="stats">PPG: 11.8</div>
+		    			<div class="stats">RPG: 3.6</div>
+		    			<div class="stats">APG: 2.3</div>
+		    			<div class="stats">BPG: .4</div>
+		    			<div class="stats">SPG: 1.6</div>
+		    		</div>
+		  		</div>
+			</div>
+
+			<div class="player_container team spurs">
+		  		<img src="img/spurs.png" alt="Avatar" class="player_image team spurs">
+		  		<div class="player_overlay champs spurs">
+		  		    <div class="team3">SAN ANTONIO SPURS</div> 
+					<div class="score spurs">4 - 2</div>
+					<div class="team2">NEW JERSEY NETS</div>
+		  		</div>
+		  		
+			</div>
+
+			<div class="champs spurs">
+				<div class="champs_text">
+					<div class="team2">SAN ANTONIO SPURS</div> 
+					<div class="score spurs">4 - 2</div>
+					<div class="team2">NEW JERSEY NETS</div>
+				</div>
+			</div>
+
+		</div>	
+
+		<div class="player_triplet">
+	    	<div class="player_container">
+	    	    <div class="fmvp">FMVP</div>
+	    		<div class="year">2002</div>
+		  		<img src="img/shaq.jpg" alt="Avatar" class="player_image">
+		  		<div class="player_overlay lakers">
+		    		<div class="player_text lakers">
+		    			<div class="name">SHAQUILLE O'NEAL</div>
+		    			<div class="stats">PPG: 27.2</div>
+		    			<div class="stats">RPG: 10.7</div>
+		    			<div class="stats">APG: 3.0</div>
+		    			<div class="stats">BPG: 2.0</div>
+		    			<div class="stats">SPG: .6</div>
+		    		</div>
+		  		</div>
+			</div>
+
+			<div class="player_container">
+				<div class="rule2">ILLEGAL DEFENSE REFORMS</div>
+		  		<img src="img/kobe.jpg" alt="Avatar" class="player_image">
+		  		<div class="player_overlay lakers">
+		    		<div class="player_text lakers">
+		    			<div class="name">KOBE BRYANT</div>
+<div class="stats">PPG: 25.2</div>
+<div class="stats">RPG: 5.5</div>
+<div class="stats">APG: 5.5</div>
+<div class="stats">BPG: 0.4</div>
+<div class="stats">SPG: 1.5</div>
+		    		</div>
+		  		</div>
+			</div>
+
+			<div class="player_container">
+		  		<img src="img/fisher.jpg" alt="Avatar" class="player_image">
+		  		<div class="player_overlay lakers">
+		    		<div class="player_text lakers">
+		    			<div class="name">DEREK FISHER</div>
+<div class="stats">PPG: 11.2</div>
+<div class="stats">RPG: 2.1</div>
+<div class="stats">APG: 2.6</div>
+<div class="stats">BPG: 0.1</div>
+<div class="stats">SPG: 0.9</div>
+		    		</div>
+		  		</div>
+			</div>
+
+			<div class="player_container team lakers">
+		  		<img src="img/lakers.png" alt="Avatar" class="player_image team lakers">
+		  		<div class="player_overlay champs lakers">
+		  		    <div class="team3">LOS ANGELES LAKERS</div> 
+					<div class="score lakers">4 - 0</div>
+					<div class="team2">NEW JERSEY NETS</div>
+		  		</div>
+		  		
+			</div>
+
+			<div class="champs lakers">
+				<div class="rule">ILLEGAL DEFENSE REFORMS</div>
+				<div class="champs_text">
+					<div class="team2">LOS ANGELES LAKERS</div> 
+					<div class="score lakers">4 - 0</div>
+					<div class="team2">NEW JERSEY NETS</div>
+				</div>
+			</div>
+
+		</div>	
+
+
+		<div class="player_triplet">
+	    	<div class="player_container">
+	    	    <div class="fmvp">FMVP</div>
+	    		<div class="year">2001</div>
+		  		<img src="img/shaq.jpg" alt="Avatar" class="player_image">
+		  		<div class="player_overlay lakers">
+		    		<div class="player_text lakers">
+		    			<div class="name">SHAQUILLE O'NEAL</div>
+<div class="stats">PPG: 28.7</div>
+<div class="stats">RPG: 12.7</div>
+<div class="stats">APG: 3.7</div>
+<div class="stats">BPG: 2.8</div>
+<div class="stats">SPG: 0.6</div>
+		    		</div>
+		  		</div>
+			</div>
+
+			<div class="player_container">
+		  		<img src="img/kobe.jpg" alt="Avatar" class="player_image">
+		  		<div class="player_overlay lakers">
+		    		<div class="player_text lakers">
+		    			<div class="name">KOBE BRYANT</div>
+<div class="stats">PPG: 28.5</div>
+<div class="stats">RPG: 5.9</div>
+<div class="stats">APG: 5.0</div>
+<div class="stats">BPG: 0.6</div>
+<div class="stats">SPG: 1.7</div>
+		    		</div>
+		  		</div>
+			</div>
+
+			<div class="player_container">
+		  		<img src="img/fisher.jpg" alt="Avatar" class="player_image">
+		  		<div class="player_overlay lakers">
+		    		<div class="player_text lakers">
+		    			<div class="name">DEREK FISHER</div>
+<div class="stats">PPG: 11.5</div>
+<div class="stats">RPG: 3.0</div>
+<div class="stats">APG: 4.4</div>
+<div class="stats">BPG: 0.1</div>
+<div class="stats">SPG: 2.0</div>
+		    		</div>
+		  		</div>
+			</div>
+
+			<div class="player_container team lakers">
+		  		<img src="img/lakers.png" alt="Avatar" class="player_image team lakers">
+		  		<div class="player_overlay champs lakers">
+		  		   <div class="team3">LOS ANGELES LAKERS</div> 
+					<div class="score lakers">4 - 1</div>
+					<div class="team2">PHILADELPHIA 76ERS</div>
+		  		</div>
+			</div>
+
+			<div class="champs lakers">
+				<div class="champs_text">
+					<div class="team2">LOS ANGELES LAKERS</div> 
+					<div class="score lakers">4 - 1</div>
+					<div class="team2">PHILADELPHIA 76ERS</div>
+				</div>
+			</div>
+
+		</div>	
+
+		<div class="player_triplet">
+	    	<div class="player_container">
+	    	    <div class="fmvp">FMVP</div>
+	    		<div class="year">2000</div>
+	    		<div class="mvp">MVP</div>
+		  		<img src="img/shaq.jpg" alt="Avatar" class="player_image">
+		  		<div class="player_overlay lakers">
+		    		<div class="player_text lakers">
+		    			<div class="name">SHAQUILLE O'NEAL</div>
+<div class="stats">PPG: 29.7</div>
+<div class="stats">RPG: 13.6</div>
+<div class="stats">APG: 3.8</div>
+<div class="stats">BPG: 3.0</div>
+<div class="stats">SPG: 0.5</div>
+		    		</div>
+		  		</div>
+			</div>
+
+			<div class="player_container">
+		  		<img src="img/kobe.jpg" alt="Avatar" class="player_image">
+		  		<div class="player_overlay lakers">
+		    		<div class="player_text lakers">
+		    			<div class="name">KOBE BRYANT</div>
+<div class="stats">PPG: 22.5</div>
+<div class="stats">RPG: 6.3</div>
+<div class="stats">APG: 4.9</div>
+<div class="stats">BPG: 0.9</div>
+<div class="stats">SPG: 1.6</div>
+		    		</div>
+		  		</div>
+			</div>
+
+			<div class="player_container">
+		  		<img src="img/rice.jpg" alt="Avatar" class="player_image">
+		  		<div class="player_overlay lakers">
+		    		<div class="player_text lakers">
+		    			<div class="name">GLEN RICE</div>
+<div class="stats">PPG: 15.9</div>
+<div class="stats">RPG: 4.1</div>
+<div class="stats">APG: 2.2</div>
+<div class="stats">BPG: 0.2</div>
+<div class="stats">SPG: 0.6</div>
+		    		</div>
+		  		</div>
+			</div>
+
+			<div class="player_container team lakers">
+		  		<img src="img/lakers.png" alt="Avatar" class="player_image team lakers">
+		  		<div class="player_overlay champs lakers">
+		  		   <div class="team3">LOS ANGELES LAKERS</div> 
+					<div class="score lakers">4 - 2</div>
+					<div class="team2">INDIANA PACERS</div>
+		  		</div>
+		  		
+			</div>
+
+			<div class="champs lakers">
+				<div class="champs_text">
+					<div class="team2">LOS ANGELES LAKERS</div> 
+					<div class="score lakers">4 - 2</div>
+					<div class="team2">INDIANA PACERS</div>
+				</div>
+			</div>
+
+		</div>	
+
+	</div>
+</div>
+	  <div class="decade">
+    	<h2> THE 90's  -  THE MICHAEL JORDAN DECADE</h2>
+    </div>
+    <div class="center2">
+    <div class="center">
+
+		<div class="player_triplet">
+	    	<div class="player_container">
+	    	    <div class="fmvp">FMVP</div>
+	    		<div class="year">1999</div>
+		  		<img src="img/duncan.jpg" alt="Avatar" class="player_image">
+		  		<div class="player_overlay spurs">
+		    		<div class="player_text spurs">
+		    			<div class="name">TIM DUNCAN</div>
+<div class="stats">PPG: 21.7</div>
+<div class="stats">RPG: 11.4</div>
+<div class="stats">APG: 2.4</div>
+<div class="stats">BPG: 2.5</div>
+<div class="stats">SPG: 0.9</div>
+		    		</div>
+		  		</div>
+			</div>
+
+			<div class="player_container">
+		  		<img src="img/robinson.jpg" alt="Avatar" class="player_image">
+		  		<div class="player_overlay spurs">
+		    		<div class="player_text spurs">
+		    			<div class="name">DAVID ROBINSON</div>
+<div class="stats">PPG: 15.8</div>
+<div class="stats">RPG: 10.0</div>
+<div class="stats">APG: 2.1</div>
+<div class="stats">BPG: 2.4</div>
+<div class="stats">SPG: 1.4</div>
+		    		</div>
+		  		</div>
+			</div>
+
+			<div class="player_container">
+		  		<img src="img/elliott.jpg" alt="Avatar" class="player_image">
+		  		<div class="player_overlay spurs">
+		    		<div class="player_text spurs">
+		    			<div class="name">SEAN ELLIOTT</div>
+<div class="stats">PPG: 11.2</div>
+<div class="stats">RPG: 4.3</div>
+<div class="stats">APG: 2.3</div>
+<div class="stats">BPG: 0.3</div>
+<div class="stats">SPG: 0.5</div>
+		    		</div>
+		  		</div>
+			</div>
+
+			<div class="player_container team spurs">
+		  		<img src="img/spurs2.png" alt="Avatar" class="player_image team spurs">
+			</div>
+
+			<div class="champs spurs">
+				<div class="champs_text">
+					<div class="team2">SAN ANTONIO SPURS</div> 
+					<div class="score spurs">4 - 1</div>
+					<div class="team2">NEW YORK KNICKS</div>
+				</div>
+			</div>
+
+		</div>	
+
+		<div class="player_triplet">
+	    	<div class="player_container">
+	    	    <div class="fmvp">FMVP</div>
+	    		<div class="year">1998</div>
+	    		<div class="mvp">MVP</div>
+		  		<img src="img/jordan.jpg" alt="Avatar" class="player_image">
+		  		<div class="player_overlay bulls">
+		    		<div class="player_text bulls">
+		    			<div class="name">MICHAEL JORDAN</div>
+<div class="stats">PPG: 28.7</div>
+<div class="stats">RPG: 5.8</div>
+<div class="stats">APG: 3.5</div>
+<div class="stats">BPG: 0.5</div>
+<div class="stats">SPG: 1.7</div>
+		    		</div>
+		  		</div>
+			</div>
+
+			<div class="player_container">
+		  		<img src="img/pippen.jpg" alt="Avatar" class="player_image">
+		  		<div class="player_overlay bulls">
+		    		<div class="player_text bulls">
+		    			<div class="name">SCOTTIE PIPPEN</div>
+		    			<div class="stats">PPG: 19.1</div>
+		    			<div class="stats">RPG: 5.2</div>
+		    			<div class="stats">APG: 4.2</div>
+		    			<div class="stats">BPG: 1.0</div>
+		    			<div class="stats">SPG: 1.8</div>
+		    		</div>
+		  		</div>
+			</div>
+
+			<div class="player_container">
+		  		<img src="img/kukoc.jpg" alt="Avatar" class="player_image">
+		  		<div class="player_overlay bulls">
+		    		<div class="player_text bulls">
+		    			<div class="name">TONI KUKOC</div>
+		    			<div class="stats">PPG: 13.3</div>
+		    			<div class="stats">RPG: 4.4</div>
+		    			<div class="stats">APG: 4.2</div>
+		    			<div class="stats">BPG: .5</div>
+		    			<div class="stats">SPG: 1.0</div>
+		    		</div>
+		  		</div>
+			</div>
+
+			<div class="player_container team bulls">
+		  		<img src="img/bulls.png" alt="Avatar" class="player_image team bulls">
+			</div>
+
+			<div class="champs bulls">
+				<div class="champs_text">
+					<div class="team2">CHICAGO BULLS</div> 
+					<div class="score bulls">4 - 2</div>
+					<div class="team2">UTAH JAZZ</div>
+				</div>
+			</div>
+
+		</div>	
+
+		<div class="player_triplet">
+	    	<div class="player_container">
+	    	    <div class="fmvp">FMVP</div>
+	    		<div class="year">1997</div>
+		  		<img src="img/jordan.jpg" alt="Avatar" class="player_image">
+		  		<div class="player_overlay bulls">
+		    		<div class="player_text bulls">
+		    			<div class="name">MICHAEL JORDAN</div>
+<div class="stats">PPG: 29.6</div>
+<div class="stats">RPG: 5.9</div>
+<div class="stats">APG: 4.3</div>
+<div class="stats">BPG: 0.5</div>
+<div class="stats">SPG: 1.7</div>
+		    		</div>
+		  		</div>
+			</div>
+
+			<div class="player_container">
+		  		<img src="img/pippen.jpg" alt="Avatar" class="player_image">
+		  		<div class="player_overlay bulls">
+		    		<div class="player_text bulls">
+		    			<div class="name">SCOTTIE PIPPEN</div>
+<div class="stats">PPG: 20.2</div>
+<div class="stats">RPG: 6.5</div>
+<div class="stats">APG: 5.7</div>
+<div class="stats">BPG: 0.5</div>
+<div class="stats">SPG: 1.9</div>
+		    		</div>
+		  		</div>
+			</div>
+
+			<div class="player_container">
+		  		<img src="img/kukoc.jpg" alt="Avatar" class="player_image">
+		  		<div class="player_overlay bulls">
+		    		<div class="player_text bulls">
+		    			<div class="name">TONI KUKOC</div>
+<div class="stats">PPG: 13.2</div>
+<div class="stats">RPG: 4.6</div>
+<div class="stats">APG: 4.5</div>
+<div class="stats">BPG: 0.5</div>
+<div class="stats">SPG: 1.1</div>
+		    		</div>
+		  		</div>
+			</div>
+
+			<div class="player_container team bulls">
+		  		<img src="img/bulls.png" alt="Avatar" class="player_image team bulls">
+			</div>
+
+			<div class="champs bulls">
+				<div class="champs_text">
+					<div class="team2">CHICAGO BULLS</div> 
+					<div class="score bulls">4 - 2</div>
+					<div class="team2">UTAH JAZZ</div>
+				</div>
+			</div>
+
+		</div>	
+
+		<div class="player_triplet">
+	    	<div class="player_container">
+	    	    <div class="fmvp">FMVP</div>
+	    		<div class="year">1996</div>
+	    		<div class="mvp">MVP</div>
+		  		<img src="img/jordan.jpg" alt="Avatar" class="player_image">
+		  		<div class="player_overlay bulls">
+		    		<div class="player_text bulls">
+		    			<div class="name">MICHAEL JORDAN</div>
+		    			<div class="stats">PPG: 30.4</div>
+		    			<div class="stats">RPG: 6.6</div>
+		    			<div class="stats">APG: 4.3</div>
+		    			<div class="stats">BPG: .5</div>
+		    			<div class="stats">SPG: 2.2</div>
+		    		</div>
+		  		</div>
+			</div>
+
+			<div class="player_container">
+		  		<img src="img/pippen.jpg" alt="Avatar" class="player_image">
+		  		<div class="player_overlay bulls">
+		    		<div class="player_text bulls">
+		    			<div class="name">SCOTTIE PIPPEN</div>
+<div class="stats">PPG: 19.4</div>
+<div class="stats">RPG: 6.4</div>
+<div class="stats">APG: 5.9</div>
+<div class="stats">BPG: 0.7</div>
+<div class="stats">SPG: 1.7</div>
+		    		</div>
+		  		</div>
+			</div>
+
+			<div class="player_container">
+		  		<img src="img/kukoc.jpg" alt="Avatar" class="player_image">
+		  		<div class="player_overlay bulls">
+		    		<div class="player_text bulls">
+		    			<div class="name">TONI KUKOC</div>
+<div class="stats">PPG: 13.1</div>
+<div class="stats">RPG: 4.0</div>
+<div class="stats">APG: 3.5</div>
+<div class="stats">BPG: 0.3</div>
+<div class="stats">SPG: 0.8</div>
+		    		</div>
+		  		</div>
+			</div>
+
+			<div class="player_container team bulls">
+		  		<img src="img/bulls.png" alt="Avatar" class="player_image team bulls">
+			</div>
+
+			<div class="champs bulls">
+				<div class="champs_text">
+					<div class="team2">CHICAGO BULLS</div> 
+					<div class="score bulls">4 - 2</div>
+					<div class="team2">SEATTLE SUPERSONICS</div>
+				</div>
+			</div>
+
+		</div>	
+
+		
+		<div class="player_triplet">
+	    	<div class="player_container">
+	    	    <div class="fmvp">FMVP</div>
+	    		<div class="year">1995</div>
+		  		<img src="img/hakeem.jpg" alt="Avatar" class="player_image">
+		  		<div class="player_overlay rockets">
+		    		<div class="player_text rockets">
+		    			<div class="name">HAKEEM OLAJUWON</div>
+<div class="stats">PPG: 27.8</div>
+<div class="stats">RPG: 10.8</div>
+<div class="stats">APG: 3.5</div>
+<div class="stats">BPG: 3.4</div>
+<div class="stats">SPG: 1.8</div>
+		    		</div>
+		  		</div>
+			</div>
+
+			<div class="player_container">
+		  		<img src="img/drexler.jpg" alt="Avatar" class="player_image">
+		  		<div class="player_overlay rockets">
+		    		<div class="player_text rockets">
+		    			<div class="name">CLYDE DREXLER</div>
+<div class="stats">PPG: 21.4</div>
+<div class="stats">RPG: 7.0</div>
+<div class="stats">APG: 4.4</div>
+<div class="stats">BPG: 0.7</div>
+<div class="stats">SPG: 1.8</div>
+		    		</div>
+		  		</div>
+			</div>
+
+			<div class="player_container">
+		  		<img src="img/maxwell.jpg" alt="Avatar" class="player_image">
+		  		<div class="player_overlay rockets">
+		    		<div class="player_text rockets">
+		    			<div class="name">VERNON MAXWELL</div>
+<div class="stats">PPG: 13.3</div>
+<div class="stats">RPG: 2.6</div>
+<div class="stats">APG: 4.3</div>
+<div class="stats">BPG: 0.2</div>
+<div class="stats">SPG: 1.2</div>
+		    		</div>
+		  		</div>
+			</div>
+
+			<div class="player_container team rockets">
+		  		<img src="img/rockets.png" alt="Avatar" class="player_image team rockets">
+			</div>
+
+			<div class="champs rockets">
+				<div class="champs_text">
+					<div class="team2">HOUSTON ROCKETS</div> 
+					<div class="score rockets">4 - 0</div>
+					<div class="team2">ORLANDO MAGIC</div>
+				</div>
+			</div>
+
+		</div>	
+
+		<div class="player_triplet">
+	    	<div class="player_container">
+	    	    <div class="fmvp">FMVP</div>
+	    		<div class="year">1994</div>
+	    		<div class="mvp">MVP</div>
+		  		<img src="img/hakeem.jpg" alt="Avatar" class="player_image">
+		  		<div class="player_overlay rockets">
+		    		<div class="player_text rockets">
+		    			<div class="name">HAKEEM OLAJUWON</div>
+<div class="stats">PPG: 27.3</div>
+<div class="stats">RPG: 11.9</div>
+<div class="stats">APG: 3.6</div>
+<div class="stats">BPG: 3.7</div>
+<div class="stats">SPG: 1.6</div>
+		    		</div>
+		  		</div>
+			</div>
+
+			<div class="player_container">
+		  		<img src="img/thorpe.jpg" alt="Avatar" class="player_image">
+		  		<div class="player_overlay rockets">
+		    		<div class="player_text rockets">
+		    			<div class="name">OTIS THORPE</div>
+<div class="stats">PPG: 14.0</div>
+<div class="stats">RPG: 10.6</div>
+<div class="stats">APG: 2.3</div>
+<div class="stats">BPG: 0.3</div>
+<div class="stats">SPG: 0.8</div>
+		    		</div>
+		  		</div>
+			</div>
+
+			<div class="player_container">
+		  		<img src="img/maxwell.jpg" alt="Avatar" class="player_image">
+		  		<div class="player_overlay rockets">
+		    		<div class="player_text rockets">
+		    			<div class="name">VERNON MAXWELL</div>
+<div class="stats">PPG: 13.6</div>
+<div class="stats">RPG: 3.1</div>
+<div class="stats">APG: 5.1</div>
+<div class="stats">BPG: 0.3</div>
+<div class="stats">SPG: 1.7</div>
+		    		</div>
+		  		</div>
+			</div>
+
+			<div class="player_container team rockets">
+		  		<img src="img/rockets.png" alt="Avatar" class="player_image team rockets">
+			</div>
+
+			<div class="champs rockets">
+				<div class="champs_text">
+					<div class="team2">HOUSTON ROCKETS</div> 
+					<div class="score rockets">4 - 3</div>
+					<div class="team2">NEW YORK KNICKS</div>
+				</div>
+			</div>
+
+		</div>	
+
+		<div class="player_triplet">
+	    	<div class="player_container">
+	    	    <div class="fmvp">FMVP</div>
+	    		<div class="year">1993</div>
+		  		<img src="img/jordan.jpg" alt="Avatar" class="player_image">
+		  		<div class="player_overlay bulls">
+		    		<div class="player_text bulls">
+		    			<div class="name">MICHAEL JORDAN</div>
+<div class="stats">PPG: 32.6</div>
+<div class="stats">RPG: 6.7</div>
+<div class="stats">APG: 5.5</div>
+<div class="stats">BPG: 0.8</div>
+<div class="stats">SPG: 2.8</div>
+		    		</div>
+		  		</div>
+			</div>
+
+			<div class="player_container">
+		  		<img src="img/pippen.jpg" alt="Avatar" class="player_image">
+		  		<div class="player_overlay bulls">
+		    		<div class="player_text bulls">
+		    			<div class="name">SCOTTIE PIPPEN</div>
+<div class="stats">PPG: 18.6</div>
+<div class="stats">RPG: 7.7</div>
+<div class="stats">APG: 6.3</div>
+<div class="stats">BPG: 0.9</div>
+<div class="stats">SPG: 2.1</div>
+		    		</div>
+		  		</div>
+			</div>
+
+			<div class="player_container">
+		  		<img src="img/grant.jpg" alt="Avatar" class="player_image">
+		  		<div class="player_overlay bulls">
+		    		<div class="player_text bulls">
+		    			<div class="name">HORACE GRANT</div>
+<div class="stats">PPG: 13.2</div>
+<div class="stats">RPG: 9.5</div>
+<div class="stats">APG: 2.6</div>
+<div class="stats">BPG: 1.2</div>
+<div class="stats">SPG: 1.2</div>
+		    		</div>
+		  		</div>
+			</div>
+
+			<div class="player_container team bulls">
+		  		<img src="img/bulls.png" alt="Avatar" class="player_image team bulls">
+			</div>
+
+			<div class="champs bulls">
+				<div class="champs_text">
+					<div class="team2">CHICAGO BULLS</div> 
+					<div class="score bulls">4 - 2</div>
+					<div class="team2">PHOENIX SUNS</div>
+				</div>
+			</div>
+
+		</div>
+
+		<div class="player_triplet">
+	    	<div class="player_container">
+	    	    <div class="fmvp">FMVP</div>
+	    		<div class="year">1992</div>
+	    		<div class="mvp">MVP</div>
+		  		<img src="img/jordan.jpg" alt="Avatar" class="player_image">
+		  		<div class="player_overlay bulls">
+		    		<div class="player_text bulls">
+		    			<div class="name">MICHAEL JORDAN</div>
+<div class="stats">PPG: 30.1</div>
+<div class="stats">RPG: 6.4</div>
+<div class="stats">APG: 6.1</div>
+<div class="stats">BPG: 0.9</div>
+<div class="stats">SPG: 2.3</div>
+		    		</div>
+		  		</div>
+			</div>
+
+			<div class="player_container">
+		  		<img src="img/pippen.jpg" alt="Avatar" class="player_image">
+		  		<div class="player_overlay bulls">
+		    		<div class="player_text bulls">
+		    			<div class="name">SCOTTIE PIPPEN</div>
+<div class="stats">PPG: 21.0</div>
+<div class="stats">RPG: 7.7</div>
+<div class="stats">APG: 7.0</div>
+<div class="stats">BPG: 1.1</div>
+<div class="stats">SPG: 1.9</div>
+		    		</div>
+		  		</div>
+			</div>
+
+			<div class="player_container">
+		  		<img src="img/grant.jpg" alt="Avatar" class="player_image">
+		  		<div class="player_overlay bulls">
+		    		<div class="player_text bulls">
+		    			<div class="name">HORACE GRANT</div>
+<div class="stats">PPG: 14.2</div>
+<div class="stats">RPG: 10.0</div>
+<div class="stats">APG: 2.7</div>
+<div class="stats">BPG: 1.6</div>
+<div class="stats">SPG: 1.2</div>
+		    		</div>
+		  		</div>
+			</div>
+
+			<div class="player_container team bulls">
+		  		<img src="img/bulls.png" alt="Avatar" class="player_image team bulls">
+			</div>
+
+			<div class="champs bulls">
+				<div class="champs_text">
+					<div class="team2">CHICAGO BULLS</div> 
+					<div class="score bulls">4 - 2</div>
+					<div class="team2">PORTLAND TRAILBLAZERS</div>
+				</div>
+			</div>
+
+		</div>	
+
+		<div class="player_triplet">
+	    	<div class="player_container">
+	    	    <div class="fmvp">FMVP</div>
+	    		<div class="year">1991</div>
+	    		<div class="mvp">MVP</div>
+		  		<img src="img/jordan.jpg" alt="Avatar" class="player_image">
+		  		<div class="player_overlay bulls">
+		    		<div class="player_text bulls">
+		    			<div class="name">MICHAEL JORDAN</div>
+<div class="stats">PPG: 31.5</div>
+<div class="stats">RPG: 6.0</div>
+<div class="stats">APG: 5.5</div>
+<div class="stats">BPG: 1.0</div>
+<div class="stats">SPG: 2.7</div>
+		    		</div>
+		  		</div>
+			</div>
+
+			<div class="player_container">
+		  		<img src="img/pippen.jpg" alt="Avatar" class="player_image">
+		  		<div class="player_overlay bulls">
+		    		<div class="player_text bulls">
+		    			<div class="name">SCOTTIE PIPPEN</div>
+<div class="stats">PPG: 17.8</div>
+<div class="stats">RPG: 7.3</div>
+<div class="stats">APG: 6.2</div>
+<div class="stats">BPG: 1.1</div>
+<div class="stats">SPG: 2.4</div>
+		    		</div>
+		  		</div>
+			</div>
+
+			<div class="player_container">
+		  		<img src="img/grant.jpg" alt="Avatar" class="player_image">
+		  		<div class="player_overlay bulls">
+		    		<div class="player_text bulls">
+		    			<div class="name">HORACE GRANT</div>
+<div class="stats">PPG: 12.8</div>
+<div class="stats">RPG: 8.4</div>
+<div class="stats">APG: 2.3</div>
+<div class="stats">BPG: 0.9</div>
+<div class="stats">SPG: 1.2</div>
+		    		</div>
+		  		</div>
+			</div>
+
+			<div class="player_container team bulls">
+		  		<img src="img/bulls.png" alt="Avatar" class="player_image team bulls">
+			</div>
+
+			<div class="champs bulls">
+				<div class="champs_text">
+					<div class="team2">CHICAGO BULLS</div> 
+					<div class="score bulls">4 - 1</div>
+					<div class="team2">LOS ANGELES LAKERS</div>
+				</div>
+			</div>
+		</div>
+
+		<div class="player_triplet">
+	    	<div class="player_container">
+	    	    <div class="fmvp">FMVP</div>
+	    		<div class="year">1990</div>
+		  		<img src="img/thomas.jpg" alt="Avatar" class="player_image">
+		  		<div class="player_overlay pistons">
+		    		<div class="player_text pistons">
+		    			<div class="name">ISAIAH THOMAS</div>
+<div class="stats">PPG: 18.4</div>
+<div class="stats">RPG: 3.8</div>
+<div class="stats">APG: 9.4</div>
+<div class="stats">BPG: 0.2</div>
+<div class="stats">SPG: 1.7</div>
+		    		</div>
+		  		</div>
+			</div>
+
+			<div class="player_container">
+		  		<img src="img/dumars.jpg" alt="Avatar" class="player_image">
+		  		<div class="player_overlay pistons">
+		    		<div class="player_text pistons">
+		    			<div class="name">JOE DUMARS</div>
+<div class="stats">PPG: 17.8</div>
+<div class="stats">RPG: 2.8</div>
+<div class="stats">APG: 4.9</div>
+<div class="stats">BPG: 0.0</div>
+<div class="stats">SPG: 0.8</div>
+		    		</div>
+		  		</div>
+			</div>
+
+			<div class="player_container">
+		  		<img src="img/edwards.jpg" alt="Avatar" class="player_image">
+		  		<div class="player_overlay pistons">
+		    		<div class="player_text pistons">
+		    			<div class="name">JAMES EDWARDS</div>
+<div class="stats">PPG: 14.5</div>
+<div class="stats">RPG: 4.2</div>
+<div class="stats">APG: 0.8</div>
+<div class="stats">BPG: 0.5</div>
+<div class="stats">SPG: 0.3</div>
+		    		</div>
+		  		</div>
+			</div>
+
+			<div class="player_container team pistons">
+		  		<img src="img/pistons2.png" alt="Avatar" class="player_image team pistons2">
+			</div>
+
+			<div class="champs pistons">
+				<div class="champs_text">
+					<div class="team2">DETROIT PISTONS</div> 
+					<div class="score pistons">4 - 1</div>
+					<div class="team2">PORTLAND TRAILBLAZERS</div>
+				</div>
+			</div>
+
+		</div>
+
+	</div>
+</div>
+
+	<div class="decade">
+    	<h2> THE 80's  -  THE LAKERS / CELTICS RIVALRY DECADE</h2>
+    </div>
+    <div class="center2">
+    <div class="center">
+
+    	<div class="player_triplet">
+	    	<div class="player_container">
+	    		<div class="year">1989</div>
+		  		<img src="img/thomas.jpg" alt="Avatar" class="player_image">
+		  		<div class="player_overlay pistons">
+		    		<div class="player_text pistons">
+		    			<div class="name">ISAIAH THOMAS</div>
+<div class="stats">PPG: 18.2</div>
+<div class="stats">RPG: 3.4</div>
+<div class="stats">APG: 8.3</div>
+<div class="stats">BPG: 0.3</div>
+<div class="stats">SPG: 1.7</div>
+		    		</div>
+		  		</div>
+			</div>
+
+			<div class="player_container">
+			    <div class="fmvp">FMVP</div>
+		  		<img src="img/dumars.jpg" alt="Avatar" class="player_image">
+		  		<div class="player_overlay pistons">
+		    		<div class="player_text pistons">
+		    			<div class="name">JOE DUMARS</div>
+<div class="stats">PPG: 17.2</div>
+<div class="stats">RPG: 2.5</div>
+<div class="stats">APG: 5.7</div>
+<div class="stats">BPG: 0.1</div>
+<div class="stats">SPG: 0.9</div>
+		    		</div>
+		  		</div>
+			</div>
+
+			<div class="player_container">
+		  		<img src="img/edwards.jpg" alt="Avatar" class="player_image">
+		  		<div class="player_overlay pistons">
+		    		<div class="player_text pistons">
+		    			<div class="name">JAMES EDWARDS</div>
+<div class="stats">PPG: 7.3</div>
+<div class="stats">RPG: 3.0</div>
+<div class="stats">APG: 0.6</div>
+<div class="stats">BPG: 0.4</div>
+<div class="stats">SPG: 0.1</div>
+		    		</div>
+		  		</div>
+			</div>
+
+			<div class="player_container team pistons">
+		  		<img src="img/pistons2.png" alt="Avatar" class="player_image team pistons2">
+			</div>
+
+			<div class="champs pistons">
+				<div class="champs_text">
+					<div class="team2">DETROIT PISTONS</div> 
+					<div class="score pistons">4 - 0</div>
+					<div class="team2">LOS ANGELES LAKERS</div>
+				</div>
+			</div>
+
+		</div>
+
+		<div class="player_triplet">
+	    	<div class="player_container">
+	    		<div class="year">1988</div>
+		  		<img src="img/scott.jpg" alt="Avatar" class="player_image">
+		  		<div class="player_overlay lakers">
+		    		<div class="player_text lakers">
+		    			<div class="name">BYRON SCOTT</div>
+<div class="stats">PPG: 21.7</div>
+<div class="stats">RPG: 4.1</div>
+<div class="stats">APG: 4.1</div>
+<div class="stats">BPG: 0.3</div>
+<div class="stats">SPG: 1.9</div>
+		    		</div>
+		  		</div>
+			</div>
+
+			<div class="player_container">
+			    <div class="fmvp">FMVP</div>
+		  		<img src="img/worthy.jpg" alt="Avatar" class="player_image">
+		  		<div class="player_overlay lakers">
+		    		<div class="player_text lakers">
+		    			<div class="name">JAMES WORTHY</div>
+<div class="stats">PPG: 19.7</div>
+<div class="stats">RPG: 5.0</div>
+<div class="stats">APG: 3.9</div>
+<div class="stats">BPG: 0.7</div>
+<div class="stats">SPG: 1.0</div>
+		    		</div>
+		  		</div>
+			</div>
+
+			<div class="player_container">
+		  		<img src="img/magic.jpg" alt="Avatar" class="player_image">
+		  		<div class="player_overlay lakers">
+		    		<div class="player_text lakers">
+		    			<div class="name">MAGIC JOHNSON</div>
+		    			<div class="stats">PPG: 19.6</div>
+		    			<div class="stats">RPG: 6.2</div>
+		    			<div class="stats">APG: 11.9</div>
+		    			<div class="stats">BPG: .2</div>
+		    			<div class="stats">SPG: 1.6</div>
+		    		</div>
+		  		</div>
+			</div>
+
+			<div class="player_container team lakers">
+		  		<img src="img/lakers.png" alt="Avatar" class="player_image team lakers">
+			</div>
+
+			<div class="champs lakers">
+				<div class="champs_text">
+					<div class="team2">LOS ANGELES LAKERS</div> 
+					<div class="score lakers">4 - 3</div>
+					<div class="team2">DETROIT PISTONS</div>
+				</div>
+			</div>
+
+		</div>	
+
+
+		<div class="player_triplet">
+	    	<div class="player_container">
+	    	    <div class="fmvp">FMVP</div>
+	    		<div class="year">1987</div>
+	    		<div class="mvp">MVP</div>
+		  		<img src="img/magic.jpg" alt="Avatar" class="player_image">
+		  		<div class="player_overlay lakers">
+		    		<div class="player_text lakers">
+		    			<div class="name">MAGIC JOHNSON</div>
+		    			<div class="stats">PPG: 23.9</div>
+		    			<div class="stats">RPG: 6.3</div>
+		    			<div class="stats">APG: 12.2</div>
+		    			<div class="stats">BPG: .5</div>
+		    			<div class="stats">SPG: 1.7</div>
+		    		</div>
+		  		</div>
+			</div>
+
+			<div class="player_container">
+		  		<img src="img/worthy.jpg" alt="Avatar" class="player_image">
+		  		<div class="player_overlay lakers">
+		    		<div class="player_text lakers">
+		    			<div class="name">JAMES WORTHY</div>
+<div class="stats">PPG: 19.4</div>
+<div class="stats">RPG: 5.7</div>
+<div class="stats">APG: 2.8</div>
+<div class="stats">BPG: 1.0</div>
+<div class="stats">SPG: 1.3</div>
+		    		</div>
+		  		</div>
+			</div>
+
+			<div class="player_container">
+		  		<img src="img/kareem.jpg" alt="Avatar" class="player_image">
+		  		<div class="player_overlay lakers">
+		    		<div class="player_text lakers">
+		    			<div class="name">KAREEM ABDUL - JABBAR</div>
+<div class="stats">PPG: 17.5</div>
+<div class="stats">RPG: 6.7</div>
+<div class="stats">APG: 2.6</div>
+<div class="stats">BPG: 1.2</div>
+<div class="stats">SPG: 0.6</div>
+		    		</div>
+		  		</div>
+			</div>
+
+			<div class="player_container team lakers">
+		  		<img src="img/lakers.png" alt="Avatar" class="player_image team lakers">
+			</div>
+
+			<div class="champs lakers">
+				<div class="champs_text">
+					<div class="team2">LOS ANGELES LAKERS</div> 
+					<div class="score lakers">4 - 2</div>
+					<div class="team2">BOSTON CELTICS</div>
+				</div>
+			</div>
+
+		</div>	
+
+
+		<div class="player_triplet">
+	    	<div class="player_container">
+	    	    <div class="fmvp">FMVP</div>
+	    		<div class="year">1986</div>
+	    		<div class="mvp">MVP</div>
+		  		<img src="img/bird.jpg" alt="Avatar" class="player_image">
+		  		<div class="player_overlay celtics">
+		    		<div class="player_text celtics">
+		    			<div class="name">LARRY BIRD</div>
+<div class="stats">PPG: 25.8</div>
+<div class="stats">RPG: 9.8</div>
+<div class="stats">APG: 6.8</div>
+<div class="stats">BPG: 0.6</div>
+<div class="stats">SPG: 2.0</div>
+		    		</div>
+		  		</div>
+			</div>
+
+			<div class="player_container">
+		  		<img src="img/mchale.jpg" alt="Avatar" class="player_image">
+		  		<div class="player_overlay celtics">
+		    		<div class="player_text celtics">
+		    			<div class="name">KEVIN MCHALE</div>
+<div class="stats">PPG: 21.3</div>
+<div class="stats">RPG: 8.1</div>
+<div class="stats">APG: 2.7</div>
+<div class="stats">BPG: 2.0</div>
+<div class="stats">SPG: 0.4</div>
+		    		</div>
+		  		</div>
+			</div>
+
+			<div class="player_container">
+		  		<img src="img/parish.jpg" alt="Avatar" class="player_image">
+		  		<div class="player_overlay celtics">
+		    		<div class="player_text celtics">
+		    			<div class="name">ROBERT PARISH</div>
+<div class="stats">PPG: 16.1</div>
+<div class="stats">RPG: 9.5</div>
+<div class="stats">APG: 1.8</div>
+<div class="stats">BPG: 1.4</div>
+<div class="stats">SPG: 0.8</div>
+		    		</div>
+		  		</div>
+			</div>
+
+			<div class="player_container team celtics">
+		  		<img src="img/celtics4.png" alt="Avatar" class="player_image team celtics">
+			</div>
+
+			<div class="champs celtics">
+				<div class="champs_text">
+					<div class="team2">BOSTON CELTICS</div> 
+					<div class="score celtics">4 - 2</div>
+					<div class="team2">HOUSTON ROCKETS</div>
+				</div>
+			</div>
+
+		</div>	
+
+
+		<div class="player_triplet">
+	    	<div class="player_container">
+	    	    <div class="fmvp">FMVP</div>
+	    		<div class="year">1985</div>
+		  		<img src="img/kareem.jpg" alt="Avatar" class="player_image">
+		  		<div class="player_overlay lakers">
+		    		<div class="player_text lakers">
+		    			<div class="name">KAREEM ABDUL - JABBAR</div>
+<div class="stats">PPG: 22.0</div>
+<div class="stats">RPG: 7.9</div>
+<div class="stats">APG: 3.2</div>
+<div class="stats">BPG: 2.1</div>
+<div class="stats">SPG: 0.8</div>
+		    		</div>
+		  		</div>
+			</div>
+
+			<div class="player_container">
+		  		<img src="img/magic.jpg" alt="Avatar" class="player_image">
+		  		<div class="player_overlay lakers">
+		    		<div class="player_text lakers">
+		    			<div class="name">MAGIC JOHNSON</div>
+		    			<div class="stats">PPG: 18.3</div>
+		    			<div class="stats">RPG: 6.2</div>
+		    			<div class="stats">APG: 12.6</div>
+		    			<div class="stats">BPG: .3</div>
+		    			<div class="stats">SPG: 1.5</div>
+		    		</div>
+		  		</div>
+			</div>
+
+			<div class="player_container">
+		  		<img src="img/worthy.jpg" alt="Avatar" class="player_image">
+		  		<div class="player_overlay lakers">
+		    		<div class="player_text lakers">
+		    			<div class="name">JAMES WORTHY</div>
+<div class="stats">PPG: 17.6</div>
+<div class="stats">RPG: 6.4</div>
+<div class="stats">APG: 2.5</div>
+<div class="stats">BPG: 0.8</div>
+<div class="stats">SPG: 1.1</div>
+		    		</div>
+		  		</div>
+			</div>
+
+			<div class="player_container team lakers">
+		  		<img src="img/lakers.png" alt="Avatar" class="player_image team lakers">
+			</div>
+
+			<div class="champs lakers">
+				<div class="champs_text">
+					<div class="team2">LOS ANGELES LAKERS</div> 
+					<div class="score lakers">4 - 2</div>
+					<div class="team2">BOSTON CELTICS</div>
+				</div>
+			</div>
+
+		</div>	
+
+		<div class="player_triplet">
+	    	<div class="player_container">
+	    	    <div class="fmvp">FMVP</div>
+	    		<div class="year">1984</div>
+	    		<div class="mvp">MVP</div>
+		  		<img src="img/bird.jpg" alt="Avatar" class="player_image">
+		  		<div class="player_overlay celtics">
+		    		<div class="player_text celtics">
+		    			<div class="name">LARRY BIRD</div>
+<div class="stats">PPG: 24.2</div>
+<div class="stats">RPG: 10.1</div>
+<div class="stats">APG: 6.6</div>
+<div class="stats">BPG: 0.9</div>
+<div class="stats">SPG: 1.8</div>
+		    		</div>
+		  		</div>
+			</div>
+
+			<div class="player_container">
+		  		<img src="img/parish.jpg" alt="Avatar" class="player_image">
+		  		<div class="player_overlay celtics">
+		    		<div class="player_text celtics">
+		    			<div class="name">ROBERT PARISH</div>
+<div class="stats">PPG: 19.0</div>
+<div class="stats">RPG: 10.7</div>
+<div class="stats">APG: 1.7</div>
+<div class="stats">BPG: 1.5</div>
+<div class="stats">SPG: 0.7</div>
+		    		</div>
+		  		</div>
+			</div>
+
+			<div class="player_container">
+		  		<img src="img/mchale.jpg" alt="Avatar" class="player_image">
+		  		<div class="player_overlay celtics">
+		    		<div class="player_text celtics">
+		    			<div class="name">KEVIN MCHALE</div>
+<div class="stats">PPG: 18.4</div>
+<div class="stats">RPG: 7.4</div>
+<div class="stats">APG: 1.3</div>
+<div class="stats">BPG: 1.5</div>
+<div class="stats">SPG: 0.3</div>
+		    		</div>
+		  		</div>
+			</div>
+
+			<div class="player_container team celtics">
+		  		<img src="img/celtics4.png" alt="Avatar" class="player_image team celtics">
+			</div>
+
+			<div class="champs celtics">
+				<div class="champs_text">
+					<div class="team2">BOSTON CELTICS</div> 
+					<div class="score celtics">4 - 3</div>
+					<div class="team2">LOS ANGELES LAKERS</div>
+				</div>
+			</div>
+
+		</div>	
+
+		<div class="player_triplet">
+	    	<div class="player_container">
+	    	    <div class="fmvp">FMVP</div>
+	    		<div class="year">1983</div>
+	    		<div class="mvp">MVP</div>
+		  		<img src="img/malone.jpg" alt="Avatar" class="player_image">
+		  		<div class="player_overlay sixers">
+		    		<div class="player_text sixers">
+		    			<div class="name">MOSES MALONE</div>
+<div class="stats">PPG: 24.5</div>
+<div class="stats">RPG: 15.3</div>
+<div class="stats">APG: 1.3</div>
+<div class="stats">BPG: 2.0</div>
+<div class="stats">SPG: 1.1</div>
+		    		</div>
+		  		</div>
+			</div>
+
+			<div class="player_container">
+		  		<img src="img/julius.jpg" alt="Avatar" class="player_image">
+		  		<div class="player_overlay sixers">
+		    		<div class="player_text sixers">
+		    			<div class="name">JULIUS IRVING</div>
+		    			<div class="stats">PPG: 21.4</div>
+		    			<div class="stats">RPG: 6.8</div>
+		    			<div class="stats">APG: 3.7</div>
+		    			<div class="stats">BPG: 1.8</div>
+		    			<div class="stats">SPG: 1.6</div>
+		    		</div>
+		  		</div>
+			</div>
+
+			<div class="player_container">
+		  		<img src="img/toney.jpg" alt="Avatar" class="player_image">
+		  		<div class="player_overlay sixers">
+		    		<div class="player_text sixers">
+		    			<div class="name">ANDREW TONEY</div>
+<div class="stats">PPG: 19.7</div>
+<div class="stats">RPG: 2.8</div>
+<div class="stats">APG: 4.5</div>
+<div class="stats">BPG: 0.2</div>
+<div class="stats">SPG: 1.0</div>
+		    		</div>
+		  		</div>
+			</div>
+
+			<div class="player_container team sixers">
+		  		<img src="img/sixers.png" alt="Avatar" class="player_image team sixers">
+			</div>
+
+			<div class="champs sixers">
+				<div class="champs_text">
+					<div class="team2">PHILADELPHIA 76ERS</div> 
+					<div class="score sixers">4 - 0</div>
+					<div class="team2">LOS ANGELES LAKERS</div>
+				</div>
+			</div>
+
+		</div>	
+
+		<div class="player_triplet">
+	    	<div class="player_container">
+	    		<div class="year">1982</div>
+		  		<img src="img/kareem.jpg" alt="Avatar" class="player_image">
+		  		<div class="player_overlay lakers">
+		    		<div class="player_text lakers">
+		    			<div class="name">KAREEM ABDUL - JABBAR</div>
+<div class="stats">PPG: 23.9</div>
+<div class="stats">RPG: 8.7</div>
+<div class="stats">APG: 3.0</div>
+<div class="stats">BPG: 2.7</div>
+<div class="stats">SPG: 0.8</div>
+		    		</div>
+		  		</div>
+			</div>
+
+			<div class="player_container">
+		  		<img src="img/wilkes.jpg" alt="Avatar" class="player_image">
+		  		<div class="player_overlay lakers">
+		    		<div class="player_text lakers">
+		    			<div class="name">JAMAAL WILKES</div>
+<div class="stats">PPG: 21.1</div>
+<div class="stats">RPG: 4.8</div>
+<div class="stats">APG: 1.7</div>
+<div class="stats">BPG: 0.3</div>
+<div class="stats">SPG: 1.1</div>
+		    		</div>
+		  		</div>
+			</div>
+
+			<div class="player_container">
+			    <div class="fmvp">FMVP</div>
+		  		<img src="img/magic.jpg" alt="Avatar" class="player_image">
+		  		<div class="player_overlay lakers">
+		    		<div class="player_text lakers">
+		    			<div class="name">MAGIC JOHNSON</div>
+		    			<div class="stats">PPG: 18.6</div>
+		    			<div class="stats">RPG: 9.6</div>
+		    			<div class="stats">APG: 9.5</div>
+		    			<div class="stats">BPG: .4</div>
+		    			<div class="stats">SPG: 2.7</div>
+		    		</div>
+		  		</div>
+			</div>
+
+			<div class="player_container team lakers">
+		  		<img src="img/lakers.png" alt="Avatar" class="player_image team lakers">
+			</div>
+
+			<div class="champs lakers">
+				<div class="champs_text">
+					<div class="team2">LOS ANGELES LAKERS</div> 
+					<div class="score lakers">4 - 2</div>
+					<div class="team2">PHILADELPHIA 76ERS</div>
+				</div>
+			</div>
+
+		</div>	
+
+		<div class="player_triplet">
+	    	<div class="player_container">
+	    		<div class="year">1981</div>
+		  		<img src="img/bird.jpg" alt="Avatar" class="player_image">
+		  		<div class="player_overlay celtics">
+		    		<div class="player_text celtics">
+		    			<div class="name">LARRY BIRD</div>
+<div class="stats">PPG: 21.2</div>
+<div class="stats">RPG: 10.9</div>
+<div class="stats">APG: 5.5</div>
+<div class="stats">BPG: 0.8</div>
+<div class="stats">SPG: 2.0</div>
+		    		</div>
+		  		</div>
+			</div>
+
+			<div class="player_container">
+		  		<img src="img/parish.jpg" alt="Avatar" class="player_image">
+		  		<div class="player_overlay celtics">
+		    		<div class="player_text celtics">
+		    			<div class="name">ROBERT PARISH</div>
+<div class="stats">PPG: 18.9</div>
+<div class="stats">RPG: 9.5</div>
+<div class="stats">APG: 1.8</div>
+<div class="stats">BPG: 2.6</div>
+<div class="stats">SPG: 1.0</div>
+		    		</div>
+		  		</div>
+			</div>
+
+			<div class="player_container">
+			    <div class="fmvp">FMVP</div>
+		  		<img src="img/cmaxwell.jpg" alt="Avatar" class="player_image">
+		  		<div class="player_overlay celtics">
+		    		<div class="player_text celtics">
+		    			<div class="name">CEDRIC MAXWELL</div>
+<div class="stats">PPG: 15.2</div>
+<div class="stats">RPG: 6.5</div>
+<div class="stats">APG: 2.7</div>
+<div class="stats">BPG: 0.8</div>
+<div class="stats">SPG: 1.0</div>
+		    		</div>
+		  		</div>
+			</div>
+
+			<div class="player_container team celtics">
+		  		<img src="img/celtics4.png" alt="Avatar" class="player_image team celtics">
+			</div>
+
+			<div class="champs celtics">
+				<div class="champs_text">
+					<div class="team2">BOSTON CELTICS</div> 
+					<div class="score celtics">4 - 2</div>
+					<div class="team2">HOUSTON ROCKETS</div>
+				</div>
+			</div>
+
+		</div>	
+
+		<div class="player_triplet">
+	    	<div class="player_container">
+	    		<div class="year">1980</div>
+	    		<div class="mvp">MVP</div>
+		  		<img src="img/kareem.jpg" alt="Avatar" class="player_image">
+		  		<div class="player_overlay lakers">
+		    		<div class="player_text lakers">
+		    			<div class="name">KAREEM ABDUL - JABBAR</div>
+<div class="stats">PPG: 24.8</div>
+<div class="stats">RPG: 10.8</div>
+<div class="stats">APG: 4.5</div>
+<div class="stats">BPG: 3.4</div>
+<div class="stats">SPG: 1.0</div>
+		    		</div>
+		  		</div>
+			</div>
+
+			<div class="player_container">
+				<div class="rule2">3 - PT LINE ADDED</div>
+		  		<img src="img/wilkes.jpg" alt="Avatar" class="player_image">
+		  		<div class="player_overlay lakers">
+		    		<div class="player_text lakers">
+		    			<div class="name">JAMAAL WILKES</div>
+<div class="stats">PPG: 20.0</div>
+<div class="stats">RPG: 6.4</div>
+<div class="stats">APG: 3.0</div>
+<div class="stats">BPG: 0.3</div>
+<div class="stats">SPG: 1.6</div>
+		    		</div>
+		  		</div>
+			</div>
+
+			<div class="player_container">
+			    <div class="fmvp">FMVP</div>
+		  		<img src="img/magic.jpg" alt="Avatar" class="player_image">
+		  		<div class="player_overlay lakers">
+		    		<div class="player_text lakers">
+		    			<div class="name">MAGIC JOHNSON</div>
+		    			<div class="stats">PPG: 18.0</div>
+		    			<div class="stats">RPG: 7.7</div>
+		    			<div class="stats">APG: 7.3</div>
+		    			<div class="stats">BPG: .5</div>
+		    			<div class="stats">SPG: 2.4</div>
+		    		</div>
+		  		</div>
+			</div>
+
+			<div class="player_container team lakers">
+		  		<img src="img/lakers.png" alt="Avatar" class="player_image team lakers">
+			</div>
+
+			<div class="champs lakers">
+				<div class="rule">3 - PT LINE ADDED</div>
+				<div class="champs_text">
+					<div class="team2">LOS ANGELES LAKERS</div> 
+					<div class="score lakers">4 - 2</div>
+					<div class="team2">PHILADELPHIA 76ERS</div>
+				</div>
+			</div>
+
+		</div>	
+
+    </div>
+</div>
+
+    <div class="decade">
+    	<h2> THE 70's  -  THE DECADE OF PARITY</h2>
+    </div>
+    <div class="center2">
+    <div class="center">
+
+    	<div class="player_triplet">
+	    	<div class="player_container">
+	    		<div class="year">1979</div>
+		  		<img src="img/gus.jpg" alt="Avatar" class="player_image">
+		  		<div class="player_overlay sonics">
+		    		<div class="player_text sonics">
+		    			<div class="name">GUS WILLIAMS</div>
+<div class="stats">PPG: 19.2</div>
+<div class="stats">RPG: 3.2</div>
+<div class="stats">APG: 4.0</div>
+<div class="stats">BPG: 0.4</div>
+<div class="stats">SPG: 2.1</div>
+		    		</div>
+		  		</div>
+			</div>
+
+			<div class="player_container">
+			    <div class="fmvp">FMVP</div>
+			  		<img src="img/johnson.jpg" alt="Avatar" class="player_image">
+			  		<div class="player_overlay sonics">
+			    		<div class="player_text sonics">
+			    			<div class="name">DENNIS JOHNSON</div>
+<div class="stats">PPG: 15.9</div>
+<div class="stats">RPG: 4.7</div>
+<div class="stats">APG: 3.5</div>
+<div class="stats">BPG: 1.2</div>
+<div class="stats">SPG: 1.3</div>
+			    		</div>
+			  		</div>
+				</div>
+
+				<div class="player_container">
+			  		<img src="img/sikma.jpg" alt="Avatar" class="player_image">
+			  		<div class="player_overlay sonics">
+			    		<div class="player_text sonics">
+			    			<div class="name">JACK SIKMA</div>
+<div class="stats">PPG: 15.6</div>
+<div class="stats">RPG: 12.4</div>
+<div class="stats">APG: 3.2</div>
+<div class="stats">BPG: 0.8</div>
+<div class="stats">SPG: 1.0</div>
+			    		</div>
+			  		</div>
+				</div>
+
+				<div class="player_container team sonics">
+		  			<img src="img/sonics.png" alt="Avatar" class="player_image team sonics">
+				</div>
+
+
+				<div class="champs sonics">
+					<div class="champs_text">
+						<div class="team2">SEATTLE SUPERSONICS</div> 
+						<div class="score sonics">4 - 1</div>
+						<div class="team2">WASHINGTON BULLETS</div>
+					</div>
+				</div>
+
+			</div>
+
+		<div class="player_triplet">
+	    	<div class="player_container">
+	    		<div class="year">1978</div>
+		  		<img src="img/hayes.jpg" alt="Avatar" class="player_image">
+		  		<div class="player_overlay wizards">
+		    		<div class="player_text wizards">
+		    			<div class="name">ELVIN HAYES</div>
+<div class="stats">PPG: 19.7</div>
+<div class="stats">RPG: 13.3</div>
+<div class="stats">APG: 1.8</div>
+<div class="stats">BPG: 2.0</div>
+<div class="stats">SPG: 1.2</div>
+		    		</div>
+		  		</div>
+			</div>
+
+			<div class="player_container">
+			  		<img src="img/bob2.jpg" alt="Avatar" class="player_image">
+			  		<div class="player_overlay wizards">
+			    		<div class="player_text wizards">
+			    			<div class="name">BOB DANDRIDGE</div>
+<div class="stats">PPG: 19.3</div>
+<div class="stats">RPG: 5.9</div>
+<div class="stats">APG: 3.8</div>
+<div class="stats">BPG: 0.6</div>
+<div class="stats">SPG: 1.3</div>
+			    		</div>
+			  		</div>
+				</div>
+
+				<div class="player_container">
+			  		<img src="img/kupchak.jpg" alt="Avatar" class="player_image">
+			  		<div class="player_overlay wizards">
+			    		<div class="player_text wizards">
+			    			<div class="name">MITCH KUPCHAK</div>
+<div class="stats">PPG: 15.9</div>
+<div class="stats">RPG: 6.9</div>
+<div class="stats">APG: 1.1</div>
+<div class="stats">BPG: 0.6</div>
+<div class="stats">SPG: 0.4</div>
+			    		</div>
+			  		</div>
+				</div>
+
+				<div class="player_container team bullets">
+		  			<img src="img/bullets.png" alt="Avatar" class="player_image team bullets">
+			    </div>
+
+				<div class="champs wizards">
+					<div class="champs_text">
+						<div class="team2">WASHINGTON BULLETS</div> 
+						<div class="score wizards">4 - 3</div>
+						<div class="team2">SEATTLE SUPERSONICS</div>
+					</div>
+				</div>
+
+			</div>
+
+
+    	<div class="player_triplet">
+	    	<div class="player_container">
+	    		<div class="year">1977</div>
+		  		<img src="img/lucas.jpg" alt="Avatar" class="player_image">
+		  		<div class="player_overlay blazers">
+		    		<div class="player_text blazers">
+		    			<div class="name">MAURICE LUCAS</div>
+<div class="stats">PPG: 20.2</div>
+<div class="stats">RPG: 11.4</div>
+<div class="stats">APG: 2.9</div>
+<div class="stats">BPG: 0.7</div>
+<div class="stats">SPG: 1.1</div>
+		    		</div>
+		  		</div>
+			</div>
+
+			<div class="player_container">
+			    <div class="fmvp">FMVP</div>
+				<div class="rule2">NBA - ABA MERGER</div>
+		  		<img src="img/walton.jpg" alt="Avatar" class="player_image">
+		  		<div class="player_overlay blazers">
+		    		<div class="player_text blazers">
+		    			<div class="name">BILL WALTON</div>
+<div class="stats">PPG: 18.6</div>
+<div class="stats">RPG: 14.4</div>
+<div class="stats">APG: 3.8</div>
+<div class="stats">BPG: 3.2</div>
+<div class="stats">SPG: 1.0</div>
+		    		</div>
+		  		</div>
+			</div>
+
+			<div class="player_container">
+		  		<img src="img/hollins.jpg" alt="Avatar" class="player_image">
+		  		<div class="player_overlay blazers">
+		    		<div class="player_text blazers">
+		    			<div class="name">LIONEL HOLLINS</div>
+<div class="stats">PPG: 14.7</div>
+<div class="stats">RPG: 2.8</div>
+<div class="stats">APG: 4.1</div>
+<div class="stats">BPG: 0.5</div>
+<div class="stats">SPG: 2.2</div>
+		    		</div>
+		  		</div>
+			</div>
+
+			<div class="player_container team blazers">
+		  		<img src="img/blazers.png" alt="Avatar" class="player_image team blazers">
+			</div>
+
+			<div class="champs blazers">
+				<div class="rule">NBA - ABA MERGER</div>
+				<div class="champs_text">
+					<div class="team2">PORTLAND TRAILBLAZERS</div> 
+					<div class="score blazers">4 - 2</div>
+					<div class="team2">PHILADELPHIA 76ERS</div>
+				</div>
+			</div>
+
+		</div>
+
+		<div class="player_triplet">
+	    	<div class="player_container">
+	    		<div class="year">1976</div>
+		  		<img src="img/cowens.jpg" alt="Avatar" class="player_image">
+		  		<div class="player_overlay celtics">
+		    		<div class="player_text celtics">
+		    			<div class="name">Dave Cowens</div>
+<div class="stats">PPG: 19.0</div>
+<div class="stats">RPG: 16.0</div>
+<div class="stats">APG: 4.2</div>
+<div class="stats">BPG: 0.9</div>
+<div class="stats">SPG: 1.2</div>
+		    		</div>
+		  		</div>
+			</div>
+
+			<div class="player_container">
+			    <div class="fmvp">FMVP</div>
+		  		<img src="img/white.jpg" alt="Avatar" class="player_image">
+		  		<div class="player_overlay celtics">
+		    		<div class="player_text celtics">
+		    			<div class="name">JOJO WHITE</div>
+<div class="stats">PPG: 18.9</div>
+<div class="stats">RPG: 3.8</div>
+<div class="stats">APG: 5.4</div>
+<div class="stats">BPG: 0.2</div>
+<div class="stats">SPG: 1.3</div>
+		    		</div>
+		  		</div>
+			</div>
+
+			<div class="player_container">
+		  		<img src="img/cscott.jpg" alt="Avatar" class="player_image">
+		  		<div class="player_overlay celtics">
+		    		<div class="player_text celtics">
+		    			<div class="name">CHARLIE SCOTT</div>
+<div class="stats">PPG: 17.6</div>
+<div class="stats">RPG: 4.4</div>
+<div class="stats">APG: 4.2</div>
+<div class="stats">BPG: 0.3</div>
+<div class="stats">SPG: 1.3</div>
+		    		</div>
+		  		</div>
+			</div>
+
+			<div class="player_container team celtics">
+		  		<img src="img/celtics3.png" alt="Avatar" class="player_image team celtics3">
+			</div>
+
+			<div class="champs celtics">
+				<div class="champs_text">
+					<div class="team2">BOSTON CELTICS</div> 
+					<div class="score celtics">4 - 2</div>
+					<div class="team2">PHOENIX SUNS</div>
+				</div>
+			</div>
+
+		</div>	
+
+		<div class="player_triplet">
+
+			<div class="player_container">
+			    <div class="fmvp">FMVP</div>
+				<div class="year">1975</div>
+		  		<img src="img/barry.jpg" alt="Avatar" class="player_image">
+		  		<div class="player_overlay warriors">
+		    		<div class="player_text warriors">
+		    			<div class="name">RICK BARRY</div>
+<div class="stats">PPG: 30.6</div>
+<div class="stats">RPG: 5.7</div>
+<div class="stats">APG: 6.2</div>
+<div class="stats">BPG: 0.4</div>
+<div class="stats">SPG: 2.9</div>
+		    		</div>
+		  		</div>
+			</div>
+
+			<div class="player_container">
+		  		<img src="img/wilkes2.jpg" alt="Avatar" class="player_image">
+		  		<div class="player_overlay warriors">
+		    		<div class="player_text warriors">
+		    			<div class="name">JAMAAL WILKES</div>
+<div class="stats">PPG: 14.2</div>
+<div class="stats">RPG: 8.2</div>
+<div class="stats">APG: 2.2</div>
+<div class="stats">BPG: 0.3</div>
+<div class="stats">SPG: 1.3</div>
+		    		</div>
+		  		</div>
+			</div>
+
+			<div class="player_container">
+		  		<img src="img/beard.jpg" alt="Avatar" class="player_image">
+		  		<div class="player_overlay warriors">
+		    		<div class="player_text warriors">
+		    			<div class="name">BUTCH BEARD</div>
+<div class="stats">PPG: 12.8</div>
+<div class="stats">RPG: 3.9</div>
+<div class="stats">APG: 4.2</div>
+<div class="stats">BPG: .1</div>
+<div class="stats">SPG: 1.6</div>
+		    		</div>
+		  		</div>
+			</div>
+
+			<div class="player_container team warriors">
+		  		<img src="img/warriors2.png" alt="Avatar" class="player_image team warriors2">
+			</div>
+
+			<div class="champs warriors">
+				<div class="champs_text">
+					<div class="team2">GOLDEN STATE WARRIORS</div> 
+					<div class="score warriors">4 - 0</div>
+					<div class="team2">WASHINGTON BULLETS</div>
+				</div>
+			</div>
+
+		</div>	
+
+		<div class="player_triplet">
+	    	<div class="player_container">
+	    	    <div class="fmvp">FMVP</div>
+	    		<div class="year">1974</div>
+		  		<img src="img/havlicek.jpg" alt="Avatar" class="player_image">
+		  		<div class="player_overlay celtics">
+		    		<div class="player_text celtics">
+		    			<div class="name">JOHN HAVLICEK</div>
+<div class="stats">PPG: 22.6</div>
+<div class="stats">RPG: 6.4</div>
+<div class="stats">APG: 5.9</div>
+<div class="stats">BPG: 0.4</div>
+<div class="stats">SPG: 1.3</div>
+		    		</div>
+		  		</div>
+			</div>
+
+			<div class="player_container">
+		  		<img src="img/cowens.jpg" alt="Avatar" class="player_image">
+		  		<div class="player_overlay celtics">
+		    		<div class="player_text celtics">
+		    			<div class="name">DAVE COWENS</div>
+<div class="stats">PPG: 19.0</div>
+<div class="stats">RPG: 15.7</div>
+<div class="stats">APG: 4.4</div>
+<div class="stats">BPG: 1.3</div>
+<div class="stats">SPG: 1.2</div>
+		    		</div>
+		  		</div>
+			</div>
+
+			<div class="player_container">
+		  		<img src="img/white.jpg" alt="Avatar" class="player_image">
+		  		<div class="player_overlay celtics">
+		    		<div class="player_text celtics">
+		    			<div class="name">JOJO WHITE</div>
+<div class="stats">PPG: 18.1</div>
+<div class="stats">RPG: 4.3</div>
+<div class="stats">APG: 5.5</div>
+<div class="stats">BPG: 0.3</div>
+<div class="stats">SPG: 1.3</div>
+		    		</div>
+		  		</div>
+			</div>
+
+			<div class="player_container team celtics">
+		  		<img src="img/celtics3.png" alt="Avatar" class="player_image team celtics3">
+			</div>
+
+			<div class="champs celtics">
+				<div class="champs_text">
+					<div class="team2">BOSTON CELTICS</div> 
+					<div class="score celtics">4 - 3</div>
+					<div class="team2">MILWAUKEE BUCKS</div>
+				</div>
+			</div>
+
+		</div>	
+
+		<div class="player_triplet">
+	    	<div class="player_container">
+	    		<div class="year">1973</div>
+		  		<img src="img/frazier.jpg" alt="Avatar" class="player_image">
+		  		<div class="player_overlay knicks">
+		    		<div class="player_text knicks">
+		    			<div class="name">WALT FRAZIER</div>
+<div class="stats">PPG: 21.1</div>
+<div class="stats">RPG: 7.3</div>
+<div class="stats">APG: 5.9</div>
+		    		</div>
+		  		</div>
+			</div>
+
+			<div class="player_container">
+		  		<img src="img/dave.jpg" alt="Avatar" class="player_image">
+		  		<div class="player_overlay knicks">
+		    		<div class="player_text knicks">
+		    			<div class="name">DAVID DEBUSSCHERE</div>
+<div class="stats">PPG: 16.3</div>
+<div class="stats">RPG: 10.2</div>
+<div class="stats">APG: 3.4</div>
+		    		</div>
+		  		</div>
+			</div>
+
+			<div class="player_container">
+		  		<img src="img/bradley.jpg" alt="Avatar" class="player_image">
+		  		<div class="player_overlay knicks">
+		    		<div class="player_text knicks">
+		    			<div class="name">BILL BRADLEY</div>
+<div class="stats">PPG: 16.1</div>
+<div class="stats">RPG: 3.7</div>
+<div class="stats">APG: 4.5</div>
+		    		</div>
+		  		</div>
+			</div>
+
+			<div class="player_container team knicks">
+		  		<img src="img/knicks.png" alt="Avatar" class="player_image team knicks">
+			</div>
+
+			<div class="champs knicks">
+				<div class="champs_text">
+					<div class="team2">NEW YORK KNICKS</div> 
+					<div class="score knicks">4 - 1</div>
+					<div class="team2">LOS ANGELES LAKERS</div>
+				</div>
+			</div>
+
+		</div>	
+
+		<div class="player_triplet">
+	    	<div class="player_container">
+	    		<div class="year">1972</div>
+		  		<img src="img/goodrich.jpg" alt="Avatar" class="player_image">
+		  		<div class="player_overlay lakers">
+		    		<div class="player_text lakers">
+		    			<div class="name">GAIL GOODRICH</div>
+<div class="stats">PPG: 25.9</div>
+<div class="stats">RPG: 3.6</div>
+<div class="stats">APG: 4.5</div>
+		    		</div>
+		  		</div>
+			</div>
+
+			<div class="player_container">
+		  		<img src="img/west.jpg" alt="Avatar" class="player_image">
+		  		<div class="player_overlay lakers">
+		    		<div class="player_text lakers">
+		    			<div class="name">JERRY WEST</div>
+<div class="stats">PPG: 25.8</div>
+<div class="stats">RPG: 4.2</div>
+<div class="stats">APG: 9.7</div>
+		    		</div>
+		  		</div>
+			</div>
+
+			<div class="player_container">
+		  		<img src="img/mcmillian.jpg" alt="Avatar" class="player_image">
+		  		<div class="player_overlay lakers">
+		    		<div class="player_text lakers">
+		    			<div class="name">JIM MCMILLIAN</div>
+<div class="stats">PPG: 18.8</div>
+<div class="stats">RPG: 6.5</div>
+<div class="stats">APG: 2.6</div>
+		    		</div>
+		  		</div>
+			</div>
+
+			<div class="player_container team lakers">
+		  		<img src="img/lakers.png" alt="Avatar" class="player_image team lakers">
+			</div>
+
+			<div class="champs lakers">
+				<div class="champs_text">
+					<div class="team2">LOS ANGELES LAKERS</div> 
+					<div class="score lakers">4 - 1</div>
+					<div class="team2">NEW YORK KNICKS</div>
+				</div>
+			</div>
+
+		</div>	
+
+		<div class="player_triplet">
+	    	<div class="player_container">
+	    	    <div class="fmvp">FMVP</div>
+	    		<div class="year">1971</div>
+	    		<div class="mvp">MVP</div>
+		  		<img src="img/kareem2.jpg" alt="Avatar" class="player_image">
+		  		<div class="player_overlay bucks">
+		    		<div class="player_text bucks">
+		    			<div class="name">KAREEM ABDUL - JABBAR</div>
+<div class="stats">PPG: 31.7</div>
+<div class="stats">RPG: 16.0</div>
+<div class="stats">APG: 3.3</div>
+		    		</div>
+		  		</div>
+			</div>
+
+			<div class="player_container">
+		  		<img src="img/oscar.jpg" alt="Avatar" class="player_image">
+		  		<div class="player_overlay bucks">
+		    		<div class="player_text bucks">
+		    			<div class="name">OSCAR ROBERTSON</div>
+<div class="stats">PPG: 19.4</div>
+<div class="stats">RPG: 5.7</div>
+<div class="stats">APG: 8.2</div>
+		    		</div>
+		  		</div>
+			</div>
+
+			<div class="player_container">
+		  		<img src="img/bob.jpg" alt="Avatar" class="player_image">
+		  		<div class="player_overlay bucks">
+		    		<div class="player_text bucks">
+		    			<div class="name">BOB DANDRIDGE</div>
+<div class="stats">PPG: 18.4</div>
+<div class="stats">RPG: 8.0</div>
+<div class="stats">APG: 3.5</div>
+		    		</div>
+		  		</div>
+			</div>
+
+			<div class="player_container team bucks">
+		  		<img src="img/bucks.png" alt="Avatar" class="player_image team bucks">
+			</div>
+
+			<div class="champs bucks">
+				<div class="champs_text">
+					<div class="team2">MILWAUKEE BUCKS</div> 
+					<div class="score bucks">4 - 0</div>
+					<div class="team2">BALTIMORE BULLETS</div>
+				</div>
+			</div>
+
+		</div>	
+
+		   <div class="player_triplet">
+	    	<div class="player_container">
+	    	    <div class="fmvp">FMVP</div>
+	    		<div class="year">1970</div>
+	    		<div class="mvp">MVP</div>
+		  		<img src="img/reed.jpg" alt="Avatar" class="player_image">
+		  		<div class="player_overlay knicks">
+		    		<div class="player_text knicks">
+		    			<div class="name">WILLIS REED</div>
+<div class="stats">PPG: 21.7</div>
+<div class="stats">RPG: 13.9</div>
+<div class="stats">APG: 2.0</div>
+		    		</div>
+		  		</div>
+			</div>
+
+			<div class="player_container">
+		  		<img src="img/frazier.jpg" alt="Avatar" class="player_image">
+		  		<div class="player_overlay knicks">
+		    		<div class="player_text knicks">
+		    			<div class="name">WALT FRAZIER</div>
+<div class="stats">PPG: 20.9</div>
+<div class="stats">RPG: 6.0</div>
+<div class="stats">APG: 8.2</div>
+		    		</div>
+		  		</div>
+			</div>
+
+			<div class="player_container">
+		  		<img src="img/barnett.jpg" alt="Avatar" class="player_image">
+		  		<div class="player_overlay knicks">
+		    		<div class="player_text knicks">
+		    			<div class="name">DICK BARNETT</div>
+<div class="stats">PPG: 14.9</div>
+<div class="stats">RPG: 2.7</div>
+<div class="stats">APG: 3.6</div>
+		    		</div>
+		  		</div>
+			</div>
+
+			<div class="player_container team knicks">
+		  		<img src="img/knicks.png" alt="Avatar" class="player_image team knicks">
+			</div>
+
+			<div class="champs knicks">
+				<div class="champs_text">
+					<div class="team2">NEW YORK KNICKS</div> 
+					<div class="score knicks">4 - 3</div>
+					<div class="team2">LOS ANGELES LAKERS</div>
+				</div>
+			</div>
+
+		</div>	
+
+    </div>
+</div>
+
+ 	<div class="decade">
+    	<h2> THE 60's  -  THE CELTICS DYNASTY DECADE</h2>
+    </div>
+    <div class="center2">
+    <div class="center">
+
+    	<div class="player_triplet">
+	    	<div class="player_container">
+	    		<div class="year">1969</div>
+		  		<img src="img/havlicek.jpg" alt="Avatar" class="player_image">
+		  		<div class="player_overlay celtics">
+		    		<div class="player_text celtics">
+		    			<div class="name">JOHN HAVLICEK</div>
+<div class="stats">PPG: 21.6</div>
+<div class="stats">RPG: 7.0</div>
+<div class="stats">APG: 5.4</div>
+		    		</div>
+		  		</div>
+			</div>
+
+			<div class="player_container">
+		  		<img src="img/howell.jpg" alt="Avatar" class="player_image">
+		  		<div class="player_overlay celtics">
+		    		<div class="player_text celtics">
+		    			<div class="name">BAILEY HOWELL</div>
+<div class="stats">PPG: 19.7</div>
+<div class="stats">RPG: 8.8</div>
+<div class="stats">APG: 1.8</div>
+		    		</div>
+		  		</div>
+			</div>
+
+			<div class="player_container">
+		  		<img src="img/jones.jpg" alt="Avatar" class="player_image">
+		  		<div class="player_overlay celtics">
+		    		<div class="player_text celtics">
+		    			<div class="name">SAM JONES</div>
+<div class="stats">PPG: 16.3</div>
+<div class="stats">RPG: 3.8</div>
+<div class="stats">APG: 2.6</div>
+		    		</div>
+		  		</div>
+			</div>
+
+			<div class="player_container team celtics">
+		  		<img src="img/celtics3.png" alt="Avatar" class="player_image team celtics3">
+			</div>
+
+			<div class="champs celtics">
+				<div class="champs_text">
+					<div class="team2">BOSTON CELTICS</div> 
+					<div class="score celtics">4 - 3</div>
+					<div class="team2">LOS ANGELES LAKERS</div>
+				</div>
+			</div>
+
+		</div>	
+
+		<div class="player_triplet">
+
+			<div class="player_container">
+				<div class="year">1968</div>
+		  		<img src="img/jones.jpg" alt="Avatar" class="player_image">
+		  		<div class="player_overlay celtics">
+		    		<div class="player_text celtics">
+		    			<div class="name">SAM JONES</div>
+<div class="stats">PPG: 21.3</div>
+<div class="stats">RPG: 4.9</div>
+<div class="stats">APG: 3.0</div>
+		    		</div>
+		  		</div>
+			</div>
+
+	    	<div class="player_container">
+		  		<img src="img/havlicek.jpg" alt="Avatar" class="player_image">
+		  		<div class="player_overlay celtics">
+		    		<div class="player_text celtics">
+		    			<div class="name">JOHN HAVLICEK</div>
+<div class="stats">PPG: 20.7</div>
+<div class="stats">RPG: 6.7</div>
+<div class="stats">APG: 4.7</div>
+		    		</div>
+		  		</div>
+			</div>
+
+
+
+			<div class="player_container">
+		  		<img src="img/howell.jpg" alt="Avatar" class="player_image">
+		  		<div class="player_overlay celtics">
+		    		<div class="player_text celtics">
+		    			<div class="name">BAILEY HOWELL</div>
+<div class="stats">PPG: 19.8</div>
+<div class="stats">RPG: 9.8</div>
+<div class="stats">APG: 1.6</div>
+		    		</div>
+		  		</div>
+			</div>
+
+			<div class="player_container team celtics">
+		  		<img src="img/celtics6.png" alt="Avatar" class="player_image team celtics6">
+			</div>
+
+			<div class="champs celtics">
+				<div class="champs_text">
+					<div class="team2">BOSTON CELTICS</div> 
+					<div class="score celtics">4 - 2</div>
+					<div class="team2">LOS ANGELES LAKERS</div>
+				</div>
+			</div>
+
+		</div>	
+
+		<div class="player_triplet">
+	    	<div class="player_container">
+	    		<div class="year">1967</div>
+	    		<div class="mvp">MVP</div>
+		  		<img src="img/wilt.jpg" alt="Avatar" class="player_image">
+		  		<div class="player_overlay sixers">
+		    		<div class="player_text sixers">
+		    			<div class="name">WILT CHAMBERLAIN</div>
+<div class="stats">PPG: 24.1</div>
+<div class="stats">RPG: 24.2</div>
+<div class="stats">APG: 7.8</div>
+		    		</div>
+		  		</div>
+			</div>
+
+			<div class="player_container">
+				<div class="rule2">FIVE FOUL PENALTY</div>
+		  		<img src="img/greer.jpg" alt="Avatar" class="player_image">
+		  		<div class="player_overlay sixers">
+		    		<div class="player_text sixers">
+		    			<div class="name">HAL GREER</div>
+<div class="stats">PPG: 22.1</div>
+<div class="stats">RPG: 5.3</div>
+<div class="stats">APG: 3.8</div>
+		    		</div>
+		  		</div>
+			</div>
+
+			<div class="player_container">
+		  		<img src="img/walker.jpg" alt="Avatar" class="player_image">
+		  		<div class="player_overlay sixers">
+		    		<div class="player_text sixers">
+		    			<div class="name">CHET WALKER</div>
+<div class="stats">PPG: 19.3</div>
+<div class="stats">RPG: 8.1</div>
+<div class="stats">APG: 2.3</div>
+		    		</div>
+		  		</div>
+			</div>
+
+			<div class="player_container team sixers">
+		  		<img src="img/sixers.png" alt="Avatar" class="player_image team sixers">
+			</div>
+
+			<div class="champs sixers">
+				<div class="rule">FIVE FOUL PENALTY</div>
+				<div class="champs_text">
+					<div class="team2">PHILADELPHIA 76ERS</div> 
+					<div class="score sixers">4 - 2</div>
+					<div class="team2">SAN FRANCISCO WARRIORS</div>
+				</div>
+			</div>
+
+		</div>
+
+		<div class="player_triplet">
+	    	<div class="player_container">
+	    		<div class="year">1966</div>
+		  		<img src="img/jones.jpg" alt="Avatar" class="player_image">
+		  		<div class="player_overlay celtics">
+		    		<div class="player_text celtics">
+		    			<div class="name">SAM JONES</div>
+<div class="stats">PPG: 23.5</div>
+<div class="stats">RPG: 5.2</div>
+<div class="stats">APG: 3.2</div>
+		    		</div>
+		  		</div>
+			</div>
+
+			<div class="player_container">
+		  		<img src="img/havlicek.jpg" alt="Avatar" class="player_image">
+		  		<div class="player_overlay celtics">
+		    		<div class="player_text celtics">
+		    			<div class="name">JOHN HAVLICEK</div>
+<div class="stats">PPG: 18.8</div>
+<div class="stats">RPG: 6.0</div>
+<div class="stats">APG: 3.0</div>
+		    		</div>
+		  		</div>
+			</div>
+
+			<div class="player_container">
+		  		<img src="img/siegfried.jpg" alt="Avatar" class="player_image">
+		  		<div class="player_overlay celtics">
+		    		<div class="player_text celtics">
+		    			<div class="name">LARRY SIEGFRIED</div>
+<div class="stats">PPG: 13.7</div>
+<div class="stats">RPG: 2.8</div>
+<div class="stats">APG: 2.3</div>
+		    		</div>
+		  		</div>
+			</div>
+
+			<div class="player_container team celtics">
+		  		<img src="img/celtics6.png" alt="Avatar" class="player_image team celtics6">
+			</div>
+
+			<div class="champs celtics">
+				<div class="champs_text">
+					<div class="team2">BOSTON CELTICS</div> 
+					<div class="score celtics">4 - 3</div>
+					<div class="team2">LOS ANGELES LAKERS</div>
+				</div>
+			</div>
+
+		</div>	
+
+		<div class="player_triplet">
+	    	<div class="player_container">
+	    		<div class="year">1965</div>
+		  		<img src="img/jones.jpg" alt="Avatar" class="player_image">
+		  		<div class="player_overlay celtics">
+		    		<div class="player_text celtics">
+		    			<div class="name">SAM JONES</div>
+<div class="stats">PPG: 25.9</div>
+<div class="stats">RPG: 5.1</div>
+<div class="stats">APG: 2.8</div>
+		    		</div>
+		  		</div>
+			</div>
+
+			<div class="player_container">
+		  		<img src="img/havlicek.jpg" alt="Avatar" class="player_image">
+		  		<div class="player_overlay celtics">
+		    		<div class="player_text celtics">
+		    			<div class="name">JOHN HAVLICEK</div>
+<div class="stats">PPG: 18.3</div>
+<div class="stats">RPG: 4.9</div>
+<div class="stats">APG: 2.7</div>
+		    		</div>
+		  		</div>
+			</div>
+
+			<div class="player_container">
+				<div class="rule2">LANE WIDENED TO 16 FT</div>
+				<div class="mvp">MVP</div>
+		  		<img src="img/russell.jpg" alt="Avatar" class="player_image">
+		  		<div class="player_overlay celtics">
+		    		<div class="player_text celtics">
+		    			<div class="name">BILL RUSSELL</div>
+<div class="stats">PPG: 14.1</div>
+<div class="stats">RPG: 24.1</div>
+<div class="stats">APG: 5.3</div>
+		    		</div>
+		  		</div>
+			</div>
+
+			<div class="player_container team celtics">
+		  		<img src="img/celtics6.png" alt="Avatar" class="player_image team celtics6">
+			</div>
+
+			<div class="champs celtics">
+				<div class="rule">LANE WIDENED TO 16 FT</div>
+				<div class="champs_text">
+					<div class="team2">BOSTON CELTICS</div> 
+					<div class="score celtics">4 - 1</div>
+					<div class="team2">LOS ANGELES LAKERS</div>
+				</div>
+			</div>
+
+		</div>
+
+		<div class="player_triplet">
+	    	<div class="player_container">
+	    		<div class="year">1964</div>
+		  		<img src="img/havlicek.jpg" alt="Avatar" class="player_image">
+		  		<div class="player_overlay celtics">
+		    		<div class="player_text celtics">
+		    			<div class="name">JOHN HAVLICEK</div>
+<div class="stats">PPG: 19.9</div>
+<div class="stats">RPG: 5.4</div>
+<div class="stats">APG: 3.0</div>
+		    		</div>
+		  		</div>
+			</div>
+
+			<div class="player_container">
+		  		<img src="img/jones.jpg" alt="Avatar" class="player_image">
+		  		<div class="player_overlay celtics">
+		    		<div class="player_text celtics">
+		    			<div class="name">SAM JONES</div>
+<div class="stats">PPG: 19.4</div>
+<div class="stats">RPG: 4.6</div>
+<div class="stats">APG: 2.7</div>
+		    		</div>
+		  		</div>
+			</div>
+
+			<div class="player_container">
+		  		<img src="img/heinsohn.jpg" alt="Avatar" class="player_image">
+		  		<div class="player_overlay celtics">
+		    		<div class="player_text celtics">
+		    			<div class="name">TOMMY HEINSOHN</div>
+<div class="stats">PPG: 16.5</div>
+<div class="stats">RPG: 6.1</div>
+<div class="stats">APG: 2.4</div>
+		    		</div>
+		  		</div>
+			</div>
+
+			<div class="player_container team celtics">
+		  		<img src="img/celtics6.png" alt="Avatar" class="player_image team celtics6">
+			</div>
+
+			<div class="champs celtics">
+				<div class="champs_text">
+					<div class="team2">BOSTON CELTICS</div> 
+					<div class="score celtics">4 - 1</div>
+					<div class="team2">SAN FRANCISCO WARRIORS</div>
+				</div>
+			</div>
+
+		</div>	
+
+		<div class="player_triplet">
+	    	<div class="player_container">
+	    		<div class="year">1963</div>
+		  		<img src="img/jones.jpg" alt="Avatar" class="player_image">
+		  		<div class="player_overlay celtics">
+		    		<div class="player_text celtics">
+		    			<div class="name">SAM JONES</div>
+<div class="stats">PPG: 19.7</div>
+<div class="stats">RPG: 5.2</div>
+<div class="stats">APG: 3.2</div>
+		    		</div>
+		  		</div>
+			</div>
+
+			<div class="player_container">
+		  		<img src="img/heinsohn.jpg" alt="Avatar" class="player_image">
+		  		<div class="player_overlay celtics">
+		    		<div class="player_text celtics">
+		    			<div class="name">TOMMY HEINSOHN</div>
+<div class="stats">PPG: 18.9</div>
+<div class="stats">RPG: 7.5</div>
+<div class="stats">APG: 1.3</div>
+		    		</div>
+		  		</div>
+			</div>
+
+			<div class="player_container">
+				<div class="mvp">MVP</div>
+		  		<img src="img/russell.jpg" alt="Avatar" class="player_image">
+		  		<div class="player_overlay celtics">
+		    		<div class="player_text celtics">
+		    			<div class="name">BILL RUSSELL</div>
+<div class="stats">PPG: 16.8</div>
+<div class="stats">RPG: 23.6</div>
+<div class="stats">APG: 4.5</div>
+		    		</div>
+		  		</div>
+			</div>
+
+			<div class="player_container team celtics">
+		  		<img src="img/celtics6.png" alt="Avatar" class="player_image team celtics6">
+			</div>
+
+			<div class="champs celtics">
+				<div class="champs_text">
+					<div class="team2">BOSTON CELTICS</div> 
+					<div class="score celtics">4 - 2</div>
+					<div class="team2">LOS ANGELES LAKERS</div>
+				</div>
+			</div>
+
+		</div>	
+
+		<div class="player_triplet">
+	    	<div class="player_container">
+	    		<div class="year">1962</div>
+		  		<img src="img/heinsohn.jpg" alt="Avatar" class="player_image">
+		  		<div class="player_overlay celtics">
+		    		<div class="player_text celtics">
+		    			<div class="name">TOMMY HEINSOHN</div>
+<div class="stats">PPG: 22.1</div>
+<div class="stats">RPG: 9.5</div>
+<div class="stats">APG: 2.1</div>
+		    		</div>
+		  		</div>
+			</div>
+
+			<div class="player_container">
+				<div class="mvp">MVP</div>
+		  		<img src="img/russell.jpg" alt="Avatar" class="player_image">
+		  		<div class="player_overlay celtics">
+		    		<div class="player_text celtics">
+		    			<div class="name">BILL RUSSELL</div>
+<div class="stats">PPG: 18.9</div>
+<div class="stats">RPG: 23.6</div>
+<div class="stats">APG: 4.5</div>
+		    		</div>
+		  		</div>
+			</div>
+
+			<div class="player_container">
+		  		<img src="img/jones.jpg" alt="Avatar" class="player_image">
+		  		<div class="player_overlay celtics">
+		    		<div class="player_text celtics">
+		    			<div class="name">SAM JONES</div>
+<div class="stats">PPG: 18.4</div>
+<div class="stats">RPG: 5.9</div>
+<div class="stats">APG: 3.0</div>
+		    		</div>
+		  		</div>
+			</div>
+
+			<div class="player_container team celtics">
+		  		<img src="img/celtics6.png" alt="Avatar" class="player_image team celtics6">
+			</div>
+
+			<div class="champs celtics">
+				<div class="champs_text">
+					<div class="team2">BOSTON CELTICS</div> 
+					<div class="score celtics">4 - 3</div>
+					<div class="team2">LOS ANGELES LAKERS</div>
+				</div>
+			</div>
+
+		</div>	
+
+		<div class="player_triplet">
+	    	<div class="player_container">
+	    		<div class="year">1961</div>
+		  		<img src="img/heinsohn.jpg" alt="Avatar" class="player_image">
+		  		<div class="player_overlay celtics">
+		    		<div class="player_text celtics">
+		    			<div class="name">TOMMY HEINSOHN</div>
+<div class="stats">PPG: 21.3</div>
+<div class="stats">RPG: 9.9</div>
+<div class="stats">APG: 1.9</div>
+		    		</div>
+		  		</div>
+			</div>
+
+			<div class="player_container">
+		  		<img src="img/cousey.jpg" alt="Avatar" class="player_image">
+		  		<div class="player_overlay celtics">
+		    		<div class="player_text celtics">
+		    			<div class="name">BOB COUSEY</div>
+<div class="stats">PPG: 18.1</div>
+<div class="stats">RPG: 4.4</div>
+<div class="stats">APG: 7.7</div>
+		    		</div>
+		  		</div>
+			</div>
+
+			<div class="player_container">
+				<div class="mvp">MVP</div>
+		  		<img src="img/russell.jpg" alt="Avatar" class="player_image">
+		  		<div class="player_overlay celtics">
+		    		<div class="player_text celtics">
+		    			<div class="name">BILL RUSSELL</div>
+<div class="stats">PPG: 16.9</div>
+<div class="stats">RPG: 23.9</div>
+<div class="stats">APG: 3.4</div>
+		    		</div>
+		  		</div>
+			</div>
+
+			<div class="player_container team celtics">
+		  		<img src="img/celtics6.png" alt="Avatar" class="player_image team celtics6">
+			</div>
+
+			<div class="champs celtics">
+				<div class="champs_text">
+					<div class="team2">BOSTON CELTICS</div> 
+					<div class="score celtics">4 - 1</div>
+					<div class="team2">ST. LOUIS HAWKS</div>
+				</div>
+			</div>
+
+		</div>
+
+
+    	<div class="player_triplet">
+	    	<div class="player_container">
+	    		<div class="year">1960</div>
+		  		<img src="img/heinsohn.jpg" alt="Avatar" class="player_image">
+		  		<div class="player_overlay celtics">
+		    		<div class="player_text celtics">
+		    			<div class="name">TOMMY HEINSOHN</div>
+<div class="stats">PPG: 21.7</div>
+<div class="stats">RPG: 10.6</div>
+<div class="stats">APG: 2.3</div>
+		    		</div>
+		  		</div>
+			</div>
+
+			<div class="player_container">
+		  		<img src="img/cousey.jpg" alt="Avatar" class="player_image">
+		  		<div class="player_overlay celtics">
+		    		<div class="player_text celtics">
+		    			<div class="name">BOB COUSEY</div>
+<div class="stats">PPG: 19.4</div>
+<div class="stats">RPG: 4.7</div>
+<div class="stats">APG: 9.5</div>
+		    		</div>
+		  		</div>
+			</div>
+
+			<div class="player_container">
+		  		<img src="img/sharman.jpg" alt="Avatar" class="player_image">
+		  		<div class="player_overlay celtics">
+		    		<div class="player_text celtics">
+		    			<div class="name">BILL SHARMAN</div>
+<div class="stats">PPG: 19.3</div>
+<div class="stats">RPG: 3.7</div>
+<div class="stats">APG: 2.0</div>
+		    		</div>
+		  		</div>
+			</div>
+
+			<div class="player_container team celtics">
+		  		<img src="img/celtics7.png" alt="Avatar" class="player_image team celtics6">
+			</div>
+
+			<div class="champs celtics">
+				<div class="champs_text">
+					<div class="team2">BOSTON CELTICS</div> 
+					<div class="score celtics">4 - 3</div>
+					<div class="team2">ST. LOUIS HAWKS</div>
+				</div>
+			</div>
+
+		</div>		
+
+    </div>
+</div>
+
+    <div class="decade">
+    	<h2> THE 50's  -  THE MINNEAPOLIS LAKERS DYNASTY DECADE</h2>
+    </div>
+    <div class="center2">
+    <div class="center">
+
+    	<div class="player_triplet">
+	    	<div class="player_container">
+	    		<div class="year">1959</div>
+		  		<img src="img/sharman.jpg" alt="Avatar" class="player_image">
+		  		<div class="player_overlay celtics">
+		    		<div class="player_text celtics">
+		    			<div class="name">BILL SHARMAN</div>
+<div class="stats">PPG: 20.4</div>
+<div class="stats">RPG: 4.1</div>
+<div class="stats">APG: 2.5</div>
+		    		</div>
+		  		</div>
+			</div>
+
+			<div class="player_container">
+		  		<img src="img/cousey.jpg" alt="Avatar" class="player_image">
+		  		<div class="player_overlay celtics">
+		    		<div class="player_text celtics">
+		    			<div class="name">BOB COUSEY</div>
+<div class="stats">PPG: 20.0</div>
+<div class="stats">RPG: 5.5</div>
+<div class="stats">APG: 8.6</div>
+		    		</div>
+		  		</div>
+			</div>
+
+			<div class="player_container">
+		  		<img src="img/heinsohn.jpg" alt="Avatar" class="player_image">
+		  		<div class="player_overlay celtics">
+		    		<div class="player_text celtics">
+		    			<div class="name">TOMMY HEINSOHN</div>
+<div class="stats">PPG: 18.8</div>
+<div class="stats">RPG: 9.7</div>
+<div class="stats">APG: 2.5</div>
+		    		</div>
+		  		</div>
+			</div>
+
+			<div class="player_container team celtics">
+		  		<img src="img/celtics7.png" alt="Avatar" class="player_image team celtics6">
+			</div>
+
+			<div class="champs celtics">
+				<div class="champs_text">
+					<div class="team2">BOSTON CELTICS</div> 
+					<div class="score celtics">4 - 0</div>
+					<div class="team2">MINNEAPOLIS LAKERS</div>
+				</div>
+			</div>
+
+		</div>	
+
+
+    	<div class="player_triplet">
+	    	<div class="player_container">
+	    		<div class="year">1958</div>
+		  		<img src="img/pettit.jpg" alt="Avatar" class="player_image">
+		  		<div class="player_overlay hawks">
+		    		<div class="player_text hawks">
+		    			<div class="name">BOB PETTIT</div>
+<div class="stats">PPG: 24.6</div>
+<div class="stats">RPG: 17.4</div>
+<div class="stats">APG: 2.2</div>
+		    		</div>
+		  		</div>
+			</div>
+
+			<div class="player_container">
+		  		<img src="img/hagan.jpg" alt="Avatar" class="player_image">
+		  		<div class="player_overlay hawks">
+		    		<div class="player_text hawks">
+		    			<div class="name">CLIFF HAGAN</div>
+<div class="stats">PPG: 19.9</div>
+<div class="stats">RPG: 10.1</div>
+<div class="stats">APG: 2.5</div>
+		    		</div>
+		  		</div>
+			</div>
+
+			<div class="player_container">
+		  		<img src="img/ed.jpg" alt="Avatar" class="player_image">
+		  		<div class="player_overlay hawks">
+		    		<div class="player_text hawks">
+		    			<div class="name">ED MACAULEY</div>
+<div class="stats">PPG: 14.2</div>
+<div class="stats">RPG: 6.6</div>
+<div class="stats">APG: 2.0</div>
+		    		</div>
+		  		</div>
+			</div>
+
+			<div class="player_container team hawks">
+		  		<img src="img/hawks.png" alt="Avatar" class="player_image team hawks">
+			</div>
+
+			<div class="champs hawks">
+				<div class="champs_text">
+					<div class="team2">ST. LOUIS HAWKS</div> 
+					<div class="score hawks">4 - 2</div>
+					<div class="team2">BOSTON CELTICS</div>
+				</div>
+			</div>
+
+		</div>
+
+    	<div class="player_triplet">
+	    	<div class="player_container">
+	    		<div class="year">1957</div>
+		  		<img src="img/sharman.jpg" alt="Avatar" class="player_image">
+		  		<div class="player_overlay celtics">
+		    		<div class="player_text celtics">
+		    			<div class="name">BILL SHARMAN</div>
+<div class="stats">PPG: 21.1</div>
+<div class="stats">RPG: 4.3</div>
+<div class="stats">APG: 3.5</div>
+		    		</div>
+		  		</div>
+			</div>
+
+			<div class="player_container">
+				<div class="mvp">MVP</div>
+		  		<img src="img/cousey.jpg" alt="Avatar" class="player_image">
+		  		<div class="player_overlay celtics">
+		    		<div class="player_text celtics">
+		    			<div class="name">BOB COUSEY</div>
+<div class="stats">PPG: 20.6</div>
+<div class="stats">RPG: 4.8</div>
+<div class="stats">APG: 9.8</div>
+		    		</div>
+		  		</div>
+			</div>
+
+			<div class="player_container">
+		  		<img src="img/heinsohn.jpg" alt="Avatar" class="player_image">
+		  		<div class="player_overlay celtics">
+		    		<div class="player_text celtics">
+		    			<div class="name">TOMMY HEINSOHN</div>
+<div class="stats">PPG: 16.2</div>
+<div class="stats">RPG: 9.8</div>
+<div class="stats">APG: 1.6</div>
+		    		</div>
+		  		</div>
+			</div>
+
+			<div class="player_container team celtics">
+		  		<img src="img/celtics7.png" alt="Avatar" class="player_image team celtics6">
+			</div>
+
+			<div class="champs celtics">
+				<div class="champs_text">
+					<div class="team2">BOSTON CELTICS</div> 
+					<div class="score celtics">4 - 3</div>
+					<div class="team2">ST. LOUIS HAWKS</div>
+				</div>
+			</div>
+
+		</div>
+
+		<div class="player_triplet">
+
+			<div class="player_container">
+				<div class="year">1956</div>
+		  		<img src="img/arizin.jpg" alt="Avatar" class="player_image">
+		  		<div class="player_overlay warriors">
+		    		<div class="player_text warriors">
+		    			<div class="name">PAUL ARIZIN</div>
+<div class="stats">PPG: 24.2</div>
+<div class="stats">RPG: 7.5</div>
+<div class="stats">APG: 2.6</div>
+		    		</div>
+		  		</div>
+			</div>
+
+			<div class="player_container">
+		  		<img src="img/johnston.jpg" alt="Avatar" class="player_image">
+		  		<div class="player_overlay warriors">
+		    		<div class="player_text warriors">
+		    			<div class="name">NEIL JOHNSTON</div>
+<div class="stats">PPG: 22.1</div>
+<div class="stats">RPG: 12.5</div>
+<div class="stats">APG: 3.2</div>
+		    		</div>
+		  		</div>
+			</div>
+
+			<div class="player_container">
+		  		<img src="img/graboski.jpg" alt="Avatar" class="player_image">
+		  		<div class="player_overlay warriors">
+		    		<div class="player_text warriors">
+		    			<div class="name">JOE GRABOSKI</div>
+<div class="stats">PPG: 14.4</div>
+<div class="stats">RPG: 8.9</div>
+<div class="stats">APG: 2.6</div>
+		    		</div>
+		  		</div>
+			</div>
+
+			<div class="player_container team warriors">
+		  		<img src="img/warriors3.png" alt="Avatar" class="player_image team warriors3">
+			</div>
+
+			<div class="champs warriors">
+				<div class="champs_text">
+					<div class="team2">PHILADELPHIA WARRIORS</div> 
+					<div class="score warriors">4 - 1</div>
+					<div class="team2">FORT WAYNE PISTONS</div>
+				</div>
+			</div>
+
+		</div>	
+
+		<div class="player_triplet">
+
+			<div class="player_container">
+				<div class="year">1955</div>
+		  		<img src="img/schayes.jpg" alt="Avatar" class="player_image">
+		  		<div class="player_overlay syracuse">
+		    		<div class="player_text syracuse">
+		    			<div class="name">DOLPH SCHAYES</div>
+<div class="stats">PPG: 18.5</div>
+<div class="stats">RPG: 12.3</div>
+<div class="stats">APG: 3.0</div>
+		    		</div>
+		  		</div>
+			</div>
+
+			<div class="player_container">
+		  		<img src="img/seymour.jpg" alt="Avatar" class="player_image">
+		  		<div class="player_overlay syracuse">
+		    		<div class="player_text syracuse">
+		    			<div class="name">PAUL SEYMOUR</div>
+<div class="stats">PPG: 14.6</div>
+<div class="stats">RPG: 4.3</div>
+<div class="stats">APG: 6.7</div>
+		    		</div>
+		  		</div>
+			</div>
+
+			<div class="player_container">
+		  		<img src="img/rocha.jpg" alt="Avatar" class="player_image">
+		  		<div class="player_overlay syracuse">
+		    		<div class="player_text syracuse">
+		    			<div class="name">RED ROCHA</div>
+<div class="stats">PPG: 11.3</div>
+<div class="stats">RPG: 6.8</div>
+<div class="stats">APG: 2.5</div>
+		    		</div>
+		  		</div>
+			</div>
+
+			<div class="player_container team syracuse">
+		  		<img src="img/syracuse.png" alt="Avatar" class="player_image team syracuse">
+			</div>
+
+			<div class="champs syracuse">
+				<div class="champs_text">
+					<div class="team2">SYRACUSE NATIONALS</div> 
+					<div class="score syracuse">4 - 3</div>
+					<div class="team2">FORT WAYNE PISTONS</div>
+				</div>
+			</div>
+
+		</div>	
+
+		<div class="player_triplet">
+	    	<div class="player_container">
+	    		<div class="year">1954</div>
+		  		<img src="img/mikan.jpg" alt="Avatar" class="player_image">
+		  		<div class="player_overlay lakers2">
+		    		<div class="player_text lakers2">
+		    			<div class="name">GEORGE MIKAN</div>
+<div class="stats">PPG: 18.1</div>
+<div class="stats">RPG: 14.3</div>
+<div class="stats">APG: 2.4</div>
+		    		</div>
+		  		</div>
+			</div>
+
+			<div class="player_container">
+				<div class="rule2">SHOT CLOCK ADDED</div>
+		  		<img src="img/pollard.jpg" alt="Avatar" class="player_image">
+		  		<div class="player_overlay lakers2">
+		    		<div class="player_text lakers2">
+		    			<div class="name">JIM POLLARD</div>
+<div class="stats">PPG: 11.7</div>
+<div class="stats">RPG: 7.0</div>
+<div class="stats">APG: 3.0</div>
+		    		</div>
+		  		</div>
+			</div>
+
+			<div class="player_container">
+		  		<img src="img/vern.jpg" alt="Avatar" class="player_image">
+		  		<div class="player_overlay lakers2">
+		    		<div class="player_text lakers2">
+		    			<div class="name">VERN MIKKELSEN</div>
+<div class="stats">PPG: 11.1</div>
+<div class="stats">RPG: 8.5</div>
+<div class="stats">APG: 1.7</div>
+		    		</div>
+		  		</div>
+			</div>
+
+			<div class="player_container team lakers2">
+		  		<img src="img/lakers2.png" alt="Avatar" class="player_image team lakers2">
+			</div>
+
+			<div class="champs lakers2">
+				<div class="rule">SHOT CLOCK ADDED</div>
+				<div class="champs_text">
+					<div class="team2">MINNEAPOLIS LAKERS</div> 
+					<div class="score lakers2">4 - 3</div>
+					<div class="team2">SYRACUSE NATIONALS</div>
+				</div>
+			</div>
+
+		</div>	
+
+		<div class="player_triplet">
+	    	<div class="player_container">
+	    		<div class="year">1953</div>
+		  		<img src="img/mikan.jpg" alt="Avatar" class="player_image">
+		  		<div class="player_overlay lakers2">
+		    		<div class="player_text lakers2">
+		    			<div class="name">GEORGE MIKAN</div>
+<div class="stats">PPG: 20.6</div>
+<div class="stats">RPG: 14.4</div>
+<div class="stats">APG: 2.9</div>
+		    		</div>
+		  		</div>
+			</div>
+
+			<div class="player_container">
+		  		<img src="img/vern.jpg" alt="Avatar" class="player_image">
+		  		<div class="player_overlay lakers2">
+		    		<div class="player_text lakers2">
+		    			<div class="name">VERN MIKKELSEN</div>
+<div class="stats">PPG: 15.0</div>
+<div class="stats">RPG: 9.3</div>
+<div class="stats">APG: 2.1</div>
+		    		</div>
+		  		</div>
+			</div>
+
+			<div class="player_container">
+		  		<img src="img/pollard.jpg" alt="Avatar" class="player_image">
+		  		<div class="player_overlay lakers2">
+		    		<div class="player_text lakers2">
+		    			<div class="name">JIM POLLARD</div>
+<div class="stats">PPG: 13.0</div>
+<div class="stats">RPG: 6.8</div>
+<div class="stats">APG: 3.5</div>
+		    		</div>
+		  		</div>
+			</div>
+
+			<div class="player_container team lakers2">
+		  		<img src="img/lakers2.png" alt="Avatar" class="player_image team lakers2">
+			</div>
+
+			<div class="champs lakers2">
+				<div class="champs_text">
+					<div class="team2">MINNEAPOLIS LAKERS</div>  
+					<div class="score lakers2">4 - 1</div>
+					<div class="team2">NEW YORK KNICKS</div>
+				</div>
+			</div>
+
+		</div>	
+
+		<div class="player_triplet">
+	    	<div class="player_container">
+	    		<div class="year">1952</div>
+		  		<img src="img/mikan.jpg" alt="Avatar" class="player_image">
+		  		<div class="player_overlay lakers2">
+		    		<div class="player_text lakers2">
+		    			<div class="name">GEORGE MIKAN</div>
+<div class="stats">PPG: 23.8</div>
+<div class="stats">RPG: 13.5</div>
+<div class="stats">APG: 3.0</div>
+		    		</div>
+		  		</div>
+			</div>
+
+			<div class="player_container">
+				<div class="rule2">LANE WIDENED TO 12 FT</div>
+		  		<img src="img/pollard.jpg" alt="Avatar" class="player_image">
+		  		<div class="player_overlay lakers2">
+		    		<div class="player_text lakers2">
+		    			<div class="name">JIM POLLARD</div>
+<div class="stats">PPG: 15.5</div>
+<div class="stats">RPG: 9.1</div>
+<div class="stats">APG: 3.6</div>
+		    		</div>
+		  		</div>
+			</div>
+
+			<div class="player_container">
+		  		<img src="img/vern.jpg" alt="Avatar" class="player_image">
+		  		<div class="player_overlay lakers2">
+		    		<div class="player_text lakers2">
+		    			<div class="name">VERN MIKKELSEN</div>
+<div class="stats">PPG: 15.3</div>
+<div class="stats">RPG: 10.3</div>
+<div class="stats">APG: 2.7</div>
+		    		</div>
+		  		</div>
+			</div>
+
+			<div class="player_container team lakers2">
+		  		<img src="img/lakers2.png" alt="Avatar" class="player_image team lakers2">
+			</div>
+
+			<div class="champs lakers2">
+				<div class="rule">LANE WIDENED TO 12 FT</div>
+				<div class="champs_text">
+					<div class="team2">MINNEAPOLIS LAKERS</div> 
+					<div class="score lakers2">4 - 3</div>
+					<div class="team2">NEW YORK KNICKS</div>
+				</div>
+			</div>
+
+		</div>	
+
+		<div class="player_triplet">
+
+			<div class="player_container">
+				<div class="year">1951</div>
+		  		<img src="img/risen.jpg" alt="Avatar" class="player_image">
+		  		<div class="player_overlay rochester">
+		    		<div class="player_text rochester">
+		    			<div class="name">ARNIE RISEN</div>
+<div class="stats">PPG: 16.3</div>
+<div class="stats">RPG: 12.0</div>
+<div class="stats">APG: 2.4</div>
+		    		</div>
+		  		</div>
+			</div>
+
+			<div class="player_container">
+		  		<img src="img/davies.jpg" alt="Avatar" class="player_image">
+		  		<div class="player_overlay rochester">
+		    		<div class="player_text rochester">
+		    			<div class="name">BOB DAVIES</div>
+<div class="stats">PPG: 15.2</div>
+<div class="stats">RPG: 3.1</div>
+<div class="stats">APG: 4.6</div>
+		    		</div>
+		  		</div>
+			</div>
+
+			<div class="player_container">
+		  		<img src="img/coleman.jpg" alt="Avatar" class="player_image">
+		  		<div class="player_overlay rochester">
+		    		<div class="player_text rochester">
+		    			<div class="name">JACK COLEMAN</div>
+<div class="stats">PPG: 11.4</div>
+<div class="stats">RPG: 8.7</div>
+<div class="stats">APG: 2.9</div>
+		    		</div>
+		  		</div>
+			</div>
+
+			<div class="player_container team rochester">
+		  		<img src="img/rochester.png" alt="Avatar" class="player_image team rochester">
+			</div>
+
+			<div class="champs rochester">
+				<div class="champs_text">
+					<div class="team2">ROCHESTER ROYALS</div> 
+					<div class="score rochester">4 - 3</div>
+					<div class="team2">NEW YORK KNICKS</div>
+				</div>
+			</div>
+
+		</div>	
+
+		<div class="player_triplet">
+	    	<div class="player_container">
+	    		<div class="year">1950</div>
+		  		<img src="img/mikan.jpg" alt="Avatar" class="player_image">
+		  		<div class="player_overlay lakers2">
+		    		<div class="player_text lakers2">
+		    			<div class="name">GEORGE MIKAN</div>
+<div class="stats">PPG: 27.4</div>
+<div class="stats">APG: 2.9</div>
+		    		</div>
+		  		</div>
+			</div>
+
+			<div class="player_container">
+				<div class="rule2">BAA - NBL MERGER</div>
+		  		<img src="img/pollard.jpg" alt="Avatar" class="player_image">
+		  		<div class="player_overlay lakers2">
+		    		<div class="player_text lakers2">
+		    			<div class="name">JIM POLLARD</div>
+<div class="stats">PPG: 14.7</div>
+<div class="stats">APG: 3.8</div>
+		    		</div>
+		  		</div>
+			</div>
+
+			<div class="player_container">
+		  		<img src="img/vern.jpg" alt="Avatar" class="player_image">
+		  		<div class="player_overlay lakers2">
+		    		<div class="player_text lakers2">
+		    			<div class="name">VERN MIKKELSEN</div>
+<div class="stats">PPG: 11.6</div>
+<div class="stats">APG: 1.8</div>
+		    		</div>
+		  		</div>
+			</div>
+
+			<div class="player_container team lakers2">
+		  		<img src="img/lakers2.png" alt="Avatar" class="player_image team lakers2">
+			</div>
+
+			<div class="champs lakers2">
+				<div class="rule">BAA - NBL MERGER</div>
+				<div class="champs_text">
+					<div class="team2">MINNEAPOLIS LAKERS</div>  
+					<div class="score lakers2">4 - 2</div>
+					<div class="team2">SYRACUSE NATIONALS</div>
+				</div>
+			</div>
+
+		</div>	
+	</div>
+</div>
+
+<div class="decade">
+    	<h2> THE 40's  -  THE BASKETBALL ASSOCIATION OF AMERICA</h2>
+    </div>
+    <div class="center2 last">
+    <div class="center">
+
+		<div class="player_triplet">
+	    	<div class="player_container">
+	    		<div class="year">1949</div>
+		  		<img src="img/mikan.jpg" alt="Avatar" class="player_image">
+		  		<div class="player_overlay lakers2">
+		    		<div class="player_text lakers2">
+		    			<div class="name">GEORGE MIKAN</div>
+<div class="stats">PPG: 28.3</div>
+<div class="stats">APG: 3.6</div>
+		    		</div>
+		  		</div>
+			</div>
+
+			<div class="player_container">
+		  		<img src="img/pollard.jpg" alt="Avatar" class="player_image">
+		  		<div class="player_overlay lakers2">
+		    		<div class="player_text lakers2">
+		    			<div class="name">JIM POLLARD</div>
+<div class="stats">PPG: 14.8</div>
+<div class="stats">APG: 2.7</div>
+		    		</div>
+		  		</div>
+			</div>
+
+			<div class="player_container">
+		  		<img src="img/herm.jpg" alt="Avatar" class="player_image">
+		  		<div class="player_overlay lakers2">
+		    		<div class="player_text lakers2">
+		    			<div class="name">HERM SCHAEFER</div>
+<div class="stats">PPG: 10.4</div>
+<div class="stats">APG: 3.2</div>
+		    		</div>
+		  		</div>
+			</div>
+
+			<div class="player_container team lakers2">
+		  		<img src="img/lakers2.png" alt="Avatar" class="player_image team lakers2">
+			</div>
+
+			<div class="champs lakers2">
+				<div class="champs_text">
+					<div class="team2">MINNEAPOLIS LAKERS</div> 
+					<div class="score lakers2">4 - 2</div>
+					<div class="team2">WASHINGTON CAPITOLS</div>
+				</div>
+			</div>
+
+		</div>	
+
+		<div class="player_triplet">
+	    	<div class="player_container">
+	    		<div class="year">1948</div>
+		  		<img src="img/hermsen.jpg" alt="Avatar" class="player_image">
+		  		<div class="player_overlay bullets">
+		    		<div class="player_text wizards">
+		    			<div class="name">KLEGGIE HERMSEN</div>
+<div class="stats">PPG: 12.0</div>
+<div class="stats">APG: 1.0</div>
+		    		</div>
+		  		</div>
+			</div>
+
+			<div class="player_container">
+			  		<img src="img/reiser.jpg" alt="Avatar" class="player_image">
+			  		<div class="player_overlay bullets">
+			    		<div class="player_text wizards">
+			    			<div class="name">CHICK REISER</div>
+<div class="stats">PPG: 11.5</div>
+<div class="stats">APG: 0.9</div>
+			    		</div>
+			  		</div>
+				</div>
+
+				<div class="player_container">
+			  		<img src="img/bloom.jpg" alt="Avatar" class="player_image">
+			  		<div class="player_overlay bullets">
+			    		<div class="player_text wizards">
+			    			<div class="name">MIKE BLOOM</div>
+<div class="stats">PPG: 9.2</div>
+<div class="stats">APG: 1.0</div>
+			    		</div>
+			  		</div>
+				</div>
+
+				<div class="player_container team bullets2">
+		  			<img src="img/bullets2.png" alt="Avatar" class="player_image team bullets2">
+			    </div>
+
+				<div class="champs bullets">
+					<div class="champs_text">
+						<div class="team2">BALTIMORE BULLETS</div> 
+						<div class="score bullets">4 - 2</div>
+						<div class="team2">PHILADELPHIA WARRIORS</div>
+					</div>
+				</div>
+
+			</div>
+
+			<div class="player_triplet">
+
+			<div class="player_container">
+				<div class="year">1947</div>
+		  		<img src="img/fulks.jpg" alt="Avatar" class="player_image">
+		  		<div class="player_overlay warriors">
+		    		<div class="player_text warriors">
+<div class="stats">PPG: 23.2</div>
+<div class="stats">APG: 0.4</div>
+		    		</div>
+		  		</div>
+			</div>
+
+			<div class="player_container">
+				<div class="rule2">ZONE DEFENSE BANNED</div>
+		  		<img src="img/musi.jpg" alt="Avatar" class="player_image">
+		  		<div class="player_overlay warriors">
+		    		<div class="player_text warriors">
+		    			<div class="name">ANGELO MUSI</div>
+<div class="stats">PPG: 9.4</div>
+<div class="stats">APG: 0.4</div>
+		    		</div>
+		  		</div>
+			</div>
+
+			<div class="player_container">
+		  		<img src="img/dallmar.jpg" alt="Avatar" class="player_image">
+		  		<div class="player_overlay warriors">
+		    		<div class="player_text warriors">
+		    			<div class="name">HOWIE DALLMAR</div>
+<div class="stats">PPG: 8.8</div>
+<div class="stats">APG: 1.7</div>
+		    		</div>
+		  		</div>
+			</div>
+
+			<div class="player_container team warriors">
+		  		<img src="img/warriors3.png" alt="Avatar" class="player_image team warriors3">
+			</div>
+
+			<div class="champs warriors">
+				<div class="rule">ZONE DEFENSE BANNED</div>
+				<div class="champs_text">
+					<div class="team2">PHILADELPHIA WARRIORS</div> 
+					<div class="score warriors">4 - 1</div>
+					<div class="team2">FORT WAYNE PISTONS</div>
+				</div>
+			</div>
+
+		</div>	
+
+    </div>
+	</div>
+
+	</div>
+
+	<div id="footer">
+	    <div id="footerContent">
+	       © 2019  -  MICHAEL ANDERSON
+	    </div>
+	</div>
+	</div>
     </body>
+<!--
+⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄
+⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⣀⣀⣀⡀⠄⣤⣤⣤⣤⣤⣀⣀⣀⣀⣀⡀⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄
+⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⣠⣤⡶⠯⠛⡻⠹⠧⠐⠤⢰⢠⠈⢫⣍⣛⠓⠂⠔⢛⠓⠂⣤⣄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄
+⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⢀⣠⡴⠞⠉⠡⠄⠈⡠⠄⠄⠆⠂⡈⢈⡀⣐⠺⠋⣌⣛⡶⠠⢊⡠⠤⠼⢿⣿⢶⣤⡀⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄
+⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⢀⣴⠟⠃⠄⠄⠄⠄⠄⢀⡑⠄⠄⢀⣠⠄⢫⡀⡕⣄⡀⠤⢨⠈⣄⢸⣠⠉⡁⣒⠈⠍⢸⣿⡧⢄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄
+⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⢀⣴⠛⠁⠔⠄⡄⠚⠠⡦⠄⠘⠉⡈⣨⠍⣩⡀⠳⠈⠗⢚⠛⣧⣄⣠⠉⣅⠈⠁⡀⠁⢲⣎⠹⡍⠛⠊⠷⢦⡀⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄
+⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⣠⡟⠁⠄⠄⠁⠈⠉⠄⠈⠉⠉⠄⠄⠄⠄⠄⠄⠄⠁⠄⠈⠁⠄⠄⠁⢂⣚⠄⠉⣀⠄⠄⠶⢀⠃⣽⢻⣛⡹⠆⠑⣦⡀⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄
+⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⢠⣾⠉⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠉⠈⠄⣤⡌⠐⠦⠄⠉⠤⠉⠄⠙⡉⣆⠐⡉⢣⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄
+⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⡸⠅⠄⠄⠄⠄⠄⠁⠄⠄⠄⠄⠈⠛⠁⠄⡀⠄⠄⠄⠄⠤⠠⠄⠄⠄⠄⢀⠄⠄⠄⠄⠄⠁⠄⣈⡹⣃⠗⠪⢆⠠⢤⠜⠌⠂⠳⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄
+⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⢠⡷⠄⠄⢀⡤⠐⠂⠂⠄⠤⠤⠄⠄⠄⠐⠈⠉⠄⠄⠄⠄⢀⣀⣀⣄⣀⡀⠄⠄⠄⠄⠄⠄⠄⠍⡇⠨⠉⣒⡒⣲⡆⡘⢂⡍⠗⣤⢣⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄
+⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⡾⠂⠄⠄⠑⠄⠐⠢⠢⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠈⠉⠄⠄⠄⠄⠄⠉⠁⠄⠄⠄⠄⠄⠄⢀⠒⠁⠄⡀⠝⠓⠛⠉⠰⣷⣊⢖⡈⠇⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄
+⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⡏⠁⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠸⡄⡆⠄⡋⡉⠁⡀⢣⣦⠋⠸⣿⣇⢺⡄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄
+⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⡏⠄⣴⣾⣿⢿⣿⣆⠄⠄⢀⠄⠄⠄⠄⠄⠄⠄⢀⠄⠄⣶⣶⡖⠿⣿⠷⠿⢶⣦⣤⠄⠄⠄⠄⠄⢱⢲⡞⢣⡧⠤⠥⢐⡾⡰⢎⣻⣾⡇⡇⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄
+⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠐⠄⠄⠄⠁⠈⠉⠄⠈⠈⠁⠄⠄⠄⠄⠄⣸⠟⠁⠄⠄⠁⠄⠄⠄⠄⠄⠄⠄⠉⠣⣄⢀⠄⠄⠄⠘⢀⠄⠄⠄⣙⠝⠄⢀⠄⣿⣬⡇⢿⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄
+⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⢸⠐⠄⠄⠄⠄⠄⠄⠐⢶⣤⡀⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⢈⠄⠄⠄⠄⠄⠄⠉⠈⠍⢗⢫⠄⢒⢸⣿⣿⡷⢸⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄
+⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⢸⠃⠄⠄⠄⣀⣀⠄⠄⠄⠈⠻⣶⡀⠄⠄⠄⠄⠄⠄⠄⠄⠄⢀⠄⠤⠤⠄⠤⠄⠄⠄⠄⠄⠃⠄⠄⠄⠄⠄⠄⠌⢌⠄⠠⠒⠄⠨⣧⣼⣯⡹⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄
+⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⢸⠄⠄⠐⣤⣤⠤⠤⢕⠂⣄⡀⣿⠓⠄⠄⠄⠄⠄⠐⠄⠄⢸⣵⣶⣲⡒⠒⠤⣄⡀⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠐⢋⠄⡜⠄⠂⠂⠈⣻⡟⡇⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄
+⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⢸⠄⠄⢿⣿⣾⠇⠄⠈⠉⢦⡱⠈⠄⠄⠄⠄⠄⠄⠄⠈⠰⠳⠹⢿⠿⠃⠄⠄⠈⠹⣶⣀⠄⠄⠄⠄⠄⠄⠄⠄⠈⠉⠄⠁⠄⠄⢫⣼⣿⢿⣿⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄
+⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⣼⠄⠄⠄⣉⣁⣀⣄⡤⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠂⠄⠄⠄⠄⠄⠤⠤⠄⠄⠄⠈⠄⠈⠁⠄⠄⠄⠄⠄⠄⠄⠄⡀⠄⠄⠄⢤⣿⣿⠟⠛⠛⠣⡄⠄⠄⠄⠄⠄⠄⠄⠄
+⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⢠⡇⠄⠄⠄⠈⠉⠉⠄⢀⣴⠄⢰⡀⠄⠄⠄⠄⠄⠄⠄⠄⠄⠠⣄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⡀⠄⠄⠄⠄⠰⠁⠄⠉⠁⣠⢖⣀⡄⢰⡀⠄⠄⠄⠄⠄⠄⠄
+⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⢸⠃⠄⠄⠄⠄⢀⣀⣠⡾⠃⢀⡟⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠱⠿⣄⣤⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠈⠄⠄⠄⢘⡇⠄⠄⢀⠴⠄⠄⠉⠈⢀⣇⠄⠄⠄⠄⠄⠄⠄
+⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⢸⡆⠄⠄⠄⠄⠈⠉⠁⠄⠄⠜⠁⠄⠄⠄⠄⠄⠄⠄⢰⡄⠄⠄⠄⠄⠄⠈⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⣽⠃⠄⣀⣆⠄⠄⠄⠄⠂⢰⣿⠄⠄⠄⠄⠄⠄⠄
+⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⢸⡇⠄⠄⠄⠄⠄⠄⠄⠄⠄⢀⡀⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠃⠄⠄⠄⠄⠄⠄⠄⠄⡿⠄⠄⠇⠙⢧⠄⠄⠄⠄⣼⠇⠄⠄⠄⠄⠄⠄⠄
+⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⢸⡇⠄⠄⠄⠄⠄⠄⠄⠄⠸⣿⣧⣄⠄⠄⢠⣾⣿⣿⡦⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⡇⠄⢀⠂⠄⠘⠄⢀⠄⣸⡏⠄⠄⠄⠄⠄⠄⠄⠄
+⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⢸⣿⠄⠄⣠⣅⠄⠄⠄⠄⢄⠙⠿⠟⠁⠄⠈⠈⠉⠙⢉⡸⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⢀⢀⠄⠄⠐⠂⠄⠐⠐⠂⠄⠄⠌⠄⡟⠁⠄⠄⠄⠄⠄⠄⠄⠄
+⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⢸⠏⠘⡄⢻⣿⣅⡀⠄⠄⠄⠁⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⡀⠄⠄⠄⠄⠄⠄⠸⠓⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⢠⡼⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄
+⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠸⡆⠄⠄⠄⠈⢹⣷⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠐⠋⠂⠄⠄⠄⠄⠄⠄⢰⣦⣀⣀⣠⣶⠏⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄
+⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠱⣦⣴⡀⠄⠐⠿⠃⠄⠄⣿⣧⣶⠴⢤⣤⣤⣶⣶⣦⣴⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠰⠄⠄⠄⠠⠄⠄⠄⠄⢸⠄⡸⣿⠟⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄
+⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠈⢹⣧⠄⠄⠄⠄⠄⠄⣿⠋⠉⣀⣈⡛⣦⣄⣀⠁⠈⠿⣶⡀⠄⠄⡀⠄⠄⠄⠄⠄⠄⠄⠄⡀⠄⠄⠄⠄⠄⠄⠄⠄⡌⠄⣿⡏⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄
+⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠹⣄⠄⠄⠄⠄⠄⠿⠣⠿⠛⢃⠄⠄⠄⠄⠛⠳⠦⠄⠻⠄⠄⢀⠄⠄⠄⠄⢀⠄⠄⠄⠄⢀⣶⡷⠢⠄⠄⠤⢠⠄⠄⣿⡇⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄
+⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⣿⡄⠄⡄⠄⠄⢬⡇⢠⣦⣄⡄⣠⡀⠄⢀⣤⣀⡠⡸⢥⡁⠈⠄⠄⠄⠄⠄⠄⠄⠄⢀⣺⠋⠄⠄⠄⠄⠄⠉⠄⠄⣿⠃⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄
+⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⢸⣇⠄⠹⡶⡀⠾⠩⣀⠉⠓⠟⠿⠷⠶⠌⠋⠩⠉⡂⠄⠱⡄⠄⠄⠄⠄⠄⠄⠄⢠⡾⠋⠄⠄⠄⠄⢀⡆⠄⠄⢀⠃⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄
+⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⣼⣿⠄⠄⢡⢣⠄⠄⠙⠷⣤⣤⣀⣠⡀⠄⠅⠄⠄⠄⠄⠄⠄⠄⠄⠄⣰⠄⠄⠄⠐⡂⠄⠄⠄⠄⠄⡀⠄⠄⠄⣸⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄
+⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⢀⣴⡟⠁⠠⠄⠌⣿⠄⠄⠄⠄⠄⢩⢭⢸⡤⠒⠄⠄⠄⢀⠄⣀⠄⠄⠄⢰⢿⠄⠄⠄⣾⡇⠄⠄⠄⢀⣤⠌⠄⠄⠄⢻⣆⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄
+⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⣀⣴⡿⠋⠄⠄⢰⠘⠴⡔⡧⠄⠁⠄⢠⣀⠃⠁⠄⠄⠄⠄⠄⠄⠉⣀⣾⠄⠄⠄⠄⠄⠄⠠⣿⠇⠄⠠⢄⠌⠁⠄⣀⡲⠃⠘⣹⣇⡀⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄
+⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⢀⣴⣾⠟⠉⠄⠄⣤⣠⡎⠄⠐⢏⣟⢯⣄⠈⢛⣉⠄⣀⣰⣰⣀⣁⠄⠄⠄⠉⠉⠰⠐⣰⠋⠄⢠⣾⠍⠄⠄⠄⠄⠄⠄⣴⡽⠁⠄⠄⣮⢯⢷⣤⡀⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄
+⠄⠄⠄⠄⠄⠄⠄⠄⣠⡼⠿⠋⢀⡀⠄⠰⠃⢉⢉⣇⠄⠄⠄⠣⢿⣿⣦⣀⣀⡤⠄⢉⣶⢀⣀⠄⠄⠄⢀⡀⠄⡓⠇⠄⠄⡽⣓⠄⠄⠄⠄⢲⠰⠰⠂⠄⠄⠄⠄⢻⣺⣷⢀⡘⠳⢄⡀⠄⠄⠄⠄⠄⠄⠄⠄
+⠄⠄⠄⠄⠄⢀⡤⠚⠁⡀⠄⡀⢴⡴⣰⠄⠐⠻⠻⢸⠄⠄⠄⠄⠈⠛⠻⣿⣿⣿⣣⡯⣿⢿⣧⣶⣆⡤⠈⠑⣜⢉⣀⣤⡄⠃⠁⠄⢀⢈⣲⠕⠋⠄⠄⠄⠄⠄⠄⠘⡯⢨⣭⢒⠈⠯⢼⠂⣤⡀⠄⠄⠄⠄⠄
+⣤⠤⠶⠖⠂⠉⢀⣀⢒⣁⠄⣀⣈⠄⣭⡖⣔⠪⠆⣿⡀⠄⠄⠄⠄⠄⠄⠈⠙⠿⠿⢹⠋⢞⠿⠿⢟⣛⣕⣪⡘⠉⠊⠙⢓⣀⠄⡄⠔⠈⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⣿⣉⢻⡏⠯⣀⢲⣶⣈⢭⣛⣀⡠⠒⠶
+⣷⣦⠄⠄⠊⠆⢸⣾⠚⠄⠈⠛⠁⠐⣒⡃⣫⣤⠄⣼⣧⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠙⠚⠓⣴⣮⢽⠭⠑⠐⠄⣐⠺⡿⠙⠋⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⢨⠧⠻⣻⡤⡥⡄⠁⣭⣄⠉⣔⠅⡈⢲
+⣿⣿⣶⡰⠄⢐⣶⠁⡠⢨⢠⠟⠃⠒⠃⡅⠋⢰⠸⣿⣦⡃⠄⠄⠄⠄⢀⠄⠄⠄⠤⣶⡦⢤⣴⠁⠉⠉⠉⠉⠛⠒⠂⠉⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⣻⢲⣆⢬⣅⠩⠍⢀⠁⡘⢂⠉⢡⠲⠈
+⢺⡇⣿⣇⠄⠛⠋⠴⢀⡅⢲⡖⢰⡶⠛⠈⢥⣴⡜⠮⠷⢿⣄⠄⠄⠄⠐⠃⠄⠄⠄⠄⠄⠄⠄⠄⢀⡀⢤⣦⡴⣾⣷⣦⡄⣀⠄⠄⠄⠄⠄⠄⠄⠄⠄⢀⠄⠄⠄⠄⣽⠹⣿⡘⣗⡤⠪⠷⠧⠹⠯⠃⠘⠝⣙
+⢽⡏⣼⣿⠉⠄⠄⠄⡖⡀⠊⠠⣂⠏⠠⢌⠒⢷⠷⢀⠠⣿⣿⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⢀⡴⣶⣿⣿⣿⠿⢛⣉⣸⠃⡻⢚⡿⣶⣦⣀⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⣿⣾⠆⢤⣺⣿⢦⠑⣾⡈⡹⠉⢳⠮⡉
+⡟⠁⢽⣿⣷⡆⠄⠄⢉⡁⡀⠄⢀⡐⣺⠽⠷⡈⢽⢆⣦⠡⣙⣿⡀⠄⠄⠄⠄⠄⣀⣤⣿⣷⣶⣿⠯⠻⣾⠍⢠⠂⠾⠄⡥⢼⣿⣿⣿⠿⠙⣆⣀⠄⠄⠄⠄⠄⠄⠄⣟⡳⢸⣿⣯⢀⣤⣄⣀⣬⣥⡡⣐⣆⣦
+⢇⣐⣿⡗⠙⠙⣆⣀⠉⡀⢠⠔⣺⠯⣀⠳⣎⣁⠘⠥⣣⣤⠋⣟⢇⠄⠄⢀⠤⠚⠛⠛⢿⣿⣿⣷⢸⣭⣛⣊⡱⣽⣝⣁⣿⣿⣿⣿⠏⠒⠻⢾⣿⣷⣤⡀⠄⠄⠄⠄⣿⠏⣶⣸⠛⣼⡮⡟⣤⡛⠛⠃⠉⡀⢑
+⣧⣡⣿⡇⢀⠿⣻⡟⠶⠚⡙⣦⡰⢴⢶⡁⠡⢉⣔⣄⠮⣅⠴⠈⢽⣆⣴⡀⠄⠄⠄⠄⠄⠄⣍⠉⣿⣿⣼⡥⢯⠲⠕⢰⣿⡿⠋⠄⠄⠄⠄⠐⠩⠙⢻⣿⣶⣄⣀⢸⡏⢘⣿⣯⢁⣶⣉⠃⠿⣯⡿⢯⡗⠩⠇
+⡯⣱⡟⠂⠼⣚⣷⣇⠄⠂⠉⠿⡥⠈⢬⢐⣢⠐⠼⡇⣀⢠⣤⢟⠘⢻⠺⣇⠄⠄⠄⠄⠄⠄⠙⠻⢫⡺⣻⡝⠫⣉⣿⣿⡿⠃⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠉⠙⠈⢸⣷⣷⢿⡄⣉⠿⡏⢴⣻⡣⢀⣟⡛⠶⣾
+⣵⣿⠡⠈⠤⣭⣿⣿⡀⠈⢀⢕⢶⣝⠆⠿⠟⣄⡰⣊⣿⢂⠸⡛⢫⣄⡄⢩⢦⠄⠄⠄⠄⠄⠄⠄⢸⣟⣻⠻⢷⣶⣿⣿⠃⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⣯⣬⣋⠾⢩⣿⡶⢰⣛⠷⡇⣸⣿⡷⢀⣌
+⡿⠷⠇⣸⣿⢹⡗⣿⣿⣧⡄⡂⢙⢚⠁⠌⡫⣿⢶⠐⢟⣠⡆⠉⣿⣿⣽⡀⠈⣄⠄⠄⠄⡀⠄⠄⣼⣿⣿⣛⣾⣿⣿⣿⣧⡀⠄⠄⠔⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⣿⣿⡿⠇⣼⣿⠇⢹⣿⠿⢳⣷⣌⠇⣺⣿
+
+-->
 </html>

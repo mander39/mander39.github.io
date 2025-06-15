@@ -1,0 +1,98 @@
+<!doctype html> <!-- HTML5 -->
+<html lang="en">
+<head><meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-158326635-1"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+    
+      gtag('config', 'UA-158326635-1');
+    </script>
+
+   <meta name="viewport" content="width=device-width, initial-scale=.51, maximum-scale=1.0, user-scalable=yes">
+    <meta name="description" content="This website generates random people from different countries based on stats from Wikipedia">
+    <title>Random People Generator</title>
+    <link href='css/flag-icon.css' rel='stylesheet'>
+    <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css'>
+    <link rel='stylesheet' href='css/style.css'>
+    <link rel="icon" href="css/icon.ico">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="js/people.js"></script><script src="js/numtxt.js"></script><script src="js/numset.js"></script>
+</head>
+<body>
+    <div class='flexbox'>
+        <h1> <span id="num"></span><span id="test">Random</span><span id='person'> People</span></h1>
+        <button id="fresh" class='fa fa-refresh' value='Refresh Page' onClick='window.location.reload();'></button>
+        <form autocomplete="off">
+            <input class = "short" type="text" id="input_id" value="" required>
+            <input class = "button" type="button" value="GO" onclick="letsgo()" />
+            <div id="alert" style="color: red"></div>
+        </form>
+    </div> <!--flexbox-->
+    <div class="flexi">
+        <div class='contain'>
+            <script> 
+                var num = creation(); 
+
+                function swaptab(evt, name) {
+                  var i, x, tablinks;
+                  x = document.getElementsByClassName("tab");
+                  for (i = 0; i < x.length; i++) {
+                    x[i].style.display = "none";
+                  }
+                  tablinks = document.getElementsByClassName("tablink");
+                  for (i = 0; i < x.length; i++) {
+                    tablinks[i].className = tablinks[i].className.replace(" greytab", "");
+                  }
+                  document.getElementById(name).style.display = "block";
+                  evt.currentTarget.className += " greytab";
+                }
+            </script>
+        </div><!--contain-->
+        <div class="infobox">
+            <div class="buttonbar">
+                  <button autofocus class="tabbutton tablink greytab" onclick="swaptab(event, 'Stats')">Stats</button><!---->
+                  <button class="tabbutton b tablink" onclick="swaptab(event, 'Info')">Info</button>
+                </div><!--buttonbar-->
+        	<div class="infotext"> 
+
+                <script>
+                    
+                </script>
+
+                <div id="Info" class="tab animfade" style="display:none">
+            		<p>This site generates a list of random people based on stats from Wikipedia (population, sex ratio, age structure & urban ratio)</p> 
+            		<ul>
+            			<li><a target="_blank" href="https://en.wikipedia.org/wiki/List_of_countries_and_dependencies_by_population">Countries and populations</a></li>
+            			<li><a target="_blank" href="https://en.wikipedia.org/wiki/List_of_countries_by_sex_ratio">Sex ratio by country</a></li>
+            			<li><a target="_blank" href="https://en.wikipedia.org/wiki/List_of_countries_by_age_structure">Age structure by country</a></li>
+            			<li><a target="_blank" href="https://en.wikipedia.org/wiki/Urbanization_by_country">Urbanization by country</a></li>
+            			<li><a target="_blank" href="https://github.com/lipis/flag-icon-css">Source for flag svgs</a></li>
+            		</ul>
+            		<p> Country of origin is chosen for each person, then the country is used to find age, postal code (for flags), and urban/rural. Age 
+                        and country of origin are used together to find the sex of each person.</p>
+            		<ul>
+            			<li>Symbols - Senior - Adult - Child</li>
+            			<li>Female:     <span class="emojis"> 👵     👩     👧 </span></li>
+            			<li>Male:          <span class="emojis"> 👴     🧑     👦 </span></li>
+            			<li>Urban/Rural:<span class="emojis"> 🚲 / 🚜 </span></li>
+            		</ul>
+                </div><!--infotab-->
+                <div id="Stats" class="tab animfade">
+                    <h2 id="stathead"> Most Common </h2>
+                    <ol>
+                        <script> toplist(num); </script>
+                    </ol>
+                    <h2 id="statheadb"> Rare Countries </h2>
+                    <ol>
+                        <script> botlist(num); </script>
+                    </ol>
+                </div><!--statstab-->
+        	</div><!--infotext-->
+        </div><!--infobox-->
+	</div><!--flexi-->
+    <footer> 2019 - Michael Anderson </footer>
+</body>
+</html>
